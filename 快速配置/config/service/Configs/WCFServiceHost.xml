@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WCFServiceHost ip="{wcf_ip}">
+  <ServiceHosts name="功能服务" portnum="{wcf_port}" bindingtype="BasicHttpBinding">
+    <ServiceHost name="LoginService"
+             map="Services\FrameworkServices\OVIT.WebApp.Framework.Services.dll,OVIT.WebApp.Framework.Services.Framework.Contracts.ILoginService"
+             to="Services\FrameworkServices\OVIT.WebApp.Framework.Services.dll,OVIT.WebApp.Framework.Services.Framework.Services.LoginService"></ServiceHost>
+    <ServiceHost name="AppInfoService"
+         map="Services\FrameworkServices\OVIT.WebApp.Framework.Services.dll,OVIT.WebApp.Framework.Services.Framework.Contracts.IAppInfoService"
+         to="Services\FrameworkServices\OVIT.WebApp.Framework.Services.dll,OVIT.WebApp.Framework.Services.Framework.Services.AppInfoService"></ServiceHost>
+    <ServiceHost name="JurisdictionService"
+             map="Services\FrameworkServices\OVIT.WebApp.Framework.Services.dll,OVIT.WebApp.Framework.Services.Framework.Contracts.IJurisdictionService"
+             to="Services\FrameworkServices\OVIT.WebApp.Framework.Services.dll,OVIT.WebApp.Framework.Services.Framework.Services.JurisdictionService"></ServiceHost>
+    <ServiceHost name="SystemDicService"
+            map="Services\FrameworkServices\OVIT.WebApp.Framework.Services.dll,OVIT.WebApp.Framework.Services.Framework.Contracts.ISystemDicService"
+            to="Services\FrameworkServices\OVIT.WebApp.Framework.Services.dll,OVIT.WebApp.Framework.Services.Framework.Services.SystemDicService"></ServiceHost>
+    <ServiceHost name="SystemUserService"
+            map="Services\FrameworkServices\OVIT.WebApp.Framework.Services.dll,OVIT.WebApp.Framework.Services.Framework.Contracts.ISystemUserService"
+            to="Services\FrameworkServices\OVIT.WebApp.Framework.Services.dll,OVIT.WebApp.Framework.Services.Framework.Services.SystemUserService"></ServiceHost>
+    <ServiceHost name="SystemRoleService"
+        map="Services\FrameworkServices\OVIT.WebApp.Framework.Services.dll,OVIT.WebApp.Framework.Services.Framework.Contracts.ISystemRoleService"
+        to="Services\FrameworkServices\OVIT.WebApp.Framework.Services.dll,OVIT.WebApp.Framework.Services.Framework.Services.SystemRoleService"></ServiceHost>
+    <ServiceHost name="WFDesignService"
+             map="Services\WorkflowServices\OVIT.WorkFlow.Services.dll,OVIT.WorkFlow.Services.Design.Contracts.IWFDesignService"
+             to="Services\WorkflowServices\OVIT.WorkFlow.Services.dll,OVIT.WorkFlow.Services.Design.Services.WFDesignService"></ServiceHost>
+    <ServiceHost name="WorkflowService"
+             map="Services\WorkflowServices\OVIT.WorkFlow.Services.dll,OVIT.WorkFlow.Services.WFDetails.Contracts.IWorkflowService"
+             to="Services\WorkflowServices\OVIT.WorkFlow.Services.dll,OVIT.WorkFlow.Services.WFDetails.Services.WorkflowService"></ServiceHost>
+    <ServiceHost name="CaseInstanceService"
+             map="Services\WorkflowServices\OVIT.WorkFlow.Services.dll,OVIT.WorkFlow.Services.CaseInstances.Contracts.ICaseInstanceService"
+             to="Services\WorkflowServices\OVIT.WorkFlow.Services.dll,OVIT.WorkFlow.Services.CaseInstances.Services.CaseInstanceService"></ServiceHost>
+  <ServiceHost name="FileUploadService"
+                 map="Services\FileSystemServices\OVIT.WebApp.FileSystem.Services.dll,OVIT.WebApp.FileSystem.Services.Contracts.IFileUploadService"
+                 to="Services\FileSystemServices\OVIT.WebApp.FileSystem.Services.dll,OVIT.WebApp.FileSystem.Services.Services.FileUploadService"></ServiceHost>
+<ServiceHost name="FileSystemManagerService"
+             map="Services\FileSystemServices\OVIT.WebApp.FileSystem.Services.dll,OVIT.WebApp.FileSystem.Services.Contracts.IFileSystemManagerService"
+             to="Services\FileSystemServices\OVIT.WebApp.FileSystem.Services.dll,OVIT.WebApp.FileSystem.Services.Services.FileSystemManagerService"></ServiceHost>
+    <ServiceHost name="FileManagerService"
+             map="Services\FileSystemServices\OVIT.WebApp.FileSystem.Services.dll,OVIT.WebApp.FileSystem.Services.Contracts.IFileManagerService"
+             to="Services\FileSystemServices\OVIT.WebApp.FileSystem.Services.dll,OVIT.WebApp.FileSystem.Services.Services.FileManagerService"></ServiceHost>
+</ServiceHosts>
+  
+</WCFServiceHost>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DatabaseConnections>
+  <DatabaseConnection>
+    <Name>WORKFLOWDB</Name>
+    <Type>Oracle10g</Type>
+    <UseCache>true</UseCache>
+    <ConnectString>Data Source={datasource};User ID={user_workflow};Password={password_workflow};Persist Security Info=True</ConnectString>
+  </DatabaseConnection>
+<DatabaseConnection>
+    <Name>BDCDJSPDB</Name>
+    <Type>Oracle10g</Type>
+    <UseCache>true</UseCache>
+    <ConnectString>Data Source={datasource};User ID={user_bdc};Password={password_bdc};Persist Security Info=True</ConnectString>
+  </DatabaseConnection>
+</DatabaseConnections>

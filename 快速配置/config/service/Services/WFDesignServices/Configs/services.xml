@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Services>
+  <add key="LoginServiceUrl" value="http://{wcf_ip}:{wcf_port}/LoginService"></add>
+  <add key="JurisdictionServiceUrl" value="http://{wcf_ip}:{wcf_port}/JurisdictionService"></add>
+  <add key="WorkflowServiceUrl" value="http://{wcf_ip}:{wcf_port}/WorkflowService"></add>
+  <add key="CaseInstanceServiceUrl" value="http://{wcf_ip}:{wcf_port}/CaseInstanceService"></add>
+  <add key="MessageServiceUrl" value="http://{wcf_ip}:8088/IMHttpService"></add>
+</Services>

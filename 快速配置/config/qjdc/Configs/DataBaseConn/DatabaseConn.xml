@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DbConns>
+  <DbConn name="BDCDJ"
+          aliname="不动产基础信息现势库"
+          type="Oracle数据库"
+          server="172.18.10.13"
+          instance="sde:oracle10g:{datasource}"
+          database="jsbdcdj"
+          authtype="数据库用户认证"
+          userid="sde"
+          password="sa">
+  </DbConn>
+  <DbConn name="BDCDJ_PRE"
+          aliname="不动产基础信息临时库"
+          type="Oracle数据库"
+          server="172.18.10.13"
+          instance="sde:oracle10g:{datasource}"
+          database="jsbdcdj"
+          authtype="数据库用户认证"
+          userid="sde_pre"
+          password="sa">
+  </DbConn>
+  <DbConn name="BDCDJ_HIS"
+          aliname="不动产基础信息历史库"
+          type="Oracle数据库"
+          server="172.18.10.13"
+          instance="sde:oracle10g:{datasource}"
+          database="jsbdcdj"
+          authtype="数据库用户认证"
+          userid="sde_his"
+          password="sa">
+  </DbConn>
+</DbConns>

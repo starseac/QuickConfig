@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WCFServiceHost ip="{wcf_ip}">
+  <ServiceHosts name="功能服务" portnum="8097" bindingtype="BasicHttpBinding">
+    <ServiceHost name="DesignService"
+             map="Services\DesignServices\OVIT.WorkFlow.Services.dll,OVIT.WorkFlow.Services.Design.Contracts.IWFDesignService"
+             to="Services\DesignServices\OVIT.WorkFlow.Services.dll,OVIT.WorkFlow.Services.Design.Services.WFDesignService"></ServiceHost>
+  </ServiceHosts>
+</WCFServiceHost>

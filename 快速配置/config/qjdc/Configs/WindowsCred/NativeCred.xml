@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--<NativeCred>
+  <TargetName>172.20.128.245</TargetName>
+  <UserName>administrator</UserName>
+  <PassWord>Xhx123</PassWord>
+  <Path>\\172.20.128.245\d$\MDBFiles</Path>
+</NativeCred>-->
+<NativeCred>
+  <TargetName>{gxml_ip}</TargetName>
+  <UserName>{gxml_user}</UserName>
+  <PassWord>{gxml_password}</PassWord>
+  <Path>\\{gxml_ip}\成果目录</Path>
+</NativeCred>

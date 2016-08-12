@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parset>
+  <par name="path_main" value="C:\不动产登记" />
+  <par name="path_service" value="C:\不动产登记\service\WebAppServiceHost" />
+  <par name="path_framework" value="C:\不动产登记\web\BaseFramework" />
+  <par name="path_workflow" value="C:\不动产登记\web\Workflow" />
+  <par name="path_hr" value="C:\不动产登记\web\HRWebApp" />
+  <par name="path_bdc" value="C:\不动产登记\web\RealEstateRegister" />
+  <par name="path_qjdc" value="C:\不动产登记\QJDC" />
+  <par name="path_ftp" value="C:\不动产登记\BDCFTP" />
+  <par name="path_gxml" value="C:\不动产登记\共享目录" />
+  
+  <par name="path_datafolder_type" value="true" />
+  <par name="path_datafolder" value="C:\APP\ADMINISTRATOR\ORADATA\BDCDJ" />
+
+  <par name="path_data_main" value="C:\不动产登记\data" />
+  <par name="path_data_framework" value="C:\不动产登记\data\framework.dmp" />
+  <par name="path_data_workflow" value="C:\不动产登记\data\workflow.dmp" />
+  <par name="path_data_hr" value="C:\不动产登记\data\ovithr.dmp" />
+  <par name="path_data_bdc" value="C:\不动产登记\data\bdcdjsp.dmp" />
+  <par name="path_data_qjdc" value="C:\不动产登记\data\qjdc.dmp" />
+  <par name="path_data_bdcdj" value="C:\不动产登记\data\BDCDJ.gdb" />
+  <par name="path_data_bdcdj_his" value="C:\不动产登记\data\BDCDJ_HIS.gdb" />
+  <par name="path_data_bdcdj_pre" value="C:\不动产登记\data\BDCDJ_PRE.gdb" />
+
+  <par name="par_gcs" value="2360" />
+  
+  <par name="user_framework" value="framework" />
+  <par name="password_framework" value="sa" />
+  <par name="user_workflow" value="workflow" />
+  <par name="password_workflow" value="sa" />
+  <par name="user_hr" value="ovithr" />
+  <par name="password_hr" value="sa" />
+  <par name="user_bdc" value="bdcdjsp" />
+  <par name="password_bdc" value="sa" />
+  <par name="user_qjdc" value="qjdc" />
+  <par name="password_qjdc" value="sa" />
+  <par name="user_sde" value="sde" />
+  <par name="password_sde" value="sa" />
+  <par name="user_sde_his" value="sde_his" />
+  <par name="password_sde_his" value="sa" />
+  <par name="user_sde_pre" value="sde_pre" />
+  <par name="password_sde_pre" value="sa" />
+  <par name="user_system" value="system" />
+  <par name="password_system" value="SA" />
+  <par name="datasource" value="ORCL" />
+  
+  <par name="wcf_ip" value="127.0.0.1" />
+  <par name="wcf_port" value="8098" />
+  <par name="web_ip" value="127.0.0.1" />
+  <par name="ftp_ip" value="127.0.0.1" />
+  <par name="ftp_user" value="bdc" />
+  <par name="ftp_password" value="bdc" />
+  <par name="gxml_ip" value="127.0.0.1" />
+  <par name="gxml_user" value="administrator" />
+  <par name="gxml_password" value="123" />
+  <par name="par_sjc" value="鄂" />
+  <par name="par_szdxzbm" value="420000" />
+  <par name="par_szdmc" value="武汉市" />
+  <par name="par_szdjc" value="武汉" />
+</parset>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<copyset>
+  <copy appname="bdc" filepath="\bin\Configs\DatabaseConnection.xml" />
+  <copy appname="bdc" filepath="\bin\Configs\services.xml" />
+  <copy appname="bdc" filepath="\Web.config" />
+  <copy appname="framework" filepath="\bin\Configs\DatabaseConnection.xml" />
+  <copy appname="framework" filepath="\bin\Configs\services.xml" />
+  <copy appname="framework" filepath="\Web.config" />
+  <copy appname="hr" filepath="\bin\Configs\DatabaseConnection.xml" />
+  <copy appname="hr" filepath="\bin\Configs\services.xml" />
+  <copy appname="hr" filepath="\Web.config" />
+  <copy appname="qjdc" filepath="\Configs\DataBaseConn\DatabaseConn.xml" />
+  <copy appname="qjdc" filepath="\Configs\WindowsCred\NativeCred.xml" />
+  <copy appname="qjdc" filepath="\OVIT.FRAMEWORK.DBENGINEBASE.dll.Config" />
+  <copy appname="qjdc" filepath="\OVIT.RightInvestigation.Desktop.exe.config" />
+  <copy appname="service" filepath="\Configs\DatabaseConnection.xml" />
+  <copy appname="service" filepath="\Configs\WCFServiceHost.xml" />
+  <copy appname="service" filepath="\Services\WFDesignServices\Configs\DatabaseConnection.xml" />
+  <copy appname="service" filepath="\Services\WFDesignServices\Configs\services.xml" />
+  <copy appname="service" filepath="\Services\WFDesignServices\Configs\WCFServiceHost.xml" />
+  <copy appname="service" filepath="\Services\WorkflowServices\Configs\DatabaseConnection.xml" />
+  <copy appname="service" filepath="\Services\WorkflowServices\Configs\services.xml" />
+  <copy appname="service" filepath="\Services\WorkflowServices\Configs\WCFServiceHost.xml" />
+  <copy appname="service" filepath="\OVIT.WebApp.ServiceHost.exe.config" />
+  <copy appname="service" filepath="\Service_InstallUtil.bat" />
+  <copy appname="service" filepath="\Service_UnInstallUtil.bat" />
+  <copy appname="workflow" filepath="\bin\Configs\DatabaseConnection.xml" />
+  <copy appname="workflow" filepath="\bin\Configs\services.xml" />
+  <copy appname="workflow" filepath="\Configs\WFDesignServices.xml" />
+  <copy appname="workflow" filepath="\Web.config" />
+</copyset>

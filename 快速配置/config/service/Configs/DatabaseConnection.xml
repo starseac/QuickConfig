@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DatabaseConnections>
+  <DatabaseConnection>
+    <Name>WEBAPPDB</Name>
+    <Type>Oracle10g</Type>
+    <UseCache>true</UseCache>
+    <ConnectString>Data Source={datasource};User ID={user_framework};Password={password_framework};Persist Security Info=True</ConnectString>
+  </DatabaseConnection>
+<DatabaseConnection>
+    <Name>HRDB</Name>
+    <Type>Oracle10g</Type>
+    <UseCache>false</UseCache>
+    <ConnectString>Data Source={datasource};User ID={user_hr};Password={password_hr};Persist Security Info=True</ConnectString>
+  </DatabaseConnection>
+  <DatabaseConnection>
+    <Name>WORKFLOWDB</Name>
+    <Type>Oracle10g</Type>
+    <UseCache>true</UseCache>
+    <ConnectString>Data Source={datasource};User ID={user_workflow};Password={password_workflow};Persist Security Info=True</ConnectString>
+  </DatabaseConnection>
+  <DatabaseConnection>
+    <Name>FileSystemDB</Name>
+    <Type>Oracle10g</Type>
+    <UseCache>true</UseCache>
+    <ConnectString>Data Source={datasource};User ID=filesystem;Password=sa;Persist Security Info=True</ConnectString>
+  </DatabaseConnection>
+  <DatabaseConnection>
+    <Name>BDCDJSPDB</Name>
+    <Type>Oracle10g</Type>
+    <UseCache>true</UseCache>
+    <ConnectString>Data Source={datasource};User ID={user_bdc};Password={password_bdc};Persist Security Info=True</ConnectString>
+  </DatabaseConnection>
+ <DatabaseConnection>
+    <Name>BDCDJSP_XS</Name>
+    <Type>Oracle10g</Type>
+    <UseCache>true</UseCache>
+    <ConnectString>Data Source={datasource};User ID={user_sde};Password={password_sde};Persist Security Info=True</ConnectString>
+  </DatabaseConnection>
+  <DatabaseConnection>
+    <Name>BDCDJSP_HIS</Name>
+    <Type>Oracle10g</Type>
+    <UseCache>true</UseCache>
+    <ConnectString>Data Source={datasource};User ID={user_sde_his};Password={password_sde_his};Persist Security Info=True</ConnectString>
+  </DatabaseConnection>
+</DatabaseConnections>
