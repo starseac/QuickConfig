@@ -201,7 +201,10 @@ namespace QuickConfig
                 if (datasetName.Name == dsName)
                 {
                     isExist = true;
-                    MessageBox.Show("要素集已存在!");
+                   // MessageBox.Show("要素集已存在!");
+                    Form form = new Form();
+                    form.SetBounds(300, 300, 300, 300);
+                    setMessage.MessageShow("", "要素集已存在!", form);
                     return;
                 }
                 datasetName = enumDatasetName.Next();
@@ -211,7 +214,11 @@ namespace QuickConfig
             if (isExist == false)
             {
                 featuredataset = featureworkspace.CreateFeatureDataset(featureDatasetName, spatialReference);
-                MessageBox.Show("要素集创建成功!");
+                //MessageBox.Show("要素集创建成功!");
+                Form form = new Form();
+                form.SetBounds(300, 300, 300, 300);
+                setMessage.MessageShow("", "要素集创建成功!", form);
+               
             }
 
         }

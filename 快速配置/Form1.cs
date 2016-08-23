@@ -11,6 +11,7 @@ using System.IO;
 using ESRI.ArcGIS.Geodatabase;
 using ESRI.ArcGIS.esriSystem;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace QuickConfig
 {
@@ -74,7 +75,7 @@ namespace QuickConfig
 
             this.check_default.Checked = parTable.Select("name='path_datafolder_type'")[0][1].ToString() == "true" ? true : false;
             this.path_datafolder.Text = parTable.Select("name='path_datafolder'")[0][1].ToString();
-            
+
 
             this.wcf_ip.Text = parTable.Select("name='wcf_ip'")[0][1].ToString();
             this.wcf_port.Text = parTable.Select("name='wcf_port'")[0][1].ToString();
@@ -168,7 +169,8 @@ namespace QuickConfig
             xml.editxml("par_szdmc", this.par_szdmc.Text);
             xml.editxml("par_szdjc", this.par_szdjc.Text);
 
-            MessageBox.Show("保存成功!");
+            // MessageBox.Show("保存成功!");
+            setMessage.MessageShow("", "保存成功!", this);
 
         }
 
@@ -291,7 +293,7 @@ namespace QuickConfig
 
             if (errStr != "")
             {
-                MessageBox.Show(errStr,"",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show(errStr, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;
@@ -338,7 +340,8 @@ namespace QuickConfig
 
             config.config(checkApp);
 
-            MessageBox.Show("设置完成!");
+            // MessageBox.Show("设置完成!");
+            setMessage.MessageShow("", "设置完成!", this);
         }
 
         private string folderPath()
@@ -548,7 +551,9 @@ namespace QuickConfig
             iis.CreateNewWebSite(info_workflow, "Workflow");
             iis.CreateNewWebSite(info_hr, "HRWebApp");
             iis.CreateNewWebSite(info_bdc, "RealEstateRegister");
-            MessageBox.Show("网站创建成功");
+            // MessageBox.Show("网站创建成功");
+            setMessage.MessageShow("", "网站创建成功!", this);
+
         }
 
         private void btn_updateappurl_Click(object sender, EventArgs e)
@@ -558,7 +563,8 @@ namespace QuickConfig
             {
                 setDB db = new setDB(xml.getSetXmlValue("user_framework"), xml.getSetXmlValue("password_framework"), this.datasource.Text);
                 db.setAppInfo(xml.getSetXmlValue("par_szdmc"), xml.getSetXmlValue("web_ip"));
-                MessageBox.Show("appinfo设置完成。");
+                // MessageBox.Show("appinfo设置完成。");
+                setMessage.MessageShow("", "appinfo设置完成!", this);
             }
             catch (Exception eg)
             {
@@ -582,11 +588,12 @@ namespace QuickConfig
             {
                 setOSUser.addUser(xml.getSetXmlValue("ftp_user"), xml.getSetXmlValue("ftp_password"));
             }
-            
+
             setFTP ftp = new setFTP();
             ftp.delFtpSite("BDCFTP");
             ftp.createFTP("BDCFTP", xml.getSetXmlValue("path_ftp"), xml.getSetXmlValue("ftp_user"), xml.getSetXmlValue("ftp_ip"));
-            MessageBox.Show("ftp创建成功");
+            //MessageBox.Show("ftp创建成功");
+            setMessage.MessageShow("", "ftp创建成功!", this);
         }
 
         private void btn_creategxml_Click(object sender, EventArgs e)
@@ -595,14 +602,16 @@ namespace QuickConfig
             setGXML gxml = new setGXML();
             gxml.SetFileRole(xml.getSetXmlValue("path_gxml"), xml.getSetXmlValue("gxml_user"));
             gxml.shareFolder(xml.getSetXmlValue("path_gxml"), "共享目录", "");
-            MessageBox.Show("共享目录创建成功");
+            //MessageBox.Show("共享目录创建成功");
+            setMessage.MessageShow("", "共享目录创建成功!", this);
         }
 
         #endregion
 
         #region 数据库初始化
 
-        private void setGCS() {
+        private void setGCS()
+        {
             Dictionary<string, string> dic = new Dictionary<string, string>();
             dic.Add("西安1980 3度分带 25度带", "2349");
             dic.Add("西安1980 3度分带 26度带", "2350");
@@ -634,14 +643,14 @@ namespace QuickConfig
             foreach (var item in dic)
             {
                 dt.Rows.Add(new object[] { item.Key, item.Value });
-            }            
+            }
 
             this.txt_GCS.Items.Clear();
             this.txt_GCS.DataSource = dt;
             this.txt_GCS.DisplayMember = "Name";
             this.txt_GCS.ValueMember = "Id";
-        
-        
+
+
         }
 
         private void btn_data_main_Click(object sender, EventArgs e)
@@ -951,12 +960,12 @@ namespace QuickConfig
             if (!checkAppFolder())
             {
                 return;
-            }            
-            
+            }
+
             string imp_tem_path = AppDomain.CurrentDomain.BaseDirectory + @"data";
             string imp_path = AppDomain.CurrentDomain.BaseDirectory + @"dataTemp";
             setConfig config = new setConfig();
-            
+
 
             string ansStr = "开始数据\r\n";
             if (check_data_framework.Checked == true)
@@ -1038,7 +1047,7 @@ namespace QuickConfig
 
                 if (db.isUserExist(xml.getSetXmlValue("user_sde_his")))
                 {
-                   // MessageBox.Show("历史库已存在");
+                    // MessageBox.Show("历史库已存在");
 
                     if (MessageBox.Show("历史库已存在,是否删除已有的历史库", "确认", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                     {
@@ -1057,7 +1066,7 @@ namespace QuickConfig
                 else
                 {
                     string ans1 = engine.createSDE("Oracle", xml.getSetXmlValue("datasource"), xml.getSetXmlValue("user_system"), xml.getSetXmlValue("password_system"), xml.getSetXmlValue("user_sde_his"), xml.getSetXmlValue("password_sde_his"), "GEO_BDCDJ_HIS", AppDomain.CurrentDomain.BaseDirectory + @"\tool\Server101.ecp");
-                   
+
                     MessageBox.Show("历史库创建结果如下:\r\n" + ans1);
                 }
             }
@@ -1067,7 +1076,7 @@ namespace QuickConfig
 
                 if (db.isUserExist(xml.getSetXmlValue("user_sde_pre")))
                 {
-                  //  MessageBox.Show("临时库已存在");
+                    //  MessageBox.Show("临时库已存在");
 
                     if (MessageBox.Show("临时库已存在,是否删除已有的临时库", "确认", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                     {
@@ -1086,7 +1095,7 @@ namespace QuickConfig
                 else
                 {
                     string ans1 = engine.createSDE("Oracle", xml.getSetXmlValue("datasource"), xml.getSetXmlValue("user_system"), xml.getSetXmlValue("password_system"), xml.getSetXmlValue("user_sde_pre"), xml.getSetXmlValue("password_sde_pre"), "GEO_BDCDJ_PRE", AppDomain.CurrentDomain.BaseDirectory + @"\tool\Server101.ecp");
-                   
+
                     MessageBox.Show("临时库创建结果如下:\r\n" + ans1);
                 }
             }
@@ -1103,26 +1112,27 @@ namespace QuickConfig
                 return;
             }
 
-            if(!checkAppFolder()){
+            if (!checkAppFolder())
+            {
                 return;
             }
-            
+
             //初始化 esri授权
             IAoInitialize pao = new AoInitializeClass();
             pao.Initialize(esriLicenseProductCode.esriLicenseProductCodeStandard);
 
-            EngineDatabase engine = new EngineDatabase();           
+            EngineDatabase engine = new EngineDatabase();
             setXml xml = new setXml();
             setDB db = new setDB(xml.getSetXmlValue("user_system"), xml.getSetXmlValue("password_system"), this.datasource.Text);
 
             if (this.check_data_bdcdj.Checked == true)
             {
-               
+
                 IWorkspace workspace = null;
                 IFeatureWorkspace featureworkspace = null;
                 IFeatureDataset featuredataset = null;
                 workspace = engine.getSDEWorkspace(xml.getSetXmlValue("wcf_ip"), "sde:oracle10g:" + xml.getSetXmlValue("datasource"), xml.getSetXmlValue("user_sde"), xml.getSetXmlValue("password_sde"));
-                string ans1 = engine.importGDB2SDE(workspace, featureworkspace, featuredataset, xml.getSetXmlValue("path_data_bdcdj"),Convert.ToInt32( xml.getSetXmlValue("par_gcs")), xml.getSetXmlValue("user_sde"));
+                string ans1 = engine.importGDB2SDE(workspace, featureworkspace, featuredataset, xml.getSetXmlValue("path_data_bdcdj"), Convert.ToInt32(xml.getSetXmlValue("par_gcs")), xml.getSetXmlValue("user_sde"));
                 MessageBox.Show("现势库创建结果如下:\r\n" + ans1);
                 Marshal.ReleaseComObject(workspace);
             }
@@ -1177,12 +1187,14 @@ namespace QuickConfig
             string backup_path = xml.getSetXmlValue("path_data_main") + "\\backup-" + dayString;
             if (!System.IO.Directory.Exists(backup_path))
             {
-                 System.IO.Directory.CreateDirectory(backup_path);
+                System.IO.Directory.CreateDirectory(backup_path);
             }
 
             setConfig config = new setConfig();
 
             string ansStr = "开始备份数据\r\n";
+            //  string ansStr = "";
+            // setMessage.MessageShow("", "开始备份数据!", this);
             if (this.check_backup_db_framework.Checked == true)
             {
                 //设置空表导出参数
@@ -1237,14 +1249,14 @@ namespace QuickConfig
                 setBAT.RunBat(exp_path + @"\exp_qjdc.bat");
                 ansStr += "权籍调查数据导出完成\r\n";
             }
-            
+
 
             //备份 sde库
             //初始化 esri授权
             IAoInitialize pao = new AoInitializeClass();
             pao.Initialize(esriLicenseProductCode.esriLicenseProductCodeStandard);
-            EngineDatabase engine = new EngineDatabase(); 
-            
+            EngineDatabase engine = new EngineDatabase();
+
             if (check_backup_sde_sde.Checked == true)
             {
                 IWorkspace workspace = null;
@@ -1252,8 +1264,12 @@ namespace QuickConfig
                 IFeatureDataset featuredataset = null;
                 workspace = engine.getSDEWorkspace(xml.getSetXmlValue("wcf_ip"), "sde:oracle10g:" + xml.getSetXmlValue("datasource"), xml.getSetXmlValue("user_sde"), xml.getSetXmlValue("password_sde"));
                 engine.createGDBFile(backup_path, "BDCDJ.gdb");
-                string ans1 = engine.exportSDE2GDB(workspace, featureworkspace, featuredataset, backup_path+"\\BDCDJ.gdb", Convert.ToInt32(xml.getSetXmlValue("par_gcs")), xml.getSetXmlValue("user_sde"));
-                MessageBox.Show("现势库导出结果如下:\r\n" + ans1);
+                frmLoading.ShowLoading();
+                string ans1 = engine.exportSDE2GDB(workspace, featureworkspace, featuredataset, backup_path + "\\BDCDJ.gdb", Convert.ToInt32(xml.getSetXmlValue("par_gcs")), xml.getSetXmlValue("user_sde"));
+                frmLoading.HideLoading();
+                //MessageBox.Show("现势库导出结果如下:\r\n" + ans1);
+                ansStr += "现势库导出结果如下:\r\n" + ans1 + "\r\n";
+                //setMessage.MessageShow("", "现势库导出结果如下:\r\n" + ans1, this);
                 Marshal.ReleaseComObject(workspace);
                 ansStr += "现势库导出导出完成\r\n";
             }
@@ -1265,8 +1281,12 @@ namespace QuickConfig
                 IFeatureDataset featuredataset = null;
                 workspace = engine.getSDEWorkspace(xml.getSetXmlValue("wcf_ip"), "sde:oracle10g:" + xml.getSetXmlValue("datasource"), xml.getSetXmlValue("user_sde_his"), xml.getSetXmlValue("password_sde_his"));
                 engine.createGDBFile(backup_path, "BDCDJ_HIS.gdb");
+                frmLoading.ShowLoading();
                 string ans1 = engine.exportSDE2GDB(workspace, featureworkspace, featuredataset, backup_path + "\\BDCDJ_HIS.gdb", Convert.ToInt32(xml.getSetXmlValue("par_gcs")), xml.getSetXmlValue("user_sde_his"));
-                MessageBox.Show("历史库导出结果如下:\r\n" + ans1);
+                //MessageBox.Show("历史库导出结果如下:\r\n" + ans1);
+                frmLoading.HideLoading();
+                // setMessage.MessageShow("", "历史库导出结果如下:\r\n" + ans1, this);
+                ansStr += "历史库导出结果如下:\r\n" + ans1;
                 Marshal.ReleaseComObject(workspace);
                 ansStr += "历史库导出完成\r\n";
             }
@@ -1277,14 +1297,19 @@ namespace QuickConfig
                 IFeatureDataset featuredataset = null;
                 workspace = engine.getSDEWorkspace(xml.getSetXmlValue("wcf_ip"), "sde:oracle10g:" + xml.getSetXmlValue("datasource"), xml.getSetXmlValue("user_sde_pre"), xml.getSetXmlValue("password_sde_pre"));
                 engine.createGDBFile(backup_path, "BDCDJ_PRE.gdb");
+                frmLoading.ShowLoading();
                 string ans1 = engine.exportSDE2GDB(workspace, featureworkspace, featuredataset, backup_path + "\\BDCDJ_PRE.gdb", Convert.ToInt32(xml.getSetXmlValue("par_gcs")), xml.getSetXmlValue("user_sde_pre"));
-                MessageBox.Show("临时库导出结果如下:\r\n" + ans1);
+                //MessageBox.Show("临时库导出结果如下:\r\n" + ans1);
+                frmLoading.HideLoading();
+                //setMessage.MessageShow("", "临时库导出结果如下:\r\n" + ans1, this);
+                ansStr += "临时库导出结果如下:\r\n" + ans1;
                 Marshal.ReleaseComObject(workspace);
                 ansStr += "临时库数据导出完成\r\n";
             }
             //备份 程序
 
-            if(check_backup_app_wcf.Checked==true){
+            if (check_backup_app_wcf.Checked == true)
+            {
                 DataTable dtPar = new DataTable();
                 dtPar.Columns.Add("name", typeof(string));
                 dtPar.Columns.Add("value", typeof(string));
@@ -1292,11 +1317,11 @@ namespace QuickConfig
                 dtPar.Rows.Add(new object[] { "appfolder", AppDomain.CurrentDomain.BaseDirectory });
                 dtPar.Rows.Add(new object[] { "filename", "wcf服务程序" });
                 dtPar.Rows.Add(new object[] { "target", backup_path + "\\WebAppServiceHost.7z" });
-                dtPar.Rows.Add(new object[] { "orifolder", xml.getSetXmlValue("path_service") });              
+                dtPar.Rows.Add(new object[] { "orifolder", xml.getSetXmlValue("path_service") });
 
-                config.repalcePar(exp_tem_path, "7z.bat", exp_path,dtPar);
+                config.repalcePar(exp_tem_path, "7z.bat", exp_path, dtPar);
                 setBAT.RunBat(exp_path + @"\7z.bat");
-                ansStr += "wcf服务程序备份完成\r\n";            
+                ansStr += "wcf服务程序备份完成\r\n";
             }
 
             if (check_backup_app_framework.Checked == true)
@@ -1408,20 +1433,37 @@ namespace QuickConfig
                 ansStr += "权籍调查共享目录文件备份完成\r\n";
             }
 
+            ansStr += "导出结束\r\n";
+           // MessageBox.Show(ansStr);
+            //Thread.Sleep(3000);
+            // setMessage.MessageShow("", ansStr, this);
+            StreamWriter sw = null;
+            if (!File.Exists(backup_path + "\\" + dayString + ".log"))
+            {
+                //不存在就新建一个文本文件,并写入一些内容 
+                sw = File.CreateText(backup_path + "\\" + dayString + ".log");
+            }
+            else {
+                sw = new StreamWriter(backup_path + "\\" + dayString + ".log");
+            }
+            
+            sw.Write(ansStr);
+            sw.Close();
+
             //打开备份目录
             DataTable folderPar = new DataTable();
             folderPar.Columns.Add("name", typeof(string));
             folderPar.Columns.Add("value", typeof(string));
             //然后把你想要加的数据加进DataTable 里
-            folderPar.Rows.Add(new object[] { "targetfolder", backup_path+"\\" });
-            config.repalcePar(AppDomain.CurrentDomain.BaseDirectory + "tool\\", "explorer.bat", exp_path,folderPar);
+            folderPar.Rows.Add(new object[] { "targetfolder", backup_path + "\\" });
+            folderPar.Rows.Add(new object[] { "dayString", dayString });
+            config.repalcePar(AppDomain.CurrentDomain.BaseDirectory + "tool\\", "explorer.bat", exp_path, folderPar);
             setBAT.RunBat(exp_path + @"\explorer.bat");
 
-            ansStr += "导出结束\r\n";
-            MessageBox.Show(ansStr);
+
         }
 
-        
+
 
     }
 }

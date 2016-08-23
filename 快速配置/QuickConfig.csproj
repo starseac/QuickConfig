@@ -100,6 +100,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoading.designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewWebSiteInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,10 +115,14 @@
     <Compile Include="setFTP.cs" />
     <Compile Include="setGXML.cs" />
     <Compile Include="setIIS.cs" />
+    <Compile Include="setMessage.cs" />
     <Compile Include="setOSUser.cs" />
     <Compile Include="setXml.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -125,7 +135,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
-    <None Include="config\bdc\Web.config" />
+    <None Include="config\bdc\Web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="config\framework\Web.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -220,6 +232,7 @@
     <Content Include="config\workflow\bin\Configs\DatabaseConnection.xml" />
     <Content Include="config\workflow\bin\Configs\services.xml" />
     <Content Include="config\workflow\Configs\WFDesignServices.xml" />
+    <None Include="Resources\pictureBox1.Image.gif" />
     <Content Include="tt.ico" />
   </ItemGroup>
   <ItemGroup>

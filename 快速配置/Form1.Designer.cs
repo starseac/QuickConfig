@@ -551,7 +551,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 289F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 290F));
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label12, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 1);
@@ -717,7 +717,7 @@
             this.password_workflow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_workflow.Location = new System.Drawing.Point(346, 66);
             this.password_workflow.Name = "password_workflow";
-            this.password_workflow.Size = new System.Drawing.Size(283, 25);
+            this.password_workflow.Size = new System.Drawing.Size(284, 25);
             this.password_workflow.TabIndex = 13;
             // 
             // password_framework
@@ -725,7 +725,7 @@
             this.password_framework.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_framework.Location = new System.Drawing.Point(346, 35);
             this.password_framework.Name = "password_framework";
-            this.password_framework.Size = new System.Drawing.Size(283, 25);
+            this.password_framework.Size = new System.Drawing.Size(284, 25);
             this.password_framework.TabIndex = 12;
             // 
             // password_hr
@@ -733,7 +733,7 @@
             this.password_hr.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_hr.Location = new System.Drawing.Point(346, 97);
             this.password_hr.Name = "password_hr";
-            this.password_hr.Size = new System.Drawing.Size(283, 25);
+            this.password_hr.Size = new System.Drawing.Size(284, 25);
             this.password_hr.TabIndex = 6;
             // 
             // password_bdc
@@ -741,7 +741,7 @@
             this.password_bdc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_bdc.Location = new System.Drawing.Point(346, 128);
             this.password_bdc.Name = "password_bdc";
-            this.password_bdc.Size = new System.Drawing.Size(283, 25);
+            this.password_bdc.Size = new System.Drawing.Size(284, 25);
             this.password_bdc.TabIndex = 14;
             // 
             // password_qjdc
@@ -749,7 +749,7 @@
             this.password_qjdc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_qjdc.Location = new System.Drawing.Point(346, 159);
             this.password_qjdc.Name = "password_qjdc";
-            this.password_qjdc.Size = new System.Drawing.Size(283, 25);
+            this.password_qjdc.Size = new System.Drawing.Size(284, 25);
             this.password_qjdc.TabIndex = 15;
             // 
             // label13
@@ -769,7 +769,7 @@
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Location = new System.Drawing.Point(346, 1);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(283, 30);
+            this.label14.Size = new System.Drawing.Size(284, 30);
             this.label14.TabIndex = 17;
             this.label14.Text = "密码";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -787,7 +787,7 @@
             this.password_sde.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_sde.Location = new System.Drawing.Point(346, 190);
             this.password_sde.Name = "password_sde";
-            this.password_sde.Size = new System.Drawing.Size(283, 25);
+            this.password_sde.Size = new System.Drawing.Size(284, 25);
             this.password_sde.TabIndex = 19;
             // 
             // user_sde_his
@@ -811,7 +811,7 @@
             this.password_sde_pre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_sde_pre.Location = new System.Drawing.Point(346, 252);
             this.password_sde_pre.Name = "password_sde_pre";
-            this.password_sde_pre.Size = new System.Drawing.Size(283, 25);
+            this.password_sde_pre.Size = new System.Drawing.Size(284, 25);
             this.password_sde_pre.TabIndex = 22;
             // 
             // password_sde_his
@@ -819,7 +819,7 @@
             this.password_sde_his.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_sde_his.Location = new System.Drawing.Point(346, 221);
             this.password_sde_his.Name = "password_sde_his";
-            this.password_sde_his.Size = new System.Drawing.Size(283, 25);
+            this.password_sde_his.Size = new System.Drawing.Size(284, 25);
             this.password_sde_his.TabIndex = 23;
             // 
             // label15
@@ -898,7 +898,7 @@
             this.password_system.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_system.Location = new System.Drawing.Point(346, 283);
             this.password_system.Name = "password_system";
-            this.password_system.Size = new System.Drawing.Size(283, 25);
+            this.password_system.Size = new System.Drawing.Size(284, 25);
             this.password_system.TabIndex = 31;
             // 
             // path_datafolder
@@ -908,7 +908,7 @@
             this.path_datafolder.Location = new System.Drawing.Point(125, 376);
             this.path_datafolder.Multiline = true;
             this.path_datafolder.Name = "path_datafolder";
-            this.path_datafolder.Size = new System.Drawing.Size(504, 58);
+            this.path_datafolder.Size = new System.Drawing.Size(505, 58);
             this.path_datafolder.TabIndex = 33;
             // 
             // label35
