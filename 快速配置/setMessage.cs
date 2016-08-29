@@ -14,7 +14,7 @@ namespace QuickConfig
             tooltip.ShowAlways = true;
             //tooltip.IsBalloon = true;
             tooltip.ToolTipTitle = title;
-            tooltip.Show(message, control, control.Bounds.X, control.Bounds.Y, 5000);
+            tooltip.Show(message, control, control.Bounds.X, control.Bounds.Y, 4000);
            // tooltip.Dispose();
         }
     }

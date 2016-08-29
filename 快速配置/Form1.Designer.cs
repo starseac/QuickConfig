@@ -221,6 +221,14 @@
             this.check_backup_db_qjdc = new System.Windows.Forms.CheckBox();
             this.btn_backup = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
+            this.check_backup_db_allnotchoose = new System.Windows.Forms.RadioButton();
+            this.check_backup_sde_allnotchoose = new System.Windows.Forms.RadioButton();
+            this.check_backup_app_allnotchoose = new System.Windows.Forms.RadioButton();
+            this.check_backup_file_allnotchoose = new System.Windows.Forms.RadioButton();
+            this.check_backup_db_allchoose = new System.Windows.Forms.RadioButton();
+            this.check_backup_sde_allchoose = new System.Windows.Forms.RadioButton();
+            this.check_backup_app_allchoose = new System.Windows.Forms.RadioButton();
+            this.check_backup_file_allchoose = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -551,7 +559,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 290F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 291F));
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label12, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 1);
@@ -603,7 +611,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(623, 438);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(645, 438);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // label7
@@ -717,7 +725,7 @@
             this.password_workflow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_workflow.Location = new System.Drawing.Point(346, 66);
             this.password_workflow.Name = "password_workflow";
-            this.password_workflow.Size = new System.Drawing.Size(284, 25);
+            this.password_workflow.Size = new System.Drawing.Size(295, 25);
             this.password_workflow.TabIndex = 13;
             // 
             // password_framework
@@ -725,7 +733,7 @@
             this.password_framework.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_framework.Location = new System.Drawing.Point(346, 35);
             this.password_framework.Name = "password_framework";
-            this.password_framework.Size = new System.Drawing.Size(284, 25);
+            this.password_framework.Size = new System.Drawing.Size(295, 25);
             this.password_framework.TabIndex = 12;
             // 
             // password_hr
@@ -733,7 +741,7 @@
             this.password_hr.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_hr.Location = new System.Drawing.Point(346, 97);
             this.password_hr.Name = "password_hr";
-            this.password_hr.Size = new System.Drawing.Size(284, 25);
+            this.password_hr.Size = new System.Drawing.Size(295, 25);
             this.password_hr.TabIndex = 6;
             // 
             // password_bdc
@@ -741,7 +749,7 @@
             this.password_bdc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_bdc.Location = new System.Drawing.Point(346, 128);
             this.password_bdc.Name = "password_bdc";
-            this.password_bdc.Size = new System.Drawing.Size(284, 25);
+            this.password_bdc.Size = new System.Drawing.Size(295, 25);
             this.password_bdc.TabIndex = 14;
             // 
             // password_qjdc
@@ -749,7 +757,7 @@
             this.password_qjdc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_qjdc.Location = new System.Drawing.Point(346, 159);
             this.password_qjdc.Name = "password_qjdc";
-            this.password_qjdc.Size = new System.Drawing.Size(284, 25);
+            this.password_qjdc.Size = new System.Drawing.Size(295, 25);
             this.password_qjdc.TabIndex = 15;
             // 
             // label13
@@ -769,7 +777,7 @@
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Location = new System.Drawing.Point(346, 1);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(284, 30);
+            this.label14.Size = new System.Drawing.Size(295, 30);
             this.label14.TabIndex = 17;
             this.label14.Text = "密码";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -787,7 +795,7 @@
             this.password_sde.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_sde.Location = new System.Drawing.Point(346, 190);
             this.password_sde.Name = "password_sde";
-            this.password_sde.Size = new System.Drawing.Size(284, 25);
+            this.password_sde.Size = new System.Drawing.Size(295, 25);
             this.password_sde.TabIndex = 19;
             // 
             // user_sde_his
@@ -811,7 +819,7 @@
             this.password_sde_pre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_sde_pre.Location = new System.Drawing.Point(346, 252);
             this.password_sde_pre.Name = "password_sde_pre";
-            this.password_sde_pre.Size = new System.Drawing.Size(284, 25);
+            this.password_sde_pre.Size = new System.Drawing.Size(295, 25);
             this.password_sde_pre.TabIndex = 22;
             // 
             // password_sde_his
@@ -819,7 +827,7 @@
             this.password_sde_his.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_sde_his.Location = new System.Drawing.Point(346, 221);
             this.password_sde_his.Name = "password_sde_his";
-            this.password_sde_his.Size = new System.Drawing.Size(284, 25);
+            this.password_sde_his.Size = new System.Drawing.Size(295, 25);
             this.password_sde_his.TabIndex = 23;
             // 
             // label15
@@ -898,7 +906,7 @@
             this.password_system.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_system.Location = new System.Drawing.Point(346, 283);
             this.password_system.Name = "password_system";
-            this.password_system.Size = new System.Drawing.Size(284, 25);
+            this.password_system.Size = new System.Drawing.Size(295, 25);
             this.password_system.TabIndex = 31;
             // 
             // path_datafolder
@@ -908,7 +916,7 @@
             this.path_datafolder.Location = new System.Drawing.Point(125, 376);
             this.path_datafolder.Multiline = true;
             this.path_datafolder.Name = "path_datafolder";
-            this.path_datafolder.Size = new System.Drawing.Size(505, 58);
+            this.path_datafolder.Size = new System.Drawing.Size(516, 58);
             this.path_datafolder.TabIndex = 33;
             // 
             // label35
@@ -1391,7 +1399,7 @@
             // 
             this.btn_initializtionSDE.Location = new System.Drawing.Point(429, 391);
             this.btn_initializtionSDE.Name = "btn_initializtionSDE";
-            this.btn_initializtionSDE.Size = new System.Drawing.Size(115, 27);
+            this.btn_initializtionSDE.Size = new System.Drawing.Size(115, 43);
             this.btn_initializtionSDE.TabIndex = 95;
             this.btn_initializtionSDE.Text = "初始化空间库";
             this.btn_initializtionSDE.UseVisualStyleBackColor = true;
@@ -1401,7 +1409,7 @@
             // 
             this.btn_createsde.Location = new System.Drawing.Point(285, 393);
             this.btn_createsde.Name = "btn_createsde";
-            this.btn_createsde.Size = new System.Drawing.Size(128, 23);
+            this.btn_createsde.Size = new System.Drawing.Size(128, 41);
             this.btn_createsde.TabIndex = 92;
             this.btn_createsde.Text = "创建企业空间库";
             this.btn_createsde.UseVisualStyleBackColor = true;
@@ -1502,7 +1510,7 @@
             // 
             this.btn_createuser.Location = new System.Drawing.Point(171, 390);
             this.btn_createuser.Name = "btn_createuser";
-            this.btn_createuser.Size = new System.Drawing.Size(96, 27);
+            this.btn_createuser.Size = new System.Drawing.Size(96, 44);
             this.btn_createuser.TabIndex = 75;
             this.btn_createuser.Text = "创建用户";
             this.btn_createuser.UseVisualStyleBackColor = true;
@@ -1510,9 +1518,9 @@
             // 
             // btn_createts
             // 
-            this.btn_createts.Location = new System.Drawing.Point(41, 389);
+            this.btn_createts.Location = new System.Drawing.Point(41, 390);
             this.btn_createts.Name = "btn_createts";
-            this.btn_createts.Size = new System.Drawing.Size(110, 27);
+            this.btn_createts.Size = new System.Drawing.Size(110, 44);
             this.btn_createts.TabIndex = 74;
             this.btn_createts.Text = "创建表空间";
             this.btn_createts.UseVisualStyleBackColor = true;
@@ -1558,7 +1566,7 @@
             // 
             this.btn_imp.Location = new System.Drawing.Point(558, 391);
             this.btn_imp.Name = "btn_imp";
-            this.btn_imp.Size = new System.Drawing.Size(95, 27);
+            this.btn_imp.Size = new System.Drawing.Size(95, 43);
             this.btn_imp.TabIndex = 47;
             this.btn_imp.Text = "导入数据";
             this.btn_imp.UseVisualStyleBackColor = true;
@@ -2027,11 +2035,13 @@
             // 
             // groupBox12
             // 
+            this.groupBox12.Controls.Add(this.check_backup_file_allchoose);
+            this.groupBox12.Controls.Add(this.check_backup_file_allnotchoose);
             this.groupBox12.Controls.Add(this.check_backup_files_gxml);
             this.groupBox12.Controls.Add(this.check_backup_files_ftp);
             this.groupBox12.Location = new System.Drawing.Point(590, 47);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(162, 319);
+            this.groupBox12.Size = new System.Drawing.Size(162, 368);
             this.groupBox12.TabIndex = 18;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "文件";
@@ -2041,7 +2051,7 @@
             this.check_backup_files_gxml.AutoSize = true;
             this.check_backup_files_gxml.Checked = true;
             this.check_backup_files_gxml.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_files_gxml.Location = new System.Drawing.Point(22, 71);
+            this.check_backup_files_gxml.Location = new System.Drawing.Point(22, 105);
             this.check_backup_files_gxml.Name = "check_backup_files_gxml";
             this.check_backup_files_gxml.Size = new System.Drawing.Size(89, 19);
             this.check_backup_files_gxml.TabIndex = 1;
@@ -2053,7 +2063,7 @@
             this.check_backup_files_ftp.AutoSize = true;
             this.check_backup_files_ftp.Checked = true;
             this.check_backup_files_ftp.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_files_ftp.Location = new System.Drawing.Point(22, 29);
+            this.check_backup_files_ftp.Location = new System.Drawing.Point(22, 63);
             this.check_backup_files_ftp.Name = "check_backup_files_ftp";
             this.check_backup_files_ftp.Size = new System.Drawing.Size(83, 19);
             this.check_backup_files_ftp.TabIndex = 0;
@@ -2062,6 +2072,8 @@
             // 
             // groupBox11
             // 
+            this.groupBox11.Controls.Add(this.check_backup_app_allchoose);
+            this.groupBox11.Controls.Add(this.check_backup_app_allnotchoose);
             this.groupBox11.Controls.Add(this.check_backup_app_wcf);
             this.groupBox11.Controls.Add(this.check_backup_app_framework);
             this.groupBox11.Controls.Add(this.check_backup_app_workflow);
@@ -2070,7 +2082,7 @@
             this.groupBox11.Controls.Add(this.check_backup_app_bdc);
             this.groupBox11.Location = new System.Drawing.Point(395, 48);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(166, 317);
+            this.groupBox11.Size = new System.Drawing.Size(166, 367);
             this.groupBox11.TabIndex = 17;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "程序";
@@ -2080,7 +2092,7 @@
             this.check_backup_app_wcf.AutoSize = true;
             this.check_backup_app_wcf.Checked = true;
             this.check_backup_app_wcf.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_app_wcf.Location = new System.Drawing.Point(18, 28);
+            this.check_backup_app_wcf.Location = new System.Drawing.Point(18, 60);
             this.check_backup_app_wcf.Name = "check_backup_app_wcf";
             this.check_backup_app_wcf.Size = new System.Drawing.Size(113, 19);
             this.check_backup_app_wcf.TabIndex = 6;
@@ -2092,7 +2104,7 @@
             this.check_backup_app_framework.AutoSize = true;
             this.check_backup_app_framework.Checked = true;
             this.check_backup_app_framework.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_app_framework.Location = new System.Drawing.Point(18, 75);
+            this.check_backup_app_framework.Location = new System.Drawing.Point(18, 107);
             this.check_backup_app_framework.Name = "check_backup_app_framework";
             this.check_backup_app_framework.Size = new System.Drawing.Size(89, 19);
             this.check_backup_app_framework.TabIndex = 7;
@@ -2104,7 +2116,7 @@
             this.check_backup_app_workflow.AutoSize = true;
             this.check_backup_app_workflow.Checked = true;
             this.check_backup_app_workflow.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_app_workflow.Location = new System.Drawing.Point(18, 130);
+            this.check_backup_app_workflow.Location = new System.Drawing.Point(18, 162);
             this.check_backup_app_workflow.Name = "check_backup_app_workflow";
             this.check_backup_app_workflow.Size = new System.Drawing.Size(74, 19);
             this.check_backup_app_workflow.TabIndex = 8;
@@ -2116,7 +2128,7 @@
             this.check_backup_app_qjdc.AutoSize = true;
             this.check_backup_app_qjdc.Checked = true;
             this.check_backup_app_qjdc.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_app_qjdc.Location = new System.Drawing.Point(18, 273);
+            this.check_backup_app_qjdc.Location = new System.Drawing.Point(18, 305);
             this.check_backup_app_qjdc.Name = "check_backup_app_qjdc";
             this.check_backup_app_qjdc.Size = new System.Drawing.Size(89, 19);
             this.check_backup_app_qjdc.TabIndex = 14;
@@ -2128,7 +2140,7 @@
             this.check_backup_app_hr.AutoSize = true;
             this.check_backup_app_hr.Checked = true;
             this.check_backup_app_hr.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_app_hr.Location = new System.Drawing.Point(18, 179);
+            this.check_backup_app_hr.Location = new System.Drawing.Point(18, 211);
             this.check_backup_app_hr.Name = "check_backup_app_hr";
             this.check_backup_app_hr.Size = new System.Drawing.Size(59, 19);
             this.check_backup_app_hr.TabIndex = 9;
@@ -2140,7 +2152,7 @@
             this.check_backup_app_bdc.AutoSize = true;
             this.check_backup_app_bdc.Checked = true;
             this.check_backup_app_bdc.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_app_bdc.Location = new System.Drawing.Point(18, 220);
+            this.check_backup_app_bdc.Location = new System.Drawing.Point(18, 252);
             this.check_backup_app_bdc.Name = "check_backup_app_bdc";
             this.check_backup_app_bdc.Size = new System.Drawing.Size(74, 19);
             this.check_backup_app_bdc.TabIndex = 10;
@@ -2149,12 +2161,14 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.check_backup_sde_allchoose);
+            this.groupBox10.Controls.Add(this.check_backup_sde_allnotchoose);
             this.groupBox10.Controls.Add(this.check_backup_sde_sde);
             this.groupBox10.Controls.Add(this.check_backup_sde_sde_his);
             this.groupBox10.Controls.Add(this.check_backup_sde_sde_pre);
             this.groupBox10.Location = new System.Drawing.Point(208, 48);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(160, 318);
+            this.groupBox10.Size = new System.Drawing.Size(160, 367);
             this.groupBox10.TabIndex = 16;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "SDE空间库";
@@ -2164,7 +2178,7 @@
             this.check_backup_sde_sde.AutoSize = true;
             this.check_backup_sde_sde.Checked = true;
             this.check_backup_sde_sde.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_sde_sde.Location = new System.Drawing.Point(22, 24);
+            this.check_backup_sde_sde.Location = new System.Drawing.Point(22, 60);
             this.check_backup_sde_sde.Name = "check_backup_sde_sde";
             this.check_backup_sde_sde.Size = new System.Drawing.Size(74, 19);
             this.check_backup_sde_sde.TabIndex = 11;
@@ -2176,7 +2190,7 @@
             this.check_backup_sde_sde_his.AutoSize = true;
             this.check_backup_sde_sde_his.Checked = true;
             this.check_backup_sde_sde_his.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_sde_sde_his.Location = new System.Drawing.Point(22, 70);
+            this.check_backup_sde_sde_his.Location = new System.Drawing.Point(22, 106);
             this.check_backup_sde_sde_his.Name = "check_backup_sde_sde_his";
             this.check_backup_sde_sde_his.Size = new System.Drawing.Size(74, 19);
             this.check_backup_sde_sde_his.TabIndex = 12;
@@ -2188,7 +2202,7 @@
             this.check_backup_sde_sde_pre.AutoSize = true;
             this.check_backup_sde_sde_pre.Checked = true;
             this.check_backup_sde_sde_pre.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_sde_sde_pre.Location = new System.Drawing.Point(22, 121);
+            this.check_backup_sde_sde_pre.Location = new System.Drawing.Point(22, 157);
             this.check_backup_sde_sde_pre.Name = "check_backup_sde_sde_pre";
             this.check_backup_sde_sde_pre.Size = new System.Drawing.Size(74, 19);
             this.check_backup_sde_sde_pre.TabIndex = 13;
@@ -2197,6 +2211,8 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.check_backup_db_allchoose);
+            this.groupBox9.Controls.Add(this.check_backup_db_allnotchoose);
             this.groupBox9.Controls.Add(this.check_backup_db_framework);
             this.groupBox9.Controls.Add(this.check_backup_db_hr);
             this.groupBox9.Controls.Add(this.check_backup_db_bdc);
@@ -2204,7 +2220,7 @@
             this.groupBox9.Controls.Add(this.check_backup_db_qjdc);
             this.groupBox9.Location = new System.Drawing.Point(29, 47);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(156, 318);
+            this.groupBox9.Size = new System.Drawing.Size(156, 368);
             this.groupBox9.TabIndex = 15;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "数据库";
@@ -2214,7 +2230,7 @@
             this.check_backup_db_framework.AutoSize = true;
             this.check_backup_db_framework.Checked = true;
             this.check_backup_db_framework.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_db_framework.Location = new System.Drawing.Point(15, 24);
+            this.check_backup_db_framework.Location = new System.Drawing.Point(15, 60);
             this.check_backup_db_framework.Name = "check_backup_db_framework";
             this.check_backup_db_framework.Size = new System.Drawing.Size(89, 19);
             this.check_backup_db_framework.TabIndex = 1;
@@ -2226,7 +2242,7 @@
             this.check_backup_db_hr.AutoSize = true;
             this.check_backup_db_hr.Checked = true;
             this.check_backup_db_hr.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_db_hr.Location = new System.Drawing.Point(15, 120);
+            this.check_backup_db_hr.Location = new System.Drawing.Point(15, 156);
             this.check_backup_db_hr.Name = "check_backup_db_hr";
             this.check_backup_db_hr.Size = new System.Drawing.Size(59, 19);
             this.check_backup_db_hr.TabIndex = 2;
@@ -2238,7 +2254,7 @@
             this.check_backup_db_bdc.AutoSize = true;
             this.check_backup_db_bdc.Checked = true;
             this.check_backup_db_bdc.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_db_bdc.Location = new System.Drawing.Point(15, 174);
+            this.check_backup_db_bdc.Location = new System.Drawing.Point(15, 203);
             this.check_backup_db_bdc.Name = "check_backup_db_bdc";
             this.check_backup_db_bdc.Size = new System.Drawing.Size(74, 19);
             this.check_backup_db_bdc.TabIndex = 3;
@@ -2250,7 +2266,7 @@
             this.check_backup_db_workflow.AutoSize = true;
             this.check_backup_db_workflow.Checked = true;
             this.check_backup_db_workflow.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_db_workflow.Location = new System.Drawing.Point(15, 71);
+            this.check_backup_db_workflow.Location = new System.Drawing.Point(15, 107);
             this.check_backup_db_workflow.Name = "check_backup_db_workflow";
             this.check_backup_db_workflow.Size = new System.Drawing.Size(74, 19);
             this.check_backup_db_workflow.TabIndex = 4;
@@ -2262,7 +2278,7 @@
             this.check_backup_db_qjdc.AutoSize = true;
             this.check_backup_db_qjdc.Checked = true;
             this.check_backup_db_qjdc.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_db_qjdc.Location = new System.Drawing.Point(15, 218);
+            this.check_backup_db_qjdc.Location = new System.Drawing.Point(15, 247);
             this.check_backup_db_qjdc.Name = "check_backup_db_qjdc";
             this.check_backup_db_qjdc.Size = new System.Drawing.Size(89, 19);
             this.check_backup_db_qjdc.TabIndex = 5;
@@ -2288,6 +2304,102 @@
             this.btn_save.Text = "保存设置";
             this.btn_save.UseVisualStyleBackColor = true;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // check_backup_db_allnotchoose
+            // 
+            this.check_backup_db_allnotchoose.AutoSize = true;
+            this.check_backup_db_allnotchoose.Location = new System.Drawing.Point(15, 25);
+            this.check_backup_db_allnotchoose.Name = "check_backup_db_allnotchoose";
+            this.check_backup_db_allnotchoose.Size = new System.Drawing.Size(58, 19);
+            this.check_backup_db_allnotchoose.TabIndex = 6;
+            this.check_backup_db_allnotchoose.TabStop = true;
+            this.check_backup_db_allnotchoose.Text = "反选";
+            this.check_backup_db_allnotchoose.UseVisualStyleBackColor = true;
+            this.check_backup_db_allnotchoose.CheckedChanged += new System.EventHandler(this.check_backup_db_allnotchoose_CheckedChanged);
+            // 
+            // check_backup_sde_allnotchoose
+            // 
+            this.check_backup_sde_allnotchoose.AutoSize = true;
+            this.check_backup_sde_allnotchoose.Location = new System.Drawing.Point(22, 23);
+            this.check_backup_sde_allnotchoose.Name = "check_backup_sde_allnotchoose";
+            this.check_backup_sde_allnotchoose.Size = new System.Drawing.Size(58, 19);
+            this.check_backup_sde_allnotchoose.TabIndex = 14;
+            this.check_backup_sde_allnotchoose.TabStop = true;
+            this.check_backup_sde_allnotchoose.Text = "反选";
+            this.check_backup_sde_allnotchoose.UseVisualStyleBackColor = true;
+            this.check_backup_sde_allnotchoose.CheckedChanged += new System.EventHandler(this.check_backup_sde_allnotchoose_CheckedChanged);
+            // 
+            // check_backup_app_allnotchoose
+            // 
+            this.check_backup_app_allnotchoose.AutoSize = true;
+            this.check_backup_app_allnotchoose.Location = new System.Drawing.Point(18, 23);
+            this.check_backup_app_allnotchoose.Name = "check_backup_app_allnotchoose";
+            this.check_backup_app_allnotchoose.Size = new System.Drawing.Size(58, 19);
+            this.check_backup_app_allnotchoose.TabIndex = 15;
+            this.check_backup_app_allnotchoose.TabStop = true;
+            this.check_backup_app_allnotchoose.Text = "反选";
+            this.check_backup_app_allnotchoose.UseVisualStyleBackColor = true;
+            this.check_backup_app_allnotchoose.CheckedChanged += new System.EventHandler(this.check_backup_app_allnotchoose_CheckedChanged);
+            // 
+            // check_backup_file_allnotchoose
+            // 
+            this.check_backup_file_allnotchoose.AutoSize = true;
+            this.check_backup_file_allnotchoose.Location = new System.Drawing.Point(22, 24);
+            this.check_backup_file_allnotchoose.Name = "check_backup_file_allnotchoose";
+            this.check_backup_file_allnotchoose.Size = new System.Drawing.Size(58, 19);
+            this.check_backup_file_allnotchoose.TabIndex = 2;
+            this.check_backup_file_allnotchoose.TabStop = true;
+            this.check_backup_file_allnotchoose.Text = "反选";
+            this.check_backup_file_allnotchoose.UseVisualStyleBackColor = true;
+            this.check_backup_file_allnotchoose.CheckedChanged += new System.EventHandler(this.check_backup_file_allnotchoose_CheckedChanged);
+            // 
+            // check_backup_db_allchoose
+            // 
+            this.check_backup_db_allchoose.AutoSize = true;
+            this.check_backup_db_allchoose.Location = new System.Drawing.Point(79, 25);
+            this.check_backup_db_allchoose.Name = "check_backup_db_allchoose";
+            this.check_backup_db_allchoose.Size = new System.Drawing.Size(58, 19);
+            this.check_backup_db_allchoose.TabIndex = 7;
+            this.check_backup_db_allchoose.TabStop = true;
+            this.check_backup_db_allchoose.Text = "全选";
+            this.check_backup_db_allchoose.UseVisualStyleBackColor = true;
+            this.check_backup_db_allchoose.CheckedChanged += new System.EventHandler(this.check_backup_db_allchoose_CheckedChanged);
+            // 
+            // check_backup_sde_allchoose
+            // 
+            this.check_backup_sde_allchoose.AutoSize = true;
+            this.check_backup_sde_allchoose.Location = new System.Drawing.Point(86, 23);
+            this.check_backup_sde_allchoose.Name = "check_backup_sde_allchoose";
+            this.check_backup_sde_allchoose.Size = new System.Drawing.Size(58, 19);
+            this.check_backup_sde_allchoose.TabIndex = 15;
+            this.check_backup_sde_allchoose.TabStop = true;
+            this.check_backup_sde_allchoose.Text = "全选";
+            this.check_backup_sde_allchoose.UseVisualStyleBackColor = true;
+            this.check_backup_sde_allchoose.CheckedChanged += new System.EventHandler(this.check_backup_sde_allchoose_CheckedChanged);
+            // 
+            // check_backup_app_allchoose
+            // 
+            this.check_backup_app_allchoose.AutoSize = true;
+            this.check_backup_app_allchoose.Location = new System.Drawing.Point(82, 23);
+            this.check_backup_app_allchoose.Name = "check_backup_app_allchoose";
+            this.check_backup_app_allchoose.Size = new System.Drawing.Size(58, 19);
+            this.check_backup_app_allchoose.TabIndex = 16;
+            this.check_backup_app_allchoose.TabStop = true;
+            this.check_backup_app_allchoose.Text = "全选";
+            this.check_backup_app_allchoose.UseVisualStyleBackColor = true;
+            this.check_backup_app_allchoose.CheckedChanged += new System.EventHandler(this.check_backup_app_allchoose_CheckedChanged);
+            // 
+            // check_backup_file_allchoose
+            // 
+            this.check_backup_file_allchoose.AutoSize = true;
+            this.check_backup_file_allchoose.Location = new System.Drawing.Point(86, 24);
+            this.check_backup_file_allchoose.Name = "check_backup_file_allchoose";
+            this.check_backup_file_allchoose.Size = new System.Drawing.Size(58, 19);
+            this.check_backup_file_allchoose.TabIndex = 3;
+            this.check_backup_file_allchoose.TabStop = true;
+            this.check_backup_file_allchoose.Text = "全选";
+            this.check_backup_file_allchoose.UseVisualStyleBackColor = true;
+            this.check_backup_file_allchoose.CheckedChanged += new System.EventHandler(this.check_backup_file_allchoose_CheckedChanged);
             // 
             // Form1
             // 
@@ -2536,6 +2648,14 @@
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.CheckBox check_backup_files_gxml;
         private System.Windows.Forms.CheckBox check_backup_files_ftp;
+        private System.Windows.Forms.RadioButton check_backup_file_allnotchoose;
+        private System.Windows.Forms.RadioButton check_backup_app_allnotchoose;
+        private System.Windows.Forms.RadioButton check_backup_sde_allnotchoose;
+        private System.Windows.Forms.RadioButton check_backup_db_allnotchoose;
+        private System.Windows.Forms.RadioButton check_backup_file_allchoose;
+        private System.Windows.Forms.RadioButton check_backup_app_allchoose;
+        private System.Windows.Forms.RadioButton check_backup_sde_allchoose;
+        private System.Windows.Forms.RadioButton check_backup_db_allchoose;
     }
 }
 

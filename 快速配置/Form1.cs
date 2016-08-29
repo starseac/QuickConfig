@@ -170,7 +170,7 @@ namespace QuickConfig
             xml.editxml("par_szdjc", this.par_szdjc.Text);
 
             // MessageBox.Show("保存成功!");
-            setMessage.MessageShow("", "保存成功!", this);
+            setMessage.MessageShow("", "保存成功!", this.btn_save);
 
         }
 
@@ -187,7 +187,8 @@ namespace QuickConfig
                 }
                 catch (Exception eg)
                 {
-                    MessageBox.Show("链接不上数据库，请检查参数和配置");
+                   // MessageBox.Show("链接不上数据库，请检查参数和配置");
+                    setMessage.MessageShow("", "链接不上数据库，请检查参数和配置!", this.check_default);
                     this.check_default.Checked = false;
                     return;
                 }
@@ -341,7 +342,7 @@ namespace QuickConfig
             config.config(checkApp);
 
             // MessageBox.Show("设置完成!");
-            setMessage.MessageShow("", "设置完成!", this);
+            setMessage.MessageShow("", "设置完成!", this.btn_beset);
         }
 
         private string folderPath()
@@ -468,11 +469,13 @@ namespace QuickConfig
             if (Directory.Exists(this.path_ftp.Text) == false)
             {
                 Directory.CreateDirectory(this.path_ftp.Text);
-                MessageBox.Show("ftp文件夹创建成功！");
+               // MessageBox.Show("ftp文件夹创建成功！");
+                setMessage.MessageShow("", "ftp文件夹创建成功！", this.btn_folder_ftp);
                 if (Directory.Exists(this.path_ftp.Text + @"\SJCL") == false)
                 {
                     Directory.CreateDirectory(this.path_ftp.Text + @"\SJCL");
-                    MessageBox.Show("ftp中SJCL文件夹创建成功！");
+                   // MessageBox.Show("ftp中SJCL文件夹创建成功！");
+                    setMessage.MessageShow("", "ftp中SJCL文件夹创建成功！", this.btn_folder_ftp);
                 }
                 else
                 {
@@ -493,7 +496,8 @@ namespace QuickConfig
             if (Directory.Exists(this.path_gxml.Text) == false)
             {
                 Directory.CreateDirectory(this.path_gxml.Text);
-                MessageBox.Show("共享目录文件夹创建成功！");
+               // MessageBox.Show("共享目录文件夹创建成功！");
+                setMessage.MessageShow("", "共享目录文件夹创建成功！", this.btn_folder_gxml);
             }
             else
             {
@@ -552,7 +556,7 @@ namespace QuickConfig
             iis.CreateNewWebSite(info_hr, "HRWebApp");
             iis.CreateNewWebSite(info_bdc, "RealEstateRegister");
             // MessageBox.Show("网站创建成功");
-            setMessage.MessageShow("", "网站创建成功!", this);
+            setMessage.MessageShow("", "网站创建成功!", this.btn_createweb);
 
         }
 
@@ -564,7 +568,7 @@ namespace QuickConfig
                 setDB db = new setDB(xml.getSetXmlValue("user_framework"), xml.getSetXmlValue("password_framework"), this.datasource.Text);
                 db.setAppInfo(xml.getSetXmlValue("par_szdmc"), xml.getSetXmlValue("web_ip"));
                 // MessageBox.Show("appinfo设置完成。");
-                setMessage.MessageShow("", "appinfo设置完成!", this);
+                setMessage.MessageShow("", "appinfo设置完成!", this.btn_updateappurl);
             }
             catch (Exception eg)
             {
@@ -593,7 +597,7 @@ namespace QuickConfig
             ftp.delFtpSite("BDCFTP");
             ftp.createFTP("BDCFTP", xml.getSetXmlValue("path_ftp"), xml.getSetXmlValue("ftp_user"), xml.getSetXmlValue("ftp_ip"));
             //MessageBox.Show("ftp创建成功");
-            setMessage.MessageShow("", "ftp创建成功!", this);
+            setMessage.MessageShow("", "ftp创建成功!", this.btn_createftp);
         }
 
         private void btn_creategxml_Click(object sender, EventArgs e)
@@ -603,7 +607,7 @@ namespace QuickConfig
             gxml.SetFileRole(xml.getSetXmlValue("path_gxml"), xml.getSetXmlValue("gxml_user"));
             gxml.shareFolder(xml.getSetXmlValue("path_gxml"), "共享目录", "");
             //MessageBox.Show("共享目录创建成功");
-            setMessage.MessageShow("", "共享目录创建成功!", this);
+            setMessage.MessageShow("", "共享目录创建成功!", this.btn_creategxml);
         }
 
         #endregion
@@ -1461,6 +1465,72 @@ namespace QuickConfig
             setBAT.RunBat(exp_path + @"\explorer.bat");
 
 
+        }
+
+        private void check_backup_db_allnotchoose_CheckedChanged(object sender, EventArgs e)
+        {
+            this.check_backup_db_framework.Checked = false;
+            this.check_backup_db_workflow.Checked = false;
+            this.check_backup_db_hr.Checked = false;
+            this.check_backup_db_bdc.Checked = false;
+            this.check_backup_db_qjdc.Checked = false;
+        }
+
+        private void check_backup_db_allchoose_CheckedChanged(object sender, EventArgs e)
+        {
+            this.check_backup_db_framework.Checked = true;
+            this.check_backup_db_workflow.Checked = true;
+            this.check_backup_db_hr.Checked = true;
+            this.check_backup_db_bdc.Checked = true;
+            this.check_backup_db_qjdc.Checked = true;
+        }
+
+        private void check_backup_sde_allnotchoose_CheckedChanged(object sender, EventArgs e)
+        {
+            this.check_backup_sde_sde.Checked = false;
+            this.check_backup_sde_sde_his.Checked = false;
+            this.check_backup_sde_sde_pre.Checked = false;
+        }
+
+        private void check_backup_sde_allchoose_CheckedChanged(object sender, EventArgs e)
+        {
+            this.check_backup_sde_sde.Checked = true;
+            this.check_backup_sde_sde_his.Checked = true;
+            this.check_backup_sde_sde_pre.Checked = true;
+        }
+
+        private void check_backup_app_allnotchoose_CheckedChanged(object sender, EventArgs e)
+        {
+            this.check_backup_app_wcf.Checked = false;
+            this.check_backup_app_framework.Checked = false;
+            this.check_backup_app_workflow.Checked = false;
+            this.check_backup_app_hr.Checked = false;
+            this.check_backup_app_bdc.Checked = false;
+            this.check_backup_app_qjdc.Checked = false;
+
+        }
+
+        private void check_backup_app_allchoose_CheckedChanged(object sender, EventArgs e)
+        {
+            this.check_backup_app_wcf.Checked = true;
+            this.check_backup_app_framework.Checked = true;
+            this.check_backup_app_workflow.Checked = true;
+            this.check_backup_app_hr.Checked = true;
+            this.check_backup_app_bdc.Checked = true;
+            this.check_backup_app_qjdc.Checked = true;
+        }
+
+        private void check_backup_file_allnotchoose_CheckedChanged(object sender, EventArgs e)
+        {
+            this.check_backup_files_ftp.Checked = false;
+            this.check_backup_files_gxml.Checked = false;
+
+        }
+
+        private void check_backup_file_allchoose_CheckedChanged(object sender, EventArgs e)
+        {
+            this.check_backup_files_ftp.Checked = true;
+            this.check_backup_files_gxml.Checked = true;
         }
 
 
