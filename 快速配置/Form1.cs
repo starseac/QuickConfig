@@ -572,7 +572,7 @@ namespace QuickConfig
             }
             catch (Exception eg)
             {
-                MessageBox.Show("请确保配置正确，并且framework用户能正常访问");
+                MessageBox.Show("请确保配置正确，并且framework用户能正常访问:\r\n"+eg.Message.ToString());
             }
         }
 
@@ -954,7 +954,7 @@ namespace QuickConfig
             }
             catch (Exception eg)
             {
-                MessageBox.Show("链接不上数据库，请检查参数和配置");
+                MessageBox.Show(eg.Message.ToString());
             }
 
         }
