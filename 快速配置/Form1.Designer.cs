@@ -199,10 +199,69 @@
             this.btn_wcfremove = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.lab_backupServicesState = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.btn_backup_serviceUninstall = new System.Windows.Forms.Button();
+            this.btn_backup_serviceStop = new System.Windows.Forms.Button();
+            this.btn_backup_serviceStart = new System.Windows.Forms.Button();
+            this.btn_backup_serviceInstall = new System.Windows.Forms.Button();
+            this.label47 = new System.Windows.Forms.Label();
+            this.tab_backup = new System.Windows.Forms.TabControl();
+            this.type_day = new System.Windows.Forms.TabPage();
+            this.backup_day_starttime = new System.Windows.Forms.DateTimePicker();
+            this.label50 = new System.Windows.Forms.Label();
+            this.type_week = new System.Windows.Forms.TabPage();
+            this.backup_week_starttime = new System.Windows.Forms.DateTimePicker();
+            this.label51 = new System.Windows.Forms.Label();
+            this.backup_week_check7 = new System.Windows.Forms.CheckBox();
+            this.backup_week_check6 = new System.Windows.Forms.CheckBox();
+            this.backup_week_check5 = new System.Windows.Forms.CheckBox();
+            this.backup_week_check4 = new System.Windows.Forms.CheckBox();
+            this.backup_week_check3 = new System.Windows.Forms.CheckBox();
+            this.backup_week_check2 = new System.Windows.Forms.CheckBox();
+            this.backup_week_check1 = new System.Windows.Forms.CheckBox();
+            this.type_month = new System.Windows.Forms.TabPage();
+            this.backup_month_starttime = new System.Windows.Forms.DateTimePicker();
+            this.label52 = new System.Windows.Forms.Label();
+            this.backup_month_check31 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check30 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check29 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check28 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check27 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check26 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check25 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check24 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check23 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check22 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check18 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check17 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check19 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check20 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check21 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check12 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check13 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check14 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check15 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check16 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check7 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check8 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check9 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check10 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check11 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check2 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check3 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check4 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check5 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check6 = new System.Windows.Forms.CheckBox();
+            this.backup_month_check1 = new System.Windows.Forms.CheckBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.check_backup_file_allchoose = new System.Windows.Forms.RadioButton();
+            this.check_backup_file_allnotchoose = new System.Windows.Forms.RadioButton();
             this.check_backup_files_gxml = new System.Windows.Forms.CheckBox();
             this.check_backup_files_ftp = new System.Windows.Forms.CheckBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.check_backup_app_allchoose = new System.Windows.Forms.RadioButton();
+            this.check_backup_app_allnotchoose = new System.Windows.Forms.RadioButton();
             this.check_backup_app_wcf = new System.Windows.Forms.CheckBox();
             this.check_backup_app_framework = new System.Windows.Forms.CheckBox();
             this.check_backup_app_workflow = new System.Windows.Forms.CheckBox();
@@ -210,10 +269,14 @@
             this.check_backup_app_hr = new System.Windows.Forms.CheckBox();
             this.check_backup_app_bdc = new System.Windows.Forms.CheckBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.check_backup_sde_allchoose = new System.Windows.Forms.RadioButton();
+            this.check_backup_sde_allnotchoose = new System.Windows.Forms.RadioButton();
             this.check_backup_sde_sde = new System.Windows.Forms.CheckBox();
             this.check_backup_sde_sde_his = new System.Windows.Forms.CheckBox();
             this.check_backup_sde_sde_pre = new System.Windows.Forms.CheckBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.check_backup_db_allchoose = new System.Windows.Forms.RadioButton();
+            this.check_backup_db_allnotchoose = new System.Windows.Forms.RadioButton();
             this.check_backup_db_framework = new System.Windows.Forms.CheckBox();
             this.check_backup_db_hr = new System.Windows.Forms.CheckBox();
             this.check_backup_db_bdc = new System.Windows.Forms.CheckBox();
@@ -221,14 +284,8 @@
             this.check_backup_db_qjdc = new System.Windows.Forms.CheckBox();
             this.btn_backup = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
-            this.check_backup_db_allnotchoose = new System.Windows.Forms.RadioButton();
-            this.check_backup_sde_allnotchoose = new System.Windows.Forms.RadioButton();
-            this.check_backup_app_allnotchoose = new System.Windows.Forms.RadioButton();
-            this.check_backup_file_allnotchoose = new System.Windows.Forms.RadioButton();
-            this.check_backup_db_allchoose = new System.Windows.Forms.RadioButton();
-            this.check_backup_sde_allchoose = new System.Windows.Forms.RadioButton();
-            this.check_backup_app_allchoose = new System.Windows.Forms.RadioButton();
-            this.check_backup_file_allchoose = new System.Windows.Forms.RadioButton();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -246,6 +303,10 @@
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.tab_backup.SuspendLayout();
+            this.type_day.SuspendLayout();
+            this.type_week.SuspendLayout();
+            this.type_month.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -396,7 +457,7 @@
             // 
             this.btn_service.Location = new System.Drawing.Point(656, 115);
             this.btn_service.Name = "btn_service";
-            this.btn_service.Size = new System.Drawing.Size(75, 25);
+            this.btn_service.Size = new System.Drawing.Size(75, 32);
             this.btn_service.TabIndex = 21;
             this.btn_service.Text = "选择";
             this.btn_service.UseVisualStyleBackColor = true;
@@ -464,7 +525,7 @@
             // 
             this.btn_main.Location = new System.Drawing.Point(656, 21);
             this.btn_main.Name = "btn_main";
-            this.btn_main.Size = new System.Drawing.Size(75, 26);
+            this.btn_main.Size = new System.Drawing.Size(75, 32);
             this.btn_main.TabIndex = 5;
             this.btn_main.Text = "选择";
             this.btn_main.UseVisualStyleBackColor = true;
@@ -474,7 +535,7 @@
             // 
             this.btn_qjdc.Location = new System.Drawing.Point(659, 388);
             this.btn_qjdc.Name = "btn_qjdc";
-            this.btn_qjdc.Size = new System.Drawing.Size(75, 29);
+            this.btn_qjdc.Size = new System.Drawing.Size(75, 32);
             this.btn_qjdc.TabIndex = 4;
             this.btn_qjdc.Text = "选择";
             this.btn_qjdc.UseVisualStyleBackColor = true;
@@ -484,7 +545,7 @@
             // 
             this.btn_bdc.Location = new System.Drawing.Point(659, 331);
             this.btn_bdc.Name = "btn_bdc";
-            this.btn_bdc.Size = new System.Drawing.Size(75, 26);
+            this.btn_bdc.Size = new System.Drawing.Size(75, 32);
             this.btn_bdc.TabIndex = 3;
             this.btn_bdc.Text = "选择";
             this.btn_bdc.UseVisualStyleBackColor = true;
@@ -494,7 +555,7 @@
             // 
             this.btn_hr.Location = new System.Drawing.Point(659, 270);
             this.btn_hr.Name = "btn_hr";
-            this.btn_hr.Size = new System.Drawing.Size(75, 25);
+            this.btn_hr.Size = new System.Drawing.Size(75, 32);
             this.btn_hr.TabIndex = 2;
             this.btn_hr.Text = "选择";
             this.btn_hr.UseVisualStyleBackColor = true;
@@ -504,7 +565,7 @@
             // 
             this.btn_workflow.Location = new System.Drawing.Point(656, 213);
             this.btn_workflow.Name = "btn_workflow";
-            this.btn_workflow.Size = new System.Drawing.Size(75, 25);
+            this.btn_workflow.Size = new System.Drawing.Size(75, 32);
             this.btn_workflow.TabIndex = 1;
             this.btn_workflow.Text = "选择";
             this.btn_workflow.UseVisualStyleBackColor = true;
@@ -514,7 +575,7 @@
             // 
             this.btn_framework.Location = new System.Drawing.Point(656, 159);
             this.btn_framework.Name = "btn_framework";
-            this.btn_framework.Size = new System.Drawing.Size(75, 31);
+            this.btn_framework.Size = new System.Drawing.Size(75, 32);
             this.btn_framework.TabIndex = 0;
             this.btn_framework.Text = "选择";
             this.btn_framework.UseVisualStyleBackColor = true;
@@ -522,6 +583,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label53);
             this.tabPage2.Controls.Add(this.label38);
             this.tabPage2.Controls.Add(this.label36);
             this.tabPage2.Controls.Add(this.tableLayoutPanel1);
@@ -537,17 +599,17 @@
             // 
             this.label38.AutoSize = true;
             this.label38.ForeColor = System.Drawing.Color.Red;
-            this.label38.Location = new System.Drawing.Point(37, 519);
+            this.label38.Location = new System.Drawing.Point(64, 519);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(723, 15);
+            this.label38.Size = new System.Drawing.Size(588, 15);
             this.label38.TabIndex = 8;
-            this.label38.Text = "系统默认 是创建oracle实例时设置路径，自定义就是自己设置的路径，但要保证文件夹在服务器上是存在的";
+            this.label38.Text = "系统默认 是创建oracle实例时设置路径，自定义就是自己设置的路径，但要保证文件夹";
             // 
             // label36
             // 
             this.label36.AutoSize = true;
             this.label36.ForeColor = System.Drawing.Color.Red;
-            this.label36.Location = new System.Drawing.Point(65, 491);
+            this.label36.Location = new System.Drawing.Point(65, 487);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(588, 15);
             this.label36.TabIndex = 7;
@@ -559,7 +621,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 291F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 307F));
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label12, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 1);
@@ -595,7 +657,7 @@
             this.tableLayoutPanel1.Controls.Add(this.path_datafolder, 1, 12);
             this.tableLayoutPanel1.Controls.Add(this.label35, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.check_default, 1, 11);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(68, 28);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(59, 28);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 13;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -611,7 +673,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(645, 438);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(654, 438);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // label7
@@ -725,7 +787,7 @@
             this.password_workflow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_workflow.Location = new System.Drawing.Point(346, 66);
             this.password_workflow.Name = "password_workflow";
-            this.password_workflow.Size = new System.Drawing.Size(295, 25);
+            this.password_workflow.Size = new System.Drawing.Size(304, 25);
             this.password_workflow.TabIndex = 13;
             // 
             // password_framework
@@ -733,7 +795,7 @@
             this.password_framework.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_framework.Location = new System.Drawing.Point(346, 35);
             this.password_framework.Name = "password_framework";
-            this.password_framework.Size = new System.Drawing.Size(295, 25);
+            this.password_framework.Size = new System.Drawing.Size(304, 25);
             this.password_framework.TabIndex = 12;
             // 
             // password_hr
@@ -741,7 +803,7 @@
             this.password_hr.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_hr.Location = new System.Drawing.Point(346, 97);
             this.password_hr.Name = "password_hr";
-            this.password_hr.Size = new System.Drawing.Size(295, 25);
+            this.password_hr.Size = new System.Drawing.Size(304, 25);
             this.password_hr.TabIndex = 6;
             // 
             // password_bdc
@@ -749,7 +811,7 @@
             this.password_bdc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_bdc.Location = new System.Drawing.Point(346, 128);
             this.password_bdc.Name = "password_bdc";
-            this.password_bdc.Size = new System.Drawing.Size(295, 25);
+            this.password_bdc.Size = new System.Drawing.Size(304, 25);
             this.password_bdc.TabIndex = 14;
             // 
             // password_qjdc
@@ -757,7 +819,7 @@
             this.password_qjdc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_qjdc.Location = new System.Drawing.Point(346, 159);
             this.password_qjdc.Name = "password_qjdc";
-            this.password_qjdc.Size = new System.Drawing.Size(295, 25);
+            this.password_qjdc.Size = new System.Drawing.Size(304, 25);
             this.password_qjdc.TabIndex = 15;
             // 
             // label13
@@ -777,7 +839,7 @@
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Location = new System.Drawing.Point(346, 1);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(295, 30);
+            this.label14.Size = new System.Drawing.Size(304, 30);
             this.label14.TabIndex = 17;
             this.label14.Text = "密码";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -795,7 +857,7 @@
             this.password_sde.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_sde.Location = new System.Drawing.Point(346, 190);
             this.password_sde.Name = "password_sde";
-            this.password_sde.Size = new System.Drawing.Size(295, 25);
+            this.password_sde.Size = new System.Drawing.Size(304, 25);
             this.password_sde.TabIndex = 19;
             // 
             // user_sde_his
@@ -819,7 +881,7 @@
             this.password_sde_pre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_sde_pre.Location = new System.Drawing.Point(346, 252);
             this.password_sde_pre.Name = "password_sde_pre";
-            this.password_sde_pre.Size = new System.Drawing.Size(295, 25);
+            this.password_sde_pre.Size = new System.Drawing.Size(304, 25);
             this.password_sde_pre.TabIndex = 22;
             // 
             // password_sde_his
@@ -827,7 +889,7 @@
             this.password_sde_his.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_sde_his.Location = new System.Drawing.Point(346, 221);
             this.password_sde_his.Name = "password_sde_his";
-            this.password_sde_his.Size = new System.Drawing.Size(295, 25);
+            this.password_sde_his.Size = new System.Drawing.Size(304, 25);
             this.password_sde_his.TabIndex = 23;
             // 
             // label15
@@ -906,7 +968,7 @@
             this.password_system.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_system.Location = new System.Drawing.Point(346, 283);
             this.password_system.Name = "password_system";
-            this.password_system.Size = new System.Drawing.Size(295, 25);
+            this.password_system.Size = new System.Drawing.Size(304, 25);
             this.password_system.TabIndex = 31;
             // 
             // path_datafolder
@@ -916,7 +978,7 @@
             this.path_datafolder.Location = new System.Drawing.Point(125, 376);
             this.path_datafolder.Multiline = true;
             this.path_datafolder.Name = "path_datafolder";
-            this.path_datafolder.Size = new System.Drawing.Size(516, 58);
+            this.path_datafolder.Size = new System.Drawing.Size(525, 58);
             this.path_datafolder.TabIndex = 33;
             // 
             // label35
@@ -981,7 +1043,7 @@
             // 
             this.btn_folder_gxml.Location = new System.Drawing.Point(492, 24);
             this.btn_folder_gxml.Name = "btn_folder_gxml";
-            this.btn_folder_gxml.Size = new System.Drawing.Size(98, 36);
+            this.btn_folder_gxml.Size = new System.Drawing.Size(98, 32);
             this.btn_folder_gxml.TabIndex = 9;
             this.btn_folder_gxml.Text = "创建文件夹";
             this.btn_folder_gxml.UseVisualStyleBackColor = true;
@@ -991,7 +1053,7 @@
             // 
             this.btn_gxml.Location = new System.Drawing.Point(400, 25);
             this.btn_gxml.Name = "btn_gxml";
-            this.btn_gxml.Size = new System.Drawing.Size(68, 35);
+            this.btn_gxml.Size = new System.Drawing.Size(68, 32);
             this.btn_gxml.TabIndex = 8;
             this.btn_gxml.Text = "选择";
             this.btn_gxml.UseVisualStyleBackColor = true;
@@ -1084,7 +1146,7 @@
             // 
             this.btn_folder_ftp.Location = new System.Drawing.Point(492, 23);
             this.btn_folder_ftp.Name = "btn_folder_ftp";
-            this.btn_folder_ftp.Size = new System.Drawing.Size(98, 27);
+            this.btn_folder_ftp.Size = new System.Drawing.Size(98, 32);
             this.btn_folder_ftp.TabIndex = 12;
             this.btn_folder_ftp.Text = "创建文件夹";
             this.btn_folder_ftp.UseVisualStyleBackColor = true;
@@ -1094,7 +1156,7 @@
             // 
             this.btn_ftp.Location = new System.Drawing.Point(400, 23);
             this.btn_ftp.Name = "btn_ftp";
-            this.btn_ftp.Size = new System.Drawing.Size(68, 27);
+            this.btn_ftp.Size = new System.Drawing.Size(68, 32);
             this.btn_ftp.TabIndex = 11;
             this.btn_ftp.Text = "选择";
             this.btn_ftp.UseVisualStyleBackColor = true;
@@ -1391,15 +1453,15 @@
             this.label45.ForeColor = System.Drawing.Color.Red;
             this.label45.Location = new System.Drawing.Point(38, 530);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(240, 15);
+            this.label45.Size = new System.Drawing.Size(369, 15);
             this.label45.TabIndex = 96;
-            this.label45.Text = "先创建企业空间库,再初始化空间库";
+            this.label45.Text = "先创建企业空间库,再通过现有的gdb文件初始化空间库";
             // 
             // btn_initializtionSDE
             // 
             this.btn_initializtionSDE.Location = new System.Drawing.Point(429, 391);
             this.btn_initializtionSDE.Name = "btn_initializtionSDE";
-            this.btn_initializtionSDE.Size = new System.Drawing.Size(115, 43);
+            this.btn_initializtionSDE.Size = new System.Drawing.Size(115, 32);
             this.btn_initializtionSDE.TabIndex = 95;
             this.btn_initializtionSDE.Text = "初始化空间库";
             this.btn_initializtionSDE.UseVisualStyleBackColor = true;
@@ -1409,7 +1471,7 @@
             // 
             this.btn_createsde.Location = new System.Drawing.Point(285, 393);
             this.btn_createsde.Name = "btn_createsde";
-            this.btn_createsde.Size = new System.Drawing.Size(128, 41);
+            this.btn_createsde.Size = new System.Drawing.Size(128, 32);
             this.btn_createsde.TabIndex = 92;
             this.btn_createsde.Text = "创建企业空间库";
             this.btn_createsde.UseVisualStyleBackColor = true;
@@ -1441,9 +1503,9 @@
             this.label42.ForeColor = System.Drawing.Color.Red;
             this.label42.Location = new System.Drawing.Point(35, 501);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(278, 15);
+            this.label42.Size = new System.Drawing.Size(451, 15);
             this.label42.TabIndex = 89;
-            this.label42.Text = "勾选要创建的用户，(不包含空间库用户)";
+            this.label42.Text = "勾选要创建的用户，(不包含空间库用户,空间库的用户会自动创建)";
             // 
             // label41
             // 
@@ -1459,7 +1521,7 @@
             // 
             this.btn_data_bdcdj_pre.Location = new System.Drawing.Point(557, 321);
             this.btn_data_bdcdj_pre.Name = "btn_data_bdcdj_pre";
-            this.btn_data_bdcdj_pre.Size = new System.Drawing.Size(75, 23);
+            this.btn_data_bdcdj_pre.Size = new System.Drawing.Size(75, 32);
             this.btn_data_bdcdj_pre.TabIndex = 87;
             this.btn_data_bdcdj_pre.Text = "选择";
             this.btn_data_bdcdj_pre.UseVisualStyleBackColor = true;
@@ -1469,7 +1531,7 @@
             // 
             this.btn_data_bdcdj_his.Location = new System.Drawing.Point(556, 285);
             this.btn_data_bdcdj_his.Name = "btn_data_bdcdj_his";
-            this.btn_data_bdcdj_his.Size = new System.Drawing.Size(75, 23);
+            this.btn_data_bdcdj_his.Size = new System.Drawing.Size(75, 32);
             this.btn_data_bdcdj_his.TabIndex = 86;
             this.btn_data_bdcdj_his.Text = "选择";
             this.btn_data_bdcdj_his.UseVisualStyleBackColor = true;
@@ -1479,7 +1541,7 @@
             // 
             this.btn_data_bdcdj.Location = new System.Drawing.Point(557, 249);
             this.btn_data_bdcdj.Name = "btn_data_bdcdj";
-            this.btn_data_bdcdj.Size = new System.Drawing.Size(75, 23);
+            this.btn_data_bdcdj.Size = new System.Drawing.Size(75, 32);
             this.btn_data_bdcdj.TabIndex = 85;
             this.btn_data_bdcdj.Text = "选择";
             this.btn_data_bdcdj.UseVisualStyleBackColor = true;
@@ -1510,7 +1572,7 @@
             // 
             this.btn_createuser.Location = new System.Drawing.Point(171, 390);
             this.btn_createuser.Name = "btn_createuser";
-            this.btn_createuser.Size = new System.Drawing.Size(96, 44);
+            this.btn_createuser.Size = new System.Drawing.Size(96, 32);
             this.btn_createuser.TabIndex = 75;
             this.btn_createuser.Text = "创建用户";
             this.btn_createuser.UseVisualStyleBackColor = true;
@@ -1520,7 +1582,7 @@
             // 
             this.btn_createts.Location = new System.Drawing.Point(41, 390);
             this.btn_createts.Name = "btn_createts";
-            this.btn_createts.Size = new System.Drawing.Size(110, 44);
+            this.btn_createts.Size = new System.Drawing.Size(110, 32);
             this.btn_createts.TabIndex = 74;
             this.btn_createts.Text = "创建表空间";
             this.btn_createts.UseVisualStyleBackColor = true;
@@ -1566,7 +1628,7 @@
             // 
             this.btn_imp.Location = new System.Drawing.Point(558, 391);
             this.btn_imp.Name = "btn_imp";
-            this.btn_imp.Size = new System.Drawing.Size(95, 43);
+            this.btn_imp.Size = new System.Drawing.Size(95, 32);
             this.btn_imp.TabIndex = 47;
             this.btn_imp.Text = "导入数据";
             this.btn_imp.UseVisualStyleBackColor = true;
@@ -1592,7 +1654,7 @@
             // 
             this.btn_data_main.Location = new System.Drawing.Point(557, 7);
             this.btn_data_main.Name = "btn_data_main";
-            this.btn_data_main.Size = new System.Drawing.Size(75, 26);
+            this.btn_data_main.Size = new System.Drawing.Size(75, 32);
             this.btn_data_main.TabIndex = 43;
             this.btn_data_main.Text = "选择";
             this.btn_data_main.UseVisualStyleBackColor = true;
@@ -1697,7 +1759,7 @@
             // 
             this.btn_data_qjdc.Location = new System.Drawing.Point(558, 207);
             this.btn_data_qjdc.Name = "btn_data_qjdc";
-            this.btn_data_qjdc.Size = new System.Drawing.Size(75, 29);
+            this.btn_data_qjdc.Size = new System.Drawing.Size(75, 32);
             this.btn_data_qjdc.TabIndex = 32;
             this.btn_data_qjdc.Text = "选择";
             this.btn_data_qjdc.UseVisualStyleBackColor = true;
@@ -1707,7 +1769,7 @@
             // 
             this.btn_data_bdc.Location = new System.Drawing.Point(558, 168);
             this.btn_data_bdc.Name = "btn_data_bdc";
-            this.btn_data_bdc.Size = new System.Drawing.Size(75, 26);
+            this.btn_data_bdc.Size = new System.Drawing.Size(75, 32);
             this.btn_data_bdc.TabIndex = 31;
             this.btn_data_bdc.Text = "选择";
             this.btn_data_bdc.UseVisualStyleBackColor = true;
@@ -1717,7 +1779,7 @@
             // 
             this.btn_data_hr.Location = new System.Drawing.Point(557, 130);
             this.btn_data_hr.Name = "btn_data_hr";
-            this.btn_data_hr.Size = new System.Drawing.Size(75, 25);
+            this.btn_data_hr.Size = new System.Drawing.Size(75, 32);
             this.btn_data_hr.TabIndex = 30;
             this.btn_data_hr.Text = "选择";
             this.btn_data_hr.UseVisualStyleBackColor = true;
@@ -1727,7 +1789,7 @@
             // 
             this.btn_data_workflow.Location = new System.Drawing.Point(558, 90);
             this.btn_data_workflow.Name = "btn_data_workflow";
-            this.btn_data_workflow.Size = new System.Drawing.Size(75, 27);
+            this.btn_data_workflow.Size = new System.Drawing.Size(75, 32);
             this.btn_data_workflow.TabIndex = 29;
             this.btn_data_workflow.Text = "选择";
             this.btn_data_workflow.UseVisualStyleBackColor = true;
@@ -1737,7 +1799,7 @@
             // 
             this.btn_data_framework.Location = new System.Drawing.Point(557, 46);
             this.btn_data_framework.Name = "btn_data_framework";
-            this.btn_data_framework.Size = new System.Drawing.Size(75, 31);
+            this.btn_data_framework.Size = new System.Drawing.Size(75, 32);
             this.btn_data_framework.TabIndex = 28;
             this.btn_data_framework.Text = "选择";
             this.btn_data_framework.UseVisualStyleBackColor = true;
@@ -1773,7 +1835,7 @@
             // 
             this.btn_beset.Location = new System.Drawing.Point(285, 66);
             this.btn_beset.Name = "btn_beset";
-            this.btn_beset.Size = new System.Drawing.Size(93, 31);
+            this.btn_beset.Size = new System.Drawing.Size(93, 32);
             this.btn_beset.TabIndex = 2;
             this.btn_beset.Text = "开始配置";
             this.btn_beset.UseVisualStyleBackColor = true;
@@ -1803,7 +1865,7 @@
             // 
             this.btn_creategxml.Location = new System.Drawing.Point(188, 24);
             this.btn_creategxml.Name = "btn_creategxml";
-            this.btn_creategxml.Size = new System.Drawing.Size(93, 39);
+            this.btn_creategxml.Size = new System.Drawing.Size(93, 32);
             this.btn_creategxml.TabIndex = 13;
             this.btn_creategxml.Text = "创建共享";
             this.btn_creategxml.UseVisualStyleBackColor = true;
@@ -1833,7 +1895,7 @@
             // 
             this.btn_createftp.Location = new System.Drawing.Point(188, 15);
             this.btn_createftp.Name = "btn_createftp";
-            this.btn_createftp.Size = new System.Drawing.Size(93, 39);
+            this.btn_createftp.Size = new System.Drawing.Size(93, 32);
             this.btn_createftp.TabIndex = 12;
             this.btn_createftp.Text = "创建ftp";
             this.btn_createftp.UseVisualStyleBackColor = true;
@@ -1860,7 +1922,7 @@
             // 
             this.btn_regasp4.Location = new System.Drawing.Point(355, 91);
             this.btn_regasp4.Name = "btn_regasp4";
-            this.btn_regasp4.Size = new System.Drawing.Size(155, 31);
+            this.btn_regasp4.Size = new System.Drawing.Size(155, 32);
             this.btn_regasp4.TabIndex = 7;
             this.btn_regasp4.Text = "注册asp.net4到iis";
             this.btn_regasp4.UseVisualStyleBackColor = true;
@@ -1870,7 +1932,7 @@
             // 
             this.btn_updateappurl.Location = new System.Drawing.Point(145, 91);
             this.btn_updateappurl.Name = "btn_updateappurl";
-            this.btn_updateappurl.Size = new System.Drawing.Size(161, 31);
+            this.btn_updateappurl.Size = new System.Drawing.Size(161, 32);
             this.btn_updateappurl.TabIndex = 6;
             this.btn_updateappurl.Text = "修改数据库appinfo";
             this.btn_updateappurl.UseVisualStyleBackColor = true;
@@ -1891,7 +1953,7 @@
             // 
             this.btn_createweb.Location = new System.Drawing.Point(9, 91);
             this.btn_createweb.Name = "btn_createweb";
-            this.btn_createweb.Size = new System.Drawing.Size(93, 31);
+            this.btn_createweb.Size = new System.Drawing.Size(93, 32);
             this.btn_createweb.TabIndex = 4;
             this.btn_createweb.Text = "创建网站";
             this.btn_createweb.UseVisualStyleBackColor = true;
@@ -1973,7 +2035,7 @@
             // 
             this.btn_wcfinstall.Location = new System.Drawing.Point(9, 74);
             this.btn_wcfinstall.Name = "btn_wcfinstall";
-            this.btn_wcfinstall.Size = new System.Drawing.Size(75, 33);
+            this.btn_wcfinstall.Size = new System.Drawing.Size(75, 32);
             this.btn_wcfinstall.TabIndex = 5;
             this.btn_wcfinstall.Text = "安装服务";
             this.btn_wcfinstall.UseVisualStyleBackColor = true;
@@ -1983,7 +2045,7 @@
             // 
             this.btn_wcfstart.Location = new System.Drawing.Point(114, 74);
             this.btn_wcfstart.Name = "btn_wcfstart";
-            this.btn_wcfstart.Size = new System.Drawing.Size(75, 33);
+            this.btn_wcfstart.Size = new System.Drawing.Size(75, 32);
             this.btn_wcfstart.TabIndex = 6;
             this.btn_wcfstart.Text = "启动";
             this.btn_wcfstart.UseVisualStyleBackColor = true;
@@ -1993,7 +2055,7 @@
             // 
             this.btn_wcfstop.Location = new System.Drawing.Point(235, 74);
             this.btn_wcfstop.Name = "btn_wcfstop";
-            this.btn_wcfstop.Size = new System.Drawing.Size(75, 33);
+            this.btn_wcfstop.Size = new System.Drawing.Size(75, 32);
             this.btn_wcfstop.TabIndex = 7;
             this.btn_wcfstop.Text = "停止";
             this.btn_wcfstop.UseVisualStyleBackColor = true;
@@ -2003,7 +2065,7 @@
             // 
             this.btn_wcfremove.Location = new System.Drawing.Point(355, 74);
             this.btn_wcfremove.Name = "btn_wcfremove";
-            this.btn_wcfremove.Size = new System.Drawing.Size(75, 33);
+            this.btn_wcfremove.Size = new System.Drawing.Size(75, 32);
             this.btn_wcfremove.TabIndex = 8;
             this.btn_wcfremove.Text = "删除";
             this.btn_wcfremove.UseVisualStyleBackColor = true;
@@ -2020,6 +2082,15 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.label49);
+            this.tabPage5.Controls.Add(this.lab_backupServicesState);
+            this.tabPage5.Controls.Add(this.label48);
+            this.tabPage5.Controls.Add(this.btn_backup_serviceUninstall);
+            this.tabPage5.Controls.Add(this.btn_backup_serviceStop);
+            this.tabPage5.Controls.Add(this.btn_backup_serviceStart);
+            this.tabPage5.Controls.Add(this.btn_backup_serviceInstall);
+            this.tabPage5.Controls.Add(this.label47);
+            this.tabPage5.Controls.Add(this.tab_backup);
             this.tabPage5.Controls.Add(this.groupBox12);
             this.tabPage5.Controls.Add(this.groupBox11);
             this.tabPage5.Controls.Add(this.groupBox10);
@@ -2033,25 +2104,637 @@
             this.tabPage5.Text = "备份";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // lab_backupServicesState
+            // 
+            this.lab_backupServicesState.AutoSize = true;
+            this.lab_backupServicesState.Location = new System.Drawing.Point(305, 370);
+            this.lab_backupServicesState.Name = "lab_backupServicesState";
+            this.lab_backupServicesState.Size = new System.Drawing.Size(52, 15);
+            this.lab_backupServicesState.TabIndex = 26;
+            this.lab_backupServicesState.Text = "未安装";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(208, 370);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(82, 15);
+            this.label48.TabIndex = 25;
+            this.label48.Text = "服务状态：";
+            // 
+            // btn_backup_serviceUninstall
+            // 
+            this.btn_backup_serviceUninstall.Location = new System.Drawing.Point(333, 545);
+            this.btn_backup_serviceUninstall.Name = "btn_backup_serviceUninstall";
+            this.btn_backup_serviceUninstall.Size = new System.Drawing.Size(75, 32);
+            this.btn_backup_serviceUninstall.TabIndex = 24;
+            this.btn_backup_serviceUninstall.Text = "卸载";
+            this.btn_backup_serviceUninstall.UseVisualStyleBackColor = true;
+            this.btn_backup_serviceUninstall.Click += new System.EventHandler(this.btn_backup_serviceUninstall_Click);
+            // 
+            // btn_backup_serviceStop
+            // 
+            this.btn_backup_serviceStop.Location = new System.Drawing.Point(230, 547);
+            this.btn_backup_serviceStop.Name = "btn_backup_serviceStop";
+            this.btn_backup_serviceStop.Size = new System.Drawing.Size(75, 32);
+            this.btn_backup_serviceStop.TabIndex = 23;
+            this.btn_backup_serviceStop.Text = "停止";
+            this.btn_backup_serviceStop.UseVisualStyleBackColor = true;
+            this.btn_backup_serviceStop.Click += new System.EventHandler(this.btn_backup_serviceStop_Click);
+            // 
+            // btn_backup_serviceStart
+            // 
+            this.btn_backup_serviceStart.Location = new System.Drawing.Point(134, 547);
+            this.btn_backup_serviceStart.Name = "btn_backup_serviceStart";
+            this.btn_backup_serviceStart.Size = new System.Drawing.Size(75, 32);
+            this.btn_backup_serviceStart.TabIndex = 22;
+            this.btn_backup_serviceStart.Text = "启动";
+            this.btn_backup_serviceStart.UseVisualStyleBackColor = true;
+            this.btn_backup_serviceStart.Click += new System.EventHandler(this.btn_backup_serviceStart_Click);
+            // 
+            // btn_backup_serviceInstall
+            // 
+            this.btn_backup_serviceInstall.Location = new System.Drawing.Point(29, 546);
+            this.btn_backup_serviceInstall.Name = "btn_backup_serviceInstall";
+            this.btn_backup_serviceInstall.Size = new System.Drawing.Size(75, 32);
+            this.btn_backup_serviceInstall.TabIndex = 21;
+            this.btn_backup_serviceInstall.Text = "安装";
+            this.btn_backup_serviceInstall.UseVisualStyleBackColor = true;
+            this.btn_backup_serviceInstall.Click += new System.EventHandler(this.btn_backup_serviceInstall_Click);
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(33, 366);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(97, 15);
+            this.label47.TabIndex = 20;
+            this.label47.Text = "自动备份设置";
+            // 
+            // tab_backup
+            // 
+            this.tab_backup.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tab_backup.Controls.Add(this.type_day);
+            this.tab_backup.Controls.Add(this.type_week);
+            this.tab_backup.Controls.Add(this.type_month);
+            this.tab_backup.Location = new System.Drawing.Point(29, 390);
+            this.tab_backup.Name = "tab_backup";
+            this.tab_backup.SelectedIndex = 0;
+            this.tab_backup.Size = new System.Drawing.Size(723, 140);
+            this.tab_backup.TabIndex = 19;
+            // 
+            // type_day
+            // 
+            this.type_day.Controls.Add(this.backup_day_starttime);
+            this.type_day.Controls.Add(this.label50);
+            this.type_day.Location = new System.Drawing.Point(4, 28);
+            this.type_day.Name = "type_day";
+            this.type_day.Padding = new System.Windows.Forms.Padding(3);
+            this.type_day.Size = new System.Drawing.Size(715, 108);
+            this.type_day.TabIndex = 0;
+            this.type_day.Text = "每天";
+            this.type_day.UseVisualStyleBackColor = true;
+            // 
+            // backup_day_starttime
+            // 
+            this.backup_day_starttime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.backup_day_starttime.Location = new System.Drawing.Point(234, 16);
+            this.backup_day_starttime.Name = "backup_day_starttime";
+            this.backup_day_starttime.ShowUpDown = true;
+            this.backup_day_starttime.Size = new System.Drawing.Size(200, 25);
+            this.backup_day_starttime.TabIndex = 2;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(129, 21);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(97, 15);
+            this.label50.TabIndex = 1;
+            this.label50.Text = "开始执行时间";
+            // 
+            // type_week
+            // 
+            this.type_week.Controls.Add(this.backup_week_starttime);
+            this.type_week.Controls.Add(this.label51);
+            this.type_week.Controls.Add(this.backup_week_check7);
+            this.type_week.Controls.Add(this.backup_week_check6);
+            this.type_week.Controls.Add(this.backup_week_check5);
+            this.type_week.Controls.Add(this.backup_week_check4);
+            this.type_week.Controls.Add(this.backup_week_check3);
+            this.type_week.Controls.Add(this.backup_week_check2);
+            this.type_week.Controls.Add(this.backup_week_check1);
+            this.type_week.Location = new System.Drawing.Point(4, 28);
+            this.type_week.Name = "type_week";
+            this.type_week.Padding = new System.Windows.Forms.Padding(3);
+            this.type_week.Size = new System.Drawing.Size(715, 108);
+            this.type_week.TabIndex = 1;
+            this.type_week.Text = "每周";
+            this.type_week.UseVisualStyleBackColor = true;
+            // 
+            // backup_week_starttime
+            // 
+            this.backup_week_starttime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.backup_week_starttime.Location = new System.Drawing.Point(275, 36);
+            this.backup_week_starttime.Name = "backup_week_starttime";
+            this.backup_week_starttime.ShowUpDown = true;
+            this.backup_week_starttime.Size = new System.Drawing.Size(200, 25);
+            this.backup_week_starttime.TabIndex = 8;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(167, 41);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(97, 15);
+            this.label51.TabIndex = 7;
+            this.label51.Text = "开始执行时间";
+            // 
+            // backup_week_check7
+            // 
+            this.backup_week_check7.AutoSize = true;
+            this.backup_week_check7.Location = new System.Drawing.Point(578, 6);
+            this.backup_week_check7.Name = "backup_week_check7";
+            this.backup_week_check7.Size = new System.Drawing.Size(74, 19);
+            this.backup_week_check7.TabIndex = 6;
+            this.backup_week_check7.Text = "星期日";
+            this.backup_week_check7.UseVisualStyleBackColor = true;
+            // 
+            // backup_week_check6
+            // 
+            this.backup_week_check6.AutoSize = true;
+            this.backup_week_check6.Location = new System.Drawing.Point(484, 7);
+            this.backup_week_check6.Name = "backup_week_check6";
+            this.backup_week_check6.Size = new System.Drawing.Size(74, 19);
+            this.backup_week_check6.TabIndex = 5;
+            this.backup_week_check6.Text = "星期六";
+            this.backup_week_check6.UseVisualStyleBackColor = true;
+            // 
+            // backup_week_check5
+            // 
+            this.backup_week_check5.AutoSize = true;
+            this.backup_week_check5.Location = new System.Drawing.Point(390, 6);
+            this.backup_week_check5.Name = "backup_week_check5";
+            this.backup_week_check5.Size = new System.Drawing.Size(74, 19);
+            this.backup_week_check5.TabIndex = 4;
+            this.backup_week_check5.Text = "星期五";
+            this.backup_week_check5.UseVisualStyleBackColor = true;
+            // 
+            // backup_week_check4
+            // 
+            this.backup_week_check4.AutoSize = true;
+            this.backup_week_check4.Location = new System.Drawing.Point(296, 6);
+            this.backup_week_check4.Name = "backup_week_check4";
+            this.backup_week_check4.Size = new System.Drawing.Size(74, 19);
+            this.backup_week_check4.TabIndex = 3;
+            this.backup_week_check4.Text = "星期四";
+            this.backup_week_check4.UseVisualStyleBackColor = true;
+            // 
+            // backup_week_check3
+            // 
+            this.backup_week_check3.AutoSize = true;
+            this.backup_week_check3.Location = new System.Drawing.Point(202, 7);
+            this.backup_week_check3.Name = "backup_week_check3";
+            this.backup_week_check3.Size = new System.Drawing.Size(74, 19);
+            this.backup_week_check3.TabIndex = 2;
+            this.backup_week_check3.Text = "星期三";
+            this.backup_week_check3.UseVisualStyleBackColor = true;
+            // 
+            // backup_week_check2
+            // 
+            this.backup_week_check2.AutoSize = true;
+            this.backup_week_check2.Location = new System.Drawing.Point(108, 7);
+            this.backup_week_check2.Name = "backup_week_check2";
+            this.backup_week_check2.Size = new System.Drawing.Size(74, 19);
+            this.backup_week_check2.TabIndex = 1;
+            this.backup_week_check2.Text = "星期二";
+            this.backup_week_check2.UseVisualStyleBackColor = true;
+            // 
+            // backup_week_check1
+            // 
+            this.backup_week_check1.AutoSize = true;
+            this.backup_week_check1.Location = new System.Drawing.Point(14, 7);
+            this.backup_week_check1.Name = "backup_week_check1";
+            this.backup_week_check1.Size = new System.Drawing.Size(74, 19);
+            this.backup_week_check1.TabIndex = 0;
+            this.backup_week_check1.Text = "星期一";
+            this.backup_week_check1.UseVisualStyleBackColor = true;
+            // 
+            // type_month
+            // 
+            this.type_month.Controls.Add(this.backup_month_starttime);
+            this.type_month.Controls.Add(this.label52);
+            this.type_month.Controls.Add(this.backup_month_check31);
+            this.type_month.Controls.Add(this.backup_month_check30);
+            this.type_month.Controls.Add(this.backup_month_check29);
+            this.type_month.Controls.Add(this.backup_month_check28);
+            this.type_month.Controls.Add(this.backup_month_check27);
+            this.type_month.Controls.Add(this.backup_month_check26);
+            this.type_month.Controls.Add(this.backup_month_check25);
+            this.type_month.Controls.Add(this.backup_month_check24);
+            this.type_month.Controls.Add(this.backup_month_check23);
+            this.type_month.Controls.Add(this.backup_month_check22);
+            this.type_month.Controls.Add(this.backup_month_check18);
+            this.type_month.Controls.Add(this.backup_month_check17);
+            this.type_month.Controls.Add(this.backup_month_check19);
+            this.type_month.Controls.Add(this.backup_month_check20);
+            this.type_month.Controls.Add(this.backup_month_check21);
+            this.type_month.Controls.Add(this.backup_month_check12);
+            this.type_month.Controls.Add(this.backup_month_check13);
+            this.type_month.Controls.Add(this.backup_month_check14);
+            this.type_month.Controls.Add(this.backup_month_check15);
+            this.type_month.Controls.Add(this.backup_month_check16);
+            this.type_month.Controls.Add(this.backup_month_check7);
+            this.type_month.Controls.Add(this.backup_month_check8);
+            this.type_month.Controls.Add(this.backup_month_check9);
+            this.type_month.Controls.Add(this.backup_month_check10);
+            this.type_month.Controls.Add(this.backup_month_check11);
+            this.type_month.Controls.Add(this.backup_month_check2);
+            this.type_month.Controls.Add(this.backup_month_check3);
+            this.type_month.Controls.Add(this.backup_month_check4);
+            this.type_month.Controls.Add(this.backup_month_check5);
+            this.type_month.Controls.Add(this.backup_month_check6);
+            this.type_month.Controls.Add(this.backup_month_check1);
+            this.type_month.Location = new System.Drawing.Point(4, 28);
+            this.type_month.Name = "type_month";
+            this.type_month.Padding = new System.Windows.Forms.Padding(3);
+            this.type_month.Size = new System.Drawing.Size(715, 108);
+            this.type_month.TabIndex = 2;
+            this.type_month.Text = "每月";
+            this.type_month.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_starttime
+            // 
+            this.backup_month_starttime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.backup_month_starttime.Location = new System.Drawing.Point(252, 69);
+            this.backup_month_starttime.Name = "backup_month_starttime";
+            this.backup_month_starttime.ShowUpDown = true;
+            this.backup_month_starttime.Size = new System.Drawing.Size(200, 25);
+            this.backup_month_starttime.TabIndex = 32;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(140, 75);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(105, 15);
+            this.label52.TabIndex = 31;
+            this.label52.Text = "开始执行时间:";
+            // 
+            // backup_month_check31
+            // 
+            this.backup_month_check31.AutoSize = true;
+            this.backup_month_check31.Location = new System.Drawing.Point(7, 58);
+            this.backup_month_check31.Name = "backup_month_check31";
+            this.backup_month_check31.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check31.TabIndex = 30;
+            this.backup_month_check31.Text = "31";
+            this.backup_month_check31.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check30
+            // 
+            this.backup_month_check30.AutoSize = true;
+            this.backup_month_check30.Location = new System.Drawing.Point(667, 31);
+            this.backup_month_check30.Name = "backup_month_check30";
+            this.backup_month_check30.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check30.TabIndex = 29;
+            this.backup_month_check30.Text = "30";
+            this.backup_month_check30.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check29
+            // 
+            this.backup_month_check29.AutoSize = true;
+            this.backup_month_check29.Location = new System.Drawing.Point(610, 31);
+            this.backup_month_check29.Name = "backup_month_check29";
+            this.backup_month_check29.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check29.TabIndex = 28;
+            this.backup_month_check29.Text = "29";
+            this.backup_month_check29.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check28
+            // 
+            this.backup_month_check28.AutoSize = true;
+            this.backup_month_check28.Location = new System.Drawing.Point(559, 31);
+            this.backup_month_check28.Name = "backup_month_check28";
+            this.backup_month_check28.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check28.TabIndex = 27;
+            this.backup_month_check28.Text = "28";
+            this.backup_month_check28.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check27
+            // 
+            this.backup_month_check27.AutoSize = true;
+            this.backup_month_check27.Location = new System.Drawing.Point(510, 33);
+            this.backup_month_check27.Name = "backup_month_check27";
+            this.backup_month_check27.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check27.TabIndex = 26;
+            this.backup_month_check27.Text = "27";
+            this.backup_month_check27.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check26
+            // 
+            this.backup_month_check26.AutoSize = true;
+            this.backup_month_check26.Location = new System.Drawing.Point(467, 31);
+            this.backup_month_check26.Name = "backup_month_check26";
+            this.backup_month_check26.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check26.TabIndex = 25;
+            this.backup_month_check26.Text = "26";
+            this.backup_month_check26.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check25
+            // 
+            this.backup_month_check25.AutoSize = true;
+            this.backup_month_check25.Location = new System.Drawing.Point(421, 33);
+            this.backup_month_check25.Name = "backup_month_check25";
+            this.backup_month_check25.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check25.TabIndex = 24;
+            this.backup_month_check25.Text = "25";
+            this.backup_month_check25.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check24
+            // 
+            this.backup_month_check24.AutoSize = true;
+            this.backup_month_check24.Location = new System.Drawing.Point(375, 31);
+            this.backup_month_check24.Name = "backup_month_check24";
+            this.backup_month_check24.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check24.TabIndex = 23;
+            this.backup_month_check24.Text = "24";
+            this.backup_month_check24.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check23
+            // 
+            this.backup_month_check23.AutoSize = true;
+            this.backup_month_check23.Location = new System.Drawing.Point(329, 33);
+            this.backup_month_check23.Name = "backup_month_check23";
+            this.backup_month_check23.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check23.TabIndex = 22;
+            this.backup_month_check23.Text = "23";
+            this.backup_month_check23.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check22
+            // 
+            this.backup_month_check22.AutoSize = true;
+            this.backup_month_check22.Location = new System.Drawing.Point(283, 31);
+            this.backup_month_check22.Name = "backup_month_check22";
+            this.backup_month_check22.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check22.TabIndex = 21;
+            this.backup_month_check22.Text = "22";
+            this.backup_month_check22.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check18
+            // 
+            this.backup_month_check18.AutoSize = true;
+            this.backup_month_check18.Location = new System.Drawing.Point(99, 33);
+            this.backup_month_check18.Name = "backup_month_check18";
+            this.backup_month_check18.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check18.TabIndex = 20;
+            this.backup_month_check18.Text = "18";
+            this.backup_month_check18.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check17
+            // 
+            this.backup_month_check17.AutoSize = true;
+            this.backup_month_check17.Location = new System.Drawing.Point(54, 33);
+            this.backup_month_check17.Name = "backup_month_check17";
+            this.backup_month_check17.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check17.TabIndex = 19;
+            this.backup_month_check17.Text = "17";
+            this.backup_month_check17.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check19
+            // 
+            this.backup_month_check19.AutoSize = true;
+            this.backup_month_check19.Location = new System.Drawing.Point(145, 33);
+            this.backup_month_check19.Name = "backup_month_check19";
+            this.backup_month_check19.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check19.TabIndex = 18;
+            this.backup_month_check19.Text = "19";
+            this.backup_month_check19.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check20
+            // 
+            this.backup_month_check20.AutoSize = true;
+            this.backup_month_check20.Location = new System.Drawing.Point(191, 33);
+            this.backup_month_check20.Name = "backup_month_check20";
+            this.backup_month_check20.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check20.TabIndex = 17;
+            this.backup_month_check20.Text = "20";
+            this.backup_month_check20.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check21
+            // 
+            this.backup_month_check21.AutoSize = true;
+            this.backup_month_check21.Location = new System.Drawing.Point(237, 33);
+            this.backup_month_check21.Name = "backup_month_check21";
+            this.backup_month_check21.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check21.TabIndex = 16;
+            this.backup_month_check21.Text = "21";
+            this.backup_month_check21.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check12
+            // 
+            this.backup_month_check12.AutoSize = true;
+            this.backup_month_check12.Location = new System.Drawing.Point(508, 7);
+            this.backup_month_check12.Name = "backup_month_check12";
+            this.backup_month_check12.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check12.TabIndex = 15;
+            this.backup_month_check12.Text = "12";
+            this.backup_month_check12.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check13
+            // 
+            this.backup_month_check13.AutoSize = true;
+            this.backup_month_check13.Location = new System.Drawing.Point(558, 7);
+            this.backup_month_check13.Name = "backup_month_check13";
+            this.backup_month_check13.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check13.TabIndex = 14;
+            this.backup_month_check13.Text = "13";
+            this.backup_month_check13.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check14
+            // 
+            this.backup_month_check14.AutoSize = true;
+            this.backup_month_check14.Location = new System.Drawing.Point(610, 7);
+            this.backup_month_check14.Name = "backup_month_check14";
+            this.backup_month_check14.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check14.TabIndex = 13;
+            this.backup_month_check14.Text = "14";
+            this.backup_month_check14.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check15
+            // 
+            this.backup_month_check15.AutoSize = true;
+            this.backup_month_check15.Location = new System.Drawing.Point(665, 6);
+            this.backup_month_check15.Name = "backup_month_check15";
+            this.backup_month_check15.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check15.TabIndex = 12;
+            this.backup_month_check15.Text = "15";
+            this.backup_month_check15.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check16
+            // 
+            this.backup_month_check16.AutoSize = true;
+            this.backup_month_check16.Location = new System.Drawing.Point(7, 32);
+            this.backup_month_check16.Name = "backup_month_check16";
+            this.backup_month_check16.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check16.TabIndex = 11;
+            this.backup_month_check16.Text = "16";
+            this.backup_month_check16.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check7
+            // 
+            this.backup_month_check7.AutoSize = true;
+            this.backup_month_check7.Location = new System.Drawing.Point(281, 6);
+            this.backup_month_check7.Name = "backup_month_check7";
+            this.backup_month_check7.Size = new System.Drawing.Size(37, 19);
+            this.backup_month_check7.TabIndex = 10;
+            this.backup_month_check7.Text = "7";
+            this.backup_month_check7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.backup_month_check7.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check8
+            // 
+            this.backup_month_check8.AutoSize = true;
+            this.backup_month_check8.Location = new System.Drawing.Point(326, 7);
+            this.backup_month_check8.Name = "backup_month_check8";
+            this.backup_month_check8.Size = new System.Drawing.Size(37, 19);
+            this.backup_month_check8.TabIndex = 9;
+            this.backup_month_check8.Text = "8";
+            this.backup_month_check8.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check9
+            // 
+            this.backup_month_check9.AutoSize = true;
+            this.backup_month_check9.Location = new System.Drawing.Point(373, 7);
+            this.backup_month_check9.Name = "backup_month_check9";
+            this.backup_month_check9.Size = new System.Drawing.Size(37, 19);
+            this.backup_month_check9.TabIndex = 8;
+            this.backup_month_check9.Text = "9";
+            this.backup_month_check9.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check10
+            // 
+            this.backup_month_check10.AutoSize = true;
+            this.backup_month_check10.Location = new System.Drawing.Point(418, 7);
+            this.backup_month_check10.Name = "backup_month_check10";
+            this.backup_month_check10.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check10.TabIndex = 7;
+            this.backup_month_check10.Text = "10";
+            this.backup_month_check10.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check11
+            // 
+            this.backup_month_check11.AutoSize = true;
+            this.backup_month_check11.Location = new System.Drawing.Point(464, 7);
+            this.backup_month_check11.Name = "backup_month_check11";
+            this.backup_month_check11.Size = new System.Drawing.Size(45, 19);
+            this.backup_month_check11.TabIndex = 6;
+            this.backup_month_check11.Text = "11";
+            this.backup_month_check11.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check2
+            // 
+            this.backup_month_check2.AutoSize = true;
+            this.backup_month_check2.Location = new System.Drawing.Point(56, 7);
+            this.backup_month_check2.Name = "backup_month_check2";
+            this.backup_month_check2.Size = new System.Drawing.Size(37, 19);
+            this.backup_month_check2.TabIndex = 5;
+            this.backup_month_check2.Text = "2";
+            this.backup_month_check2.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check3
+            // 
+            this.backup_month_check3.AutoSize = true;
+            this.backup_month_check3.Location = new System.Drawing.Point(99, 7);
+            this.backup_month_check3.Name = "backup_month_check3";
+            this.backup_month_check3.Size = new System.Drawing.Size(37, 19);
+            this.backup_month_check3.TabIndex = 4;
+            this.backup_month_check3.Text = "3";
+            this.backup_month_check3.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check4
+            // 
+            this.backup_month_check4.AutoSize = true;
+            this.backup_month_check4.Location = new System.Drawing.Point(144, 6);
+            this.backup_month_check4.Name = "backup_month_check4";
+            this.backup_month_check4.Size = new System.Drawing.Size(37, 19);
+            this.backup_month_check4.TabIndex = 3;
+            this.backup_month_check4.Text = "4";
+            this.backup_month_check4.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check5
+            // 
+            this.backup_month_check5.AutoSize = true;
+            this.backup_month_check5.Location = new System.Drawing.Point(190, 7);
+            this.backup_month_check5.Name = "backup_month_check5";
+            this.backup_month_check5.Size = new System.Drawing.Size(37, 19);
+            this.backup_month_check5.TabIndex = 2;
+            this.backup_month_check5.Text = "5";
+            this.backup_month_check5.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check6
+            // 
+            this.backup_month_check6.AutoSize = true;
+            this.backup_month_check6.Location = new System.Drawing.Point(235, 7);
+            this.backup_month_check6.Name = "backup_month_check6";
+            this.backup_month_check6.Size = new System.Drawing.Size(37, 19);
+            this.backup_month_check6.TabIndex = 1;
+            this.backup_month_check6.Text = "6";
+            this.backup_month_check6.UseVisualStyleBackColor = true;
+            // 
+            // backup_month_check1
+            // 
+            this.backup_month_check1.AutoSize = true;
+            this.backup_month_check1.Location = new System.Drawing.Point(8, 7);
+            this.backup_month_check1.Name = "backup_month_check1";
+            this.backup_month_check1.Size = new System.Drawing.Size(37, 19);
+            this.backup_month_check1.TabIndex = 0;
+            this.backup_month_check1.Text = "1";
+            this.backup_month_check1.UseVisualStyleBackColor = true;
+            // 
             // groupBox12
             // 
             this.groupBox12.Controls.Add(this.check_backup_file_allchoose);
             this.groupBox12.Controls.Add(this.check_backup_file_allnotchoose);
             this.groupBox12.Controls.Add(this.check_backup_files_gxml);
             this.groupBox12.Controls.Add(this.check_backup_files_ftp);
-            this.groupBox12.Location = new System.Drawing.Point(590, 47);
+            this.groupBox12.Location = new System.Drawing.Point(590, 11);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(162, 368);
+            this.groupBox12.Size = new System.Drawing.Size(162, 275);
             this.groupBox12.TabIndex = 18;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "文件";
+            // 
+            // check_backup_file_allchoose
+            // 
+            this.check_backup_file_allchoose.AutoSize = true;
+            this.check_backup_file_allchoose.Location = new System.Drawing.Point(86, 24);
+            this.check_backup_file_allchoose.Name = "check_backup_file_allchoose";
+            this.check_backup_file_allchoose.Size = new System.Drawing.Size(58, 19);
+            this.check_backup_file_allchoose.TabIndex = 3;
+            this.check_backup_file_allchoose.TabStop = true;
+            this.check_backup_file_allchoose.Text = "全选";
+            this.check_backup_file_allchoose.UseVisualStyleBackColor = true;
+            this.check_backup_file_allchoose.CheckedChanged += new System.EventHandler(this.check_backup_file_allchoose_CheckedChanged);
+            // 
+            // check_backup_file_allnotchoose
+            // 
+            this.check_backup_file_allnotchoose.AutoSize = true;
+            this.check_backup_file_allnotchoose.Location = new System.Drawing.Point(22, 24);
+            this.check_backup_file_allnotchoose.Name = "check_backup_file_allnotchoose";
+            this.check_backup_file_allnotchoose.Size = new System.Drawing.Size(58, 19);
+            this.check_backup_file_allnotchoose.TabIndex = 2;
+            this.check_backup_file_allnotchoose.TabStop = true;
+            this.check_backup_file_allnotchoose.Text = "反选";
+            this.check_backup_file_allnotchoose.UseVisualStyleBackColor = true;
+            this.check_backup_file_allnotchoose.CheckedChanged += new System.EventHandler(this.check_backup_file_allnotchoose_CheckedChanged);
             // 
             // check_backup_files_gxml
             // 
             this.check_backup_files_gxml.AutoSize = true;
             this.check_backup_files_gxml.Checked = true;
             this.check_backup_files_gxml.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_files_gxml.Location = new System.Drawing.Point(22, 105);
+            this.check_backup_files_gxml.Location = new System.Drawing.Point(22, 96);
             this.check_backup_files_gxml.Name = "check_backup_files_gxml";
             this.check_backup_files_gxml.Size = new System.Drawing.Size(89, 19);
             this.check_backup_files_gxml.TabIndex = 1;
@@ -2080,12 +2763,36 @@
             this.groupBox11.Controls.Add(this.check_backup_app_qjdc);
             this.groupBox11.Controls.Add(this.check_backup_app_hr);
             this.groupBox11.Controls.Add(this.check_backup_app_bdc);
-            this.groupBox11.Location = new System.Drawing.Point(395, 48);
+            this.groupBox11.Location = new System.Drawing.Point(395, 12);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(166, 367);
+            this.groupBox11.Size = new System.Drawing.Size(166, 274);
             this.groupBox11.TabIndex = 17;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "程序";
+            // 
+            // check_backup_app_allchoose
+            // 
+            this.check_backup_app_allchoose.AutoSize = true;
+            this.check_backup_app_allchoose.Location = new System.Drawing.Point(82, 23);
+            this.check_backup_app_allchoose.Name = "check_backup_app_allchoose";
+            this.check_backup_app_allchoose.Size = new System.Drawing.Size(58, 19);
+            this.check_backup_app_allchoose.TabIndex = 16;
+            this.check_backup_app_allchoose.TabStop = true;
+            this.check_backup_app_allchoose.Text = "全选";
+            this.check_backup_app_allchoose.UseVisualStyleBackColor = true;
+            this.check_backup_app_allchoose.CheckedChanged += new System.EventHandler(this.check_backup_app_allchoose_CheckedChanged);
+            // 
+            // check_backup_app_allnotchoose
+            // 
+            this.check_backup_app_allnotchoose.AutoSize = true;
+            this.check_backup_app_allnotchoose.Location = new System.Drawing.Point(18, 23);
+            this.check_backup_app_allnotchoose.Name = "check_backup_app_allnotchoose";
+            this.check_backup_app_allnotchoose.Size = new System.Drawing.Size(58, 19);
+            this.check_backup_app_allnotchoose.TabIndex = 15;
+            this.check_backup_app_allnotchoose.TabStop = true;
+            this.check_backup_app_allnotchoose.Text = "反选";
+            this.check_backup_app_allnotchoose.UseVisualStyleBackColor = true;
+            this.check_backup_app_allnotchoose.CheckedChanged += new System.EventHandler(this.check_backup_app_allnotchoose_CheckedChanged);
             // 
             // check_backup_app_wcf
             // 
@@ -2104,7 +2811,7 @@
             this.check_backup_app_framework.AutoSize = true;
             this.check_backup_app_framework.Checked = true;
             this.check_backup_app_framework.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_app_framework.Location = new System.Drawing.Point(18, 107);
+            this.check_backup_app_framework.Location = new System.Drawing.Point(18, 93);
             this.check_backup_app_framework.Name = "check_backup_app_framework";
             this.check_backup_app_framework.Size = new System.Drawing.Size(89, 19);
             this.check_backup_app_framework.TabIndex = 7;
@@ -2116,7 +2823,7 @@
             this.check_backup_app_workflow.AutoSize = true;
             this.check_backup_app_workflow.Checked = true;
             this.check_backup_app_workflow.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_app_workflow.Location = new System.Drawing.Point(18, 162);
+            this.check_backup_app_workflow.Location = new System.Drawing.Point(18, 130);
             this.check_backup_app_workflow.Name = "check_backup_app_workflow";
             this.check_backup_app_workflow.Size = new System.Drawing.Size(74, 19);
             this.check_backup_app_workflow.TabIndex = 8;
@@ -2128,7 +2835,7 @@
             this.check_backup_app_qjdc.AutoSize = true;
             this.check_backup_app_qjdc.Checked = true;
             this.check_backup_app_qjdc.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_app_qjdc.Location = new System.Drawing.Point(18, 305);
+            this.check_backup_app_qjdc.Location = new System.Drawing.Point(18, 228);
             this.check_backup_app_qjdc.Name = "check_backup_app_qjdc";
             this.check_backup_app_qjdc.Size = new System.Drawing.Size(89, 19);
             this.check_backup_app_qjdc.TabIndex = 14;
@@ -2140,7 +2847,7 @@
             this.check_backup_app_hr.AutoSize = true;
             this.check_backup_app_hr.Checked = true;
             this.check_backup_app_hr.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_app_hr.Location = new System.Drawing.Point(18, 211);
+            this.check_backup_app_hr.Location = new System.Drawing.Point(18, 165);
             this.check_backup_app_hr.Name = "check_backup_app_hr";
             this.check_backup_app_hr.Size = new System.Drawing.Size(59, 19);
             this.check_backup_app_hr.TabIndex = 9;
@@ -2152,7 +2859,7 @@
             this.check_backup_app_bdc.AutoSize = true;
             this.check_backup_app_bdc.Checked = true;
             this.check_backup_app_bdc.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_app_bdc.Location = new System.Drawing.Point(18, 252);
+            this.check_backup_app_bdc.Location = new System.Drawing.Point(18, 197);
             this.check_backup_app_bdc.Name = "check_backup_app_bdc";
             this.check_backup_app_bdc.Size = new System.Drawing.Size(74, 19);
             this.check_backup_app_bdc.TabIndex = 10;
@@ -2166,12 +2873,36 @@
             this.groupBox10.Controls.Add(this.check_backup_sde_sde);
             this.groupBox10.Controls.Add(this.check_backup_sde_sde_his);
             this.groupBox10.Controls.Add(this.check_backup_sde_sde_pre);
-            this.groupBox10.Location = new System.Drawing.Point(208, 48);
+            this.groupBox10.Location = new System.Drawing.Point(208, 12);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(160, 367);
+            this.groupBox10.Size = new System.Drawing.Size(160, 274);
             this.groupBox10.TabIndex = 16;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "SDE空间库";
+            // 
+            // check_backup_sde_allchoose
+            // 
+            this.check_backup_sde_allchoose.AutoSize = true;
+            this.check_backup_sde_allchoose.Location = new System.Drawing.Point(86, 23);
+            this.check_backup_sde_allchoose.Name = "check_backup_sde_allchoose";
+            this.check_backup_sde_allchoose.Size = new System.Drawing.Size(58, 19);
+            this.check_backup_sde_allchoose.TabIndex = 15;
+            this.check_backup_sde_allchoose.TabStop = true;
+            this.check_backup_sde_allchoose.Text = "全选";
+            this.check_backup_sde_allchoose.UseVisualStyleBackColor = true;
+            this.check_backup_sde_allchoose.CheckedChanged += new System.EventHandler(this.check_backup_sde_allchoose_CheckedChanged);
+            // 
+            // check_backup_sde_allnotchoose
+            // 
+            this.check_backup_sde_allnotchoose.AutoSize = true;
+            this.check_backup_sde_allnotchoose.Location = new System.Drawing.Point(22, 23);
+            this.check_backup_sde_allnotchoose.Name = "check_backup_sde_allnotchoose";
+            this.check_backup_sde_allnotchoose.Size = new System.Drawing.Size(58, 19);
+            this.check_backup_sde_allnotchoose.TabIndex = 14;
+            this.check_backup_sde_allnotchoose.TabStop = true;
+            this.check_backup_sde_allnotchoose.Text = "反选";
+            this.check_backup_sde_allnotchoose.UseVisualStyleBackColor = true;
+            this.check_backup_sde_allnotchoose.CheckedChanged += new System.EventHandler(this.check_backup_sde_allnotchoose_CheckedChanged);
             // 
             // check_backup_sde_sde
             // 
@@ -2190,7 +2921,7 @@
             this.check_backup_sde_sde_his.AutoSize = true;
             this.check_backup_sde_sde_his.Checked = true;
             this.check_backup_sde_sde_his.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_sde_sde_his.Location = new System.Drawing.Point(22, 106);
+            this.check_backup_sde_sde_his.Location = new System.Drawing.Point(22, 91);
             this.check_backup_sde_sde_his.Name = "check_backup_sde_sde_his";
             this.check_backup_sde_sde_his.Size = new System.Drawing.Size(74, 19);
             this.check_backup_sde_sde_his.TabIndex = 12;
@@ -2202,7 +2933,7 @@
             this.check_backup_sde_sde_pre.AutoSize = true;
             this.check_backup_sde_sde_pre.Checked = true;
             this.check_backup_sde_sde_pre.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_sde_sde_pre.Location = new System.Drawing.Point(22, 157);
+            this.check_backup_sde_sde_pre.Location = new System.Drawing.Point(22, 127);
             this.check_backup_sde_sde_pre.Name = "check_backup_sde_sde_pre";
             this.check_backup_sde_sde_pre.Size = new System.Drawing.Size(74, 19);
             this.check_backup_sde_sde_pre.TabIndex = 13;
@@ -2218,12 +2949,36 @@
             this.groupBox9.Controls.Add(this.check_backup_db_bdc);
             this.groupBox9.Controls.Add(this.check_backup_db_workflow);
             this.groupBox9.Controls.Add(this.check_backup_db_qjdc);
-            this.groupBox9.Location = new System.Drawing.Point(29, 47);
+            this.groupBox9.Location = new System.Drawing.Point(29, 11);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(156, 368);
+            this.groupBox9.Size = new System.Drawing.Size(156, 275);
             this.groupBox9.TabIndex = 15;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "数据库";
+            // 
+            // check_backup_db_allchoose
+            // 
+            this.check_backup_db_allchoose.AutoSize = true;
+            this.check_backup_db_allchoose.Location = new System.Drawing.Point(79, 25);
+            this.check_backup_db_allchoose.Name = "check_backup_db_allchoose";
+            this.check_backup_db_allchoose.Size = new System.Drawing.Size(58, 19);
+            this.check_backup_db_allchoose.TabIndex = 7;
+            this.check_backup_db_allchoose.TabStop = true;
+            this.check_backup_db_allchoose.Text = "全选";
+            this.check_backup_db_allchoose.UseVisualStyleBackColor = true;
+            this.check_backup_db_allchoose.CheckedChanged += new System.EventHandler(this.check_backup_db_allchoose_CheckedChanged);
+            // 
+            // check_backup_db_allnotchoose
+            // 
+            this.check_backup_db_allnotchoose.AutoSize = true;
+            this.check_backup_db_allnotchoose.Location = new System.Drawing.Point(15, 25);
+            this.check_backup_db_allnotchoose.Name = "check_backup_db_allnotchoose";
+            this.check_backup_db_allnotchoose.Size = new System.Drawing.Size(58, 19);
+            this.check_backup_db_allnotchoose.TabIndex = 6;
+            this.check_backup_db_allnotchoose.TabStop = true;
+            this.check_backup_db_allnotchoose.Text = "反选";
+            this.check_backup_db_allnotchoose.UseVisualStyleBackColor = true;
+            this.check_backup_db_allnotchoose.CheckedChanged += new System.EventHandler(this.check_backup_db_allnotchoose_CheckedChanged);
             // 
             // check_backup_db_framework
             // 
@@ -2242,7 +2997,7 @@
             this.check_backup_db_hr.AutoSize = true;
             this.check_backup_db_hr.Checked = true;
             this.check_backup_db_hr.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_db_hr.Location = new System.Drawing.Point(15, 156);
+            this.check_backup_db_hr.Location = new System.Drawing.Point(15, 129);
             this.check_backup_db_hr.Name = "check_backup_db_hr";
             this.check_backup_db_hr.Size = new System.Drawing.Size(59, 19);
             this.check_backup_db_hr.TabIndex = 2;
@@ -2254,7 +3009,7 @@
             this.check_backup_db_bdc.AutoSize = true;
             this.check_backup_db_bdc.Checked = true;
             this.check_backup_db_bdc.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_db_bdc.Location = new System.Drawing.Point(15, 203);
+            this.check_backup_db_bdc.Location = new System.Drawing.Point(15, 160);
             this.check_backup_db_bdc.Name = "check_backup_db_bdc";
             this.check_backup_db_bdc.Size = new System.Drawing.Size(74, 19);
             this.check_backup_db_bdc.TabIndex = 3;
@@ -2266,7 +3021,7 @@
             this.check_backup_db_workflow.AutoSize = true;
             this.check_backup_db_workflow.Checked = true;
             this.check_backup_db_workflow.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_db_workflow.Location = new System.Drawing.Point(15, 107);
+            this.check_backup_db_workflow.Location = new System.Drawing.Point(15, 95);
             this.check_backup_db_workflow.Name = "check_backup_db_workflow";
             this.check_backup_db_workflow.Size = new System.Drawing.Size(74, 19);
             this.check_backup_db_workflow.TabIndex = 4;
@@ -2278,7 +3033,7 @@
             this.check_backup_db_qjdc.AutoSize = true;
             this.check_backup_db_qjdc.Checked = true;
             this.check_backup_db_qjdc.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_backup_db_qjdc.Location = new System.Drawing.Point(15, 247);
+            this.check_backup_db_qjdc.Location = new System.Drawing.Point(15, 192);
             this.check_backup_db_qjdc.Name = "check_backup_db_qjdc";
             this.check_backup_db_qjdc.Size = new System.Drawing.Size(89, 19);
             this.check_backup_db_qjdc.TabIndex = 5;
@@ -2287,17 +3042,17 @@
             // 
             // btn_backup
             // 
-            this.btn_backup.Location = new System.Drawing.Point(291, 448);
+            this.btn_backup.Location = new System.Drawing.Point(640, 545);
             this.btn_backup.Name = "btn_backup";
-            this.btn_backup.Size = new System.Drawing.Size(112, 34);
+            this.btn_backup.Size = new System.Drawing.Size(112, 32);
             this.btn_backup.TabIndex = 0;
-            this.btn_backup.Text = "备份";
+            this.btn_backup.Text = "手动备份";
             this.btn_backup.UseVisualStyleBackColor = true;
             this.btn_backup.Click += new System.EventHandler(this.btn_backup_Click);
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(289, 621);
+            this.btn_save.Location = new System.Drawing.Point(351, 621);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(106, 40);
             this.btn_save.TabIndex = 1;
@@ -2305,101 +3060,25 @@
             this.btn_save.UseVisualStyleBackColor = true;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
-            // check_backup_db_allnotchoose
+            // label49
             // 
-            this.check_backup_db_allnotchoose.AutoSize = true;
-            this.check_backup_db_allnotchoose.Location = new System.Drawing.Point(15, 25);
-            this.check_backup_db_allnotchoose.Name = "check_backup_db_allnotchoose";
-            this.check_backup_db_allnotchoose.Size = new System.Drawing.Size(58, 19);
-            this.check_backup_db_allnotchoose.TabIndex = 6;
-            this.check_backup_db_allnotchoose.TabStop = true;
-            this.check_backup_db_allnotchoose.Text = "反选";
-            this.check_backup_db_allnotchoose.UseVisualStyleBackColor = true;
-            this.check_backup_db_allnotchoose.CheckedChanged += new System.EventHandler(this.check_backup_db_allnotchoose_CheckedChanged);
+            this.label49.AutoSize = true;
+            this.label49.ForeColor = System.Drawing.Color.Red;
+            this.label49.Location = new System.Drawing.Point(29, 293);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(472, 15);
+            this.label49.TabIndex = 27;
+            this.label49.Text = "勾选要备份的内容，设置好备份服务的类型和日期等，需要先保存设置";
             // 
-            // check_backup_sde_allnotchoose
+            // label53
             // 
-            this.check_backup_sde_allnotchoose.AutoSize = true;
-            this.check_backup_sde_allnotchoose.Location = new System.Drawing.Point(22, 23);
-            this.check_backup_sde_allnotchoose.Name = "check_backup_sde_allnotchoose";
-            this.check_backup_sde_allnotchoose.Size = new System.Drawing.Size(58, 19);
-            this.check_backup_sde_allnotchoose.TabIndex = 14;
-            this.check_backup_sde_allnotchoose.TabStop = true;
-            this.check_backup_sde_allnotchoose.Text = "反选";
-            this.check_backup_sde_allnotchoose.UseVisualStyleBackColor = true;
-            this.check_backup_sde_allnotchoose.CheckedChanged += new System.EventHandler(this.check_backup_sde_allnotchoose_CheckedChanged);
-            // 
-            // check_backup_app_allnotchoose
-            // 
-            this.check_backup_app_allnotchoose.AutoSize = true;
-            this.check_backup_app_allnotchoose.Location = new System.Drawing.Point(18, 23);
-            this.check_backup_app_allnotchoose.Name = "check_backup_app_allnotchoose";
-            this.check_backup_app_allnotchoose.Size = new System.Drawing.Size(58, 19);
-            this.check_backup_app_allnotchoose.TabIndex = 15;
-            this.check_backup_app_allnotchoose.TabStop = true;
-            this.check_backup_app_allnotchoose.Text = "反选";
-            this.check_backup_app_allnotchoose.UseVisualStyleBackColor = true;
-            this.check_backup_app_allnotchoose.CheckedChanged += new System.EventHandler(this.check_backup_app_allnotchoose_CheckedChanged);
-            // 
-            // check_backup_file_allnotchoose
-            // 
-            this.check_backup_file_allnotchoose.AutoSize = true;
-            this.check_backup_file_allnotchoose.Location = new System.Drawing.Point(22, 24);
-            this.check_backup_file_allnotchoose.Name = "check_backup_file_allnotchoose";
-            this.check_backup_file_allnotchoose.Size = new System.Drawing.Size(58, 19);
-            this.check_backup_file_allnotchoose.TabIndex = 2;
-            this.check_backup_file_allnotchoose.TabStop = true;
-            this.check_backup_file_allnotchoose.Text = "反选";
-            this.check_backup_file_allnotchoose.UseVisualStyleBackColor = true;
-            this.check_backup_file_allnotchoose.CheckedChanged += new System.EventHandler(this.check_backup_file_allnotchoose_CheckedChanged);
-            // 
-            // check_backup_db_allchoose
-            // 
-            this.check_backup_db_allchoose.AutoSize = true;
-            this.check_backup_db_allchoose.Location = new System.Drawing.Point(79, 25);
-            this.check_backup_db_allchoose.Name = "check_backup_db_allchoose";
-            this.check_backup_db_allchoose.Size = new System.Drawing.Size(58, 19);
-            this.check_backup_db_allchoose.TabIndex = 7;
-            this.check_backup_db_allchoose.TabStop = true;
-            this.check_backup_db_allchoose.Text = "全选";
-            this.check_backup_db_allchoose.UseVisualStyleBackColor = true;
-            this.check_backup_db_allchoose.CheckedChanged += new System.EventHandler(this.check_backup_db_allchoose_CheckedChanged);
-            // 
-            // check_backup_sde_allchoose
-            // 
-            this.check_backup_sde_allchoose.AutoSize = true;
-            this.check_backup_sde_allchoose.Location = new System.Drawing.Point(86, 23);
-            this.check_backup_sde_allchoose.Name = "check_backup_sde_allchoose";
-            this.check_backup_sde_allchoose.Size = new System.Drawing.Size(58, 19);
-            this.check_backup_sde_allchoose.TabIndex = 15;
-            this.check_backup_sde_allchoose.TabStop = true;
-            this.check_backup_sde_allchoose.Text = "全选";
-            this.check_backup_sde_allchoose.UseVisualStyleBackColor = true;
-            this.check_backup_sde_allchoose.CheckedChanged += new System.EventHandler(this.check_backup_sde_allchoose_CheckedChanged);
-            // 
-            // check_backup_app_allchoose
-            // 
-            this.check_backup_app_allchoose.AutoSize = true;
-            this.check_backup_app_allchoose.Location = new System.Drawing.Point(82, 23);
-            this.check_backup_app_allchoose.Name = "check_backup_app_allchoose";
-            this.check_backup_app_allchoose.Size = new System.Drawing.Size(58, 19);
-            this.check_backup_app_allchoose.TabIndex = 16;
-            this.check_backup_app_allchoose.TabStop = true;
-            this.check_backup_app_allchoose.Text = "全选";
-            this.check_backup_app_allchoose.UseVisualStyleBackColor = true;
-            this.check_backup_app_allchoose.CheckedChanged += new System.EventHandler(this.check_backup_app_allchoose_CheckedChanged);
-            // 
-            // check_backup_file_allchoose
-            // 
-            this.check_backup_file_allchoose.AutoSize = true;
-            this.check_backup_file_allchoose.Location = new System.Drawing.Point(86, 24);
-            this.check_backup_file_allchoose.Name = "check_backup_file_allchoose";
-            this.check_backup_file_allchoose.Size = new System.Drawing.Size(58, 19);
-            this.check_backup_file_allchoose.TabIndex = 3;
-            this.check_backup_file_allchoose.TabStop = true;
-            this.check_backup_file_allchoose.Text = "全选";
-            this.check_backup_file_allchoose.UseVisualStyleBackColor = true;
-            this.check_backup_file_allchoose.CheckedChanged += new System.EventHandler(this.check_backup_file_allchoose_CheckedChanged);
+            this.label53.AutoSize = true;
+            this.label53.ForeColor = System.Drawing.Color.Red;
+            this.label53.Location = new System.Drawing.Point(68, 543);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(142, 15);
+            this.label53.TabIndex = 9;
+            this.label53.Text = "在服务器上是存在的";
             // 
             // Form1
             // 
@@ -2442,6 +3121,14 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.tab_backup.ResumeLayout(false);
+            this.type_day.ResumeLayout(false);
+            this.type_day.PerformLayout();
+            this.type_week.ResumeLayout(false);
+            this.type_week.PerformLayout();
+            this.type_month.ResumeLayout(false);
+            this.type_month.PerformLayout();
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.groupBox11.ResumeLayout(false);
@@ -2656,6 +3343,63 @@
         private System.Windows.Forms.RadioButton check_backup_app_allchoose;
         private System.Windows.Forms.RadioButton check_backup_sde_allchoose;
         private System.Windows.Forms.RadioButton check_backup_db_allchoose;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TabControl tab_backup;
+        private System.Windows.Forms.TabPage type_day;
+        private System.Windows.Forms.TabPage type_week;
+        private System.Windows.Forms.TabPage type_month;
+        private System.Windows.Forms.Label lab_backupServicesState;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Button btn_backup_serviceUninstall;
+        private System.Windows.Forms.Button btn_backup_serviceStop;
+        private System.Windows.Forms.Button btn_backup_serviceStart;
+        private System.Windows.Forms.Button btn_backup_serviceInstall;
+        private System.Windows.Forms.DateTimePicker backup_day_starttime;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.DateTimePicker backup_week_starttime;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.CheckBox backup_week_check7;
+        private System.Windows.Forms.CheckBox backup_week_check6;
+        private System.Windows.Forms.CheckBox backup_week_check5;
+        private System.Windows.Forms.CheckBox backup_week_check4;
+        private System.Windows.Forms.CheckBox backup_week_check3;
+        private System.Windows.Forms.CheckBox backup_week_check2;
+        private System.Windows.Forms.CheckBox backup_week_check1;
+        private System.Windows.Forms.DateTimePicker backup_month_starttime;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.CheckBox backup_month_check31;
+        private System.Windows.Forms.CheckBox backup_month_check30;
+        private System.Windows.Forms.CheckBox backup_month_check29;
+        private System.Windows.Forms.CheckBox backup_month_check28;
+        private System.Windows.Forms.CheckBox backup_month_check27;
+        private System.Windows.Forms.CheckBox backup_month_check26;
+        private System.Windows.Forms.CheckBox backup_month_check25;
+        private System.Windows.Forms.CheckBox backup_month_check24;
+        private System.Windows.Forms.CheckBox backup_month_check23;
+        private System.Windows.Forms.CheckBox backup_month_check22;
+        private System.Windows.Forms.CheckBox backup_month_check18;
+        private System.Windows.Forms.CheckBox backup_month_check17;
+        private System.Windows.Forms.CheckBox backup_month_check19;
+        private System.Windows.Forms.CheckBox backup_month_check20;
+        private System.Windows.Forms.CheckBox backup_month_check21;
+        private System.Windows.Forms.CheckBox backup_month_check12;
+        private System.Windows.Forms.CheckBox backup_month_check13;
+        private System.Windows.Forms.CheckBox backup_month_check14;
+        private System.Windows.Forms.CheckBox backup_month_check15;
+        private System.Windows.Forms.CheckBox backup_month_check16;
+        private System.Windows.Forms.CheckBox backup_month_check7;
+        private System.Windows.Forms.CheckBox backup_month_check8;
+        private System.Windows.Forms.CheckBox backup_month_check9;
+        private System.Windows.Forms.CheckBox backup_month_check10;
+        private System.Windows.Forms.CheckBox backup_month_check11;
+        private System.Windows.Forms.CheckBox backup_month_check2;
+        private System.Windows.Forms.CheckBox backup_month_check3;
+        private System.Windows.Forms.CheckBox backup_month_check4;
+        private System.Windows.Forms.CheckBox backup_month_check5;
+        private System.Windows.Forms.CheckBox backup_month_check6;
+        private System.Windows.Forms.CheckBox backup_month_check1;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label53;
     }
 }
 

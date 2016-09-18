@@ -8,10 +8,10 @@ using System.Text;
 using System.Windows.Forms;
 using System.ServiceProcess;
 using System.IO;
-using ESRI.ArcGIS.Geodatabase;
 using ESRI.ArcGIS.esriSystem;
 using System.Runtime.InteropServices;
 using System.Threading;
+using ESRI.ArcGIS.Geodatabase;
 
 namespace QuickConfig
 {
@@ -23,11 +23,13 @@ namespace QuickConfig
             setGCS();
             setValue();
             this.wcf_state.Text = getServiceState("OVIT_WebAppServer");
+            this.lab_backupServicesState.Text = getServiceState("QuickConfig_AutoBackup");
         }
 
         private void setValue()
         {
             setXml xml = new setXml();
+            xml.setQuickConfig();
             DataTable parTable = xml.readXML();
 
             this.path_main.Text = parTable.Select("name='path_main'")[0][1].ToString();
@@ -95,6 +97,87 @@ namespace QuickConfig
             this.par_szdxzbm.Text = parTable.Select("name='par_szdxzbm'")[0][1].ToString();
             this.par_szdmc.Text = parTable.Select("name='par_szdmc'")[0][1].ToString();
             this.par_szdjc.Text = parTable.Select("name='par_szdjc'")[0][1].ToString();
+            //获取备份设置参数
+            string backupcontent = parTable.Select("name='backup_content'")[0][1].ToString();
+            if (backupcontent != "")
+            {
+                string[] backupContent = backupcontent.Split(',');
+                bool[] backupBool = new bool[backupContent.Length];
+                for (int i = 0; i < backupBool.Length; i++)
+                {
+                    backupBool[i] = backupContent[i] == "True" ? true : false;
+                }
+
+                this.check_backup_db_framework.Checked = backupBool[0];
+                this.check_backup_db_workflow.Checked = backupBool[1];
+                this.check_backup_db_hr.Checked = backupBool[2];
+                this.check_backup_db_bdc.Checked = backupBool[3];
+                this.check_backup_db_qjdc.Checked = backupBool[4];
+
+                this.check_backup_sde_sde.Checked = backupBool[5];
+                this.check_backup_sde_sde_his.Checked = backupBool[6];
+                this.check_backup_sde_sde_pre.Checked = backupBool[7];
+
+                this.check_backup_app_wcf.Checked = backupBool[8];
+                this.check_backup_app_framework.Checked = backupBool[9];
+                this.check_backup_app_workflow.Checked = backupBool[10];
+                this.check_backup_app_hr.Checked = backupBool[11];
+                this.check_backup_app_bdc.Checked = backupBool[12];
+                this.check_backup_app_qjdc.Checked = backupBool[13];
+
+                this.check_backup_files_ftp.Checked = backupBool[14];
+                this.check_backup_files_gxml.Checked = backupBool[15];
+
+            }
+
+
+            string backuptype = parTable.Select("name='backup_type'")[0][1].ToString();
+            if (backuptype != "")
+            {
+                if (backuptype == "每日")
+                {
+                    this.tab_backup.SelectedIndex = 0;
+                }
+                else if (backuptype == "每周")
+                {
+                    this.tab_backup.SelectedIndex = 1;
+                }
+                else
+                {
+                    this.tab_backup.SelectedIndex = 2;
+                }
+
+            }
+            else
+            {
+                this.tab_backup.SelectedIndex = 0;
+            }
+
+            string chooseWeekStr = parTable.Select("name='backup_type_week'")[0][1].ToString();
+            foreach (Control cb in tab_backup.TabPages[1].Controls)
+            {
+                if (cb is CheckBox && chooseWeekStr.Contains(cb.Text))
+                {
+                    (cb as CheckBox).Checked = true;
+                }
+            }
+            this.backup_week_starttime.Text = parTable.Select("name='backup_type_weektime'")[0][1].ToString();
+
+
+            string chooseMonthStr = parTable.Select("name='backup_type_month'")[0][1].ToString();
+            foreach (Control cb in tab_backup.TabPages[2].Controls)
+            {
+                if (cb is CheckBox)
+                {
+                    if ((chooseMonthStr.Contains(cb.Text) && chooseMonthStr == cb.Text) || (chooseMonthStr.Contains(cb.Text + ",")) || (chooseMonthStr.Contains("," + cb.Text + ",")) || (chooseMonthStr.Contains("," + cb.Text)))
+                    {
+                        (cb as CheckBox).Checked = true;
+                    }
+                }
+            }
+            this.backup_month_starttime.Text = parTable.Select("name='backup_type_monthtime'")[0][1].ToString();
+
+
         }
 
         private void btn_save_Click(object sender, EventArgs e)
@@ -105,6 +188,7 @@ namespace QuickConfig
             }
 
             setXml xml = new setXml();
+            xml.setQuickConfig();
             xml.editxml("path_main", this.path_main.Text);
             xml.editxml("path_service", this.path_service.Text);
             xml.editxml("path_framework", this.path_framework.Text);
@@ -169,6 +253,76 @@ namespace QuickConfig
             xml.editxml("par_szdmc", this.par_szdmc.Text);
             xml.editxml("par_szdjc", this.par_szdjc.Text);
 
+
+            //设置备份服务
+            string chooseContent =
+                this.check_backup_db_framework.Checked.ToString() + "," +
+                this.check_backup_db_workflow.Checked.ToString() + "," +
+                this.check_backup_db_hr.Checked.ToString() + "," +
+                this.check_backup_db_bdc.Checked.ToString() + "," +
+                this.check_backup_db_qjdc.Checked.ToString() + "," +
+
+                this.check_backup_sde_sde.Checked.ToString() + "," +
+                this.check_backup_sde_sde_his.Checked.ToString() + "," +
+                this.check_backup_sde_sde_pre.Checked.ToString() + "," +
+
+                this.check_backup_app_wcf.Checked.ToString() + "," +
+                this.check_backup_app_framework.Checked.ToString() + "," +
+                this.check_backup_app_workflow.Checked.ToString() + "," +
+                this.check_backup_app_hr.Checked.ToString() + "," +
+                this.check_backup_app_bdc.Checked.ToString() + "," +
+                this.check_backup_app_qjdc.Checked.ToString() + "," +
+
+                this.check_backup_files_ftp.Checked.ToString() + "," +
+                this.check_backup_files_gxml.Checked.ToString();
+
+            xml.editxml("backup_content", chooseContent);
+
+            xml.editxml("backup_type", this.tab_backup.SelectedTab.Text);
+            xml.editxml("backup_type_daytime", this.backup_day_starttime.Value.ToString("HH:mm:ss"));
+
+            string chooseWeekStr = "";
+            foreach (Control cb in tab_backup.TabPages[1].Controls)
+            {
+                if (cb is CheckBox)
+                {
+                    if ((cb as CheckBox).Checked == true)
+                    {
+                        if (chooseWeekStr == "")
+                        {
+                            chooseWeekStr = cb.Text;
+                        }
+                        else
+                        {
+                            chooseWeekStr += "," + cb.Text;
+                        }
+                    }
+                }
+            }
+            xml.editxml("backup_type_week", chooseWeekStr);
+            xml.editxml("backup_type_weektime", this.backup_week_starttime.Value.ToString("HH:mm:ss"));
+
+            string chooseMonthStr = "";
+            foreach (Control cb in tab_backup.TabPages[2].Controls)
+            {
+                if (cb is CheckBox)
+                {
+                    if ((cb as CheckBox).Checked == true)
+                    {
+                        if (chooseMonthStr == "")
+                        {
+                            chooseMonthStr = cb.Text;
+                        }
+                        else
+                        {
+                            chooseMonthStr += "," + cb.Text;
+                        }
+                    }
+                }
+            }
+
+            xml.editxml("backup_type_month", chooseMonthStr);
+            xml.editxml("backup_type_monthtime", this.backup_month_starttime.Value.ToString("HH:mm:ss"));
             // MessageBox.Show("保存成功!");
             setMessage.MessageShow("", "保存成功!", this.btn_save);
 
@@ -187,7 +341,7 @@ namespace QuickConfig
                 }
                 catch (Exception eg)
                 {
-                   // MessageBox.Show("链接不上数据库，请检查参数和配置");
+                    // MessageBox.Show("链接不上数据库，请检查参数和配置");
                     setMessage.MessageShow("", "链接不上数据库，请检查参数和配置!", this.check_default);
                     this.check_default.Checked = false;
                     return;
@@ -308,6 +462,7 @@ namespace QuickConfig
             }
 
             setXml xml = new setXml();
+            xml.setQuickConfig();
             xml.addCopyFileXML(xml.scanfiles());
 
             setConfig config = new setConfig();
@@ -469,12 +624,12 @@ namespace QuickConfig
             if (Directory.Exists(this.path_ftp.Text) == false)
             {
                 Directory.CreateDirectory(this.path_ftp.Text);
-               // MessageBox.Show("ftp文件夹创建成功！");
+                // MessageBox.Show("ftp文件夹创建成功！");
                 setMessage.MessageShow("", "ftp文件夹创建成功！", this.btn_folder_ftp);
                 if (Directory.Exists(this.path_ftp.Text + @"\SJCL") == false)
                 {
                     Directory.CreateDirectory(this.path_ftp.Text + @"\SJCL");
-                   // MessageBox.Show("ftp中SJCL文件夹创建成功！");
+                    // MessageBox.Show("ftp中SJCL文件夹创建成功！");
                     setMessage.MessageShow("", "ftp中SJCL文件夹创建成功！", this.btn_folder_ftp);
                 }
                 else
@@ -496,7 +651,7 @@ namespace QuickConfig
             if (Directory.Exists(this.path_gxml.Text) == false)
             {
                 Directory.CreateDirectory(this.path_gxml.Text);
-               // MessageBox.Show("共享目录文件夹创建成功！");
+                // MessageBox.Show("共享目录文件夹创建成功！");
                 setMessage.MessageShow("", "共享目录文件夹创建成功！", this.btn_folder_gxml);
             }
             else
@@ -511,6 +666,7 @@ namespace QuickConfig
         private void btn_wcfinstall_Click(object sender, EventArgs e)
         {
             setXml xml = new setXml();
+            xml.setQuickConfig();
             setBAT.RunBat(xml.getSetXmlValue("path_service") + @"\Service_InstallUtil.bat");
             this.wcf_state.Text = getServiceState("OVIT_WebAppServer");
         }
@@ -518,6 +674,7 @@ namespace QuickConfig
         private void btn_wcfstart_Click(object sender, EventArgs e)
         {
             setXml xml = new setXml();
+            xml.setQuickConfig();
             setBAT.RunBat(xml.getSetXmlValue("path_service") + @"\Service_Start.bat");
             this.wcf_state.Text = getServiceState("OVIT_WebAppServer");
         }
@@ -525,6 +682,7 @@ namespace QuickConfig
         private void btn_wcfstop_Click(object sender, EventArgs e)
         {
             setXml xml = new setXml();
+            xml.setQuickConfig();
             setBAT.RunBat(xml.getSetXmlValue("path_service") + @"\Service_Stop.bat");
             this.wcf_state.Text = getServiceState("OVIT_WebAppServer");
         }
@@ -532,6 +690,7 @@ namespace QuickConfig
         private void btn_wcfremove_Click(object sender, EventArgs e)
         {
             setXml xml = new setXml();
+            xml.setQuickConfig();
             setBAT.RunBat(xml.getSetXmlValue("path_service") + @"\Service_UnInstallUtil.bat");
             this.wcf_state.Text = getServiceState("OVIT_WebAppServer");
         }
@@ -540,6 +699,7 @@ namespace QuickConfig
         {
 
             setXml xml = new setXml();
+            xml.setQuickConfig();
             setIIS iis = new setIIS();
             iis.DelSite("BaseFramework");
             iis.DelSite("HRWebApp");
@@ -563,6 +723,7 @@ namespace QuickConfig
         private void btn_updateappurl_Click(object sender, EventArgs e)
         {
             setXml xml = new setXml();
+            xml.setQuickConfig();
             try
             {
                 setDB db = new setDB(xml.getSetXmlValue("user_framework"), xml.getSetXmlValue("password_framework"), this.datasource.Text);
@@ -572,7 +733,7 @@ namespace QuickConfig
             }
             catch (Exception eg)
             {
-                MessageBox.Show("请确保配置正确，并且framework用户能正常访问:\r\n"+eg.Message.ToString());
+                MessageBox.Show("请确保配置正确，并且framework用户能正常访问:\r\n" + eg.Message.ToString());
             }
         }
 
@@ -584,6 +745,7 @@ namespace QuickConfig
         private void btn_createftp_Click(object sender, EventArgs e)
         {
             setXml xml = new setXml();
+            xml.setQuickConfig();
             //if (setOSUser.isUserExist(xml.getSetXmlValue("ftp_user")))
             //{
             //    setOSUser.RemoveUser(xml.getSetXmlValue("ftp_user"));
@@ -603,6 +765,7 @@ namespace QuickConfig
         private void btn_creategxml_Click(object sender, EventArgs e)
         {
             setXml xml = new setXml();
+            xml.setQuickConfig();
             setGXML gxml = new setGXML();
             gxml.SetFileRole(xml.getSetXmlValue("path_gxml"), xml.getSetXmlValue("gxml_user"));
             gxml.shareFolder(xml.getSetXmlValue("path_gxml"), "共享目录", "");
@@ -724,7 +887,7 @@ namespace QuickConfig
         private void btn_createts_Click(object sender, EventArgs e)
         {
             setXml xml = new setXml();
-
+            xml.setQuickConfig();
             try
             {
                 setDB db = new setDB(xml.getSetXmlValue("user_system"), xml.getSetXmlValue("password_system"), this.datasource.Text);
@@ -852,7 +1015,7 @@ namespace QuickConfig
             }
 
             setXml xml = new setXml();
-
+            xml.setQuickConfig();
             try
             {
                 setDB db = new setDB(xml.getSetXmlValue("user_system"), xml.getSetXmlValue("password_system"), this.datasource.Text);
@@ -970,39 +1133,41 @@ namespace QuickConfig
             string imp_path = AppDomain.CurrentDomain.BaseDirectory + @"dataTemp";
             setConfig config = new setConfig();
 
+            setXml xml = new setXml();
+            xml.setQuickConfig();
 
             string ansStr = "开始数据\r\n";
             if (check_data_framework.Checked == true)
             {
-                config.repalcePar(imp_tem_path, "imp_framework.bat", imp_path);
+                config.repalcePar(xml,imp_tem_path, "imp_framework.bat", imp_path);
                 setBAT.RunBat(imp_path + @"\imp_framework.bat");
                 ansStr += "基础框架数据导入完成\r\n";
             }
 
             if (check_data_workflow.Checked == true)
             {
-                config.repalcePar(imp_tem_path, "imp_workflow.bat", imp_path);
+                config.repalcePar(xml,imp_tem_path, "imp_workflow.bat", imp_path);
                 setBAT.RunBat(imp_path + @"\imp_workflow.bat");
                 ansStr += "工作流据导入完成\r\n";
             }
 
             if (check_data_hr.Checked == true)
             {
-                config.repalcePar(imp_tem_path, "imp_hr.bat", imp_path);
+                config.repalcePar(xml,imp_tem_path, "imp_hr.bat", imp_path);
                 setBAT.RunBat(imp_path + @"\imp_hr.bat");
                 ansStr += "人事据导入完成\r\n";
             }
 
             if (check_data_bdc.Checked == true)
             {
-                config.repalcePar(imp_tem_path, "imp_bdc.bat", imp_path);
+                config.repalcePar(xml,imp_tem_path, "imp_bdc.bat", imp_path);
                 setBAT.RunBat(imp_path + @"\imp_bdc.bat");
                 ansStr += "不动产导入完成\r\n";
             }
 
             if (check_data_qjdc.Checked == true)
             {
-                config.repalcePar(imp_tem_path, "imp_qjdc.bat", imp_path);
+                config.repalcePar(xml,imp_tem_path, "imp_qjdc.bat", imp_path);
                 setBAT.RunBat(imp_path + @"\imp_qjdc.bat");
                 ansStr += "权籍调查数据导入完成\r\n";
             }
@@ -1015,8 +1180,11 @@ namespace QuickConfig
 
         private void btn_createsde_Click(object sender, EventArgs e)
         {
+            setArcgis.init();
             EngineDatabase engine = new EngineDatabase();
+           
             setXml xml = new setXml();
+            xml.setQuickConfig();
             setDB db = new setDB(xml.getSetXmlValue("user_system"), xml.getSetXmlValue("password_system"), this.datasource.Text);
 
             if (this.check_data_bdcdj.Checked == true)
@@ -1104,7 +1272,7 @@ namespace QuickConfig
                 }
             }
 
-            MessageBox.Show("企业空间库创建完成");
+            MessageBox.Show("企业空间库操作结束");
 
 
         }
@@ -1120,13 +1288,15 @@ namespace QuickConfig
             {
                 return;
             }
-
+            setArcgis.init();
             //初始化 esri授权
             IAoInitialize pao = new AoInitializeClass();
             pao.Initialize(esriLicenseProductCode.esriLicenseProductCodeStandard);
 
             EngineDatabase engine = new EngineDatabase();
+          
             setXml xml = new setXml();
+            xml.setQuickConfig();
             setDB db = new setDB(xml.getSetXmlValue("user_system"), xml.getSetXmlValue("password_system"), this.datasource.Text);
 
             if (this.check_data_bdcdj.Checked == true)
@@ -1185,284 +1355,31 @@ namespace QuickConfig
         {
             string exp_tem_path = AppDomain.CurrentDomain.BaseDirectory + @"data";
             string exp_path = AppDomain.CurrentDomain.BaseDirectory + @"dataTemp";
-            string dayString = DateTime.Now.Year + "-" + (DateTime.Now.Month < 10 ? "0" + DateTime.Now.Month : DateTime.Now.Month + "") + "-" + (DateTime.Now.Day < 10 ? "0" + DateTime.Now.Day : DateTime.Now.Day + "");  //DateTime.Now.ToShortDateString();
-            //MessageBox.Show(dayString);
-            setXml xml = new setXml();
-            string backup_path = xml.getSetXmlValue("path_data_main") + "\\backup-" + dayString;
-            if (!System.IO.Directory.Exists(backup_path))
+
+            setBackup backup = new setBackup();
+
+            QuickConfig.setXml xml = new QuickConfig.setXml();
+            xml.setQuickConfig();
+
+            DataTable parTable = xml.readXML();
+
+            //获取备份设置参数
+            string backupcontent = parTable.Select("name='backup_content'")[0][1].ToString();
+            bool[] backupBool = null;
+            if (backupcontent != "")
             {
-                System.IO.Directory.CreateDirectory(backup_path);
+                string[] backupContent = backupcontent.Split(',');
+                backupBool = new bool[backupContent.Length];
+                for (int i = 0; i < backupBool.Length; i++)
+                {
+                    backupBool[i] = backupContent[i] == "True" ? true : false;
+                }
+
             }
 
-            setConfig config = new setConfig();
-
-            string ansStr = "开始备份数据\r\n";
-            //  string ansStr = "";
-            // setMessage.MessageShow("", "开始备份数据!", this);
-            if (this.check_backup_db_framework.Checked == true)
-            {
-                //设置空表导出参数
-                setDB db = new setDB(xml.getSetXmlValue("user_framework"), xml.getSetXmlValue("password_framework"), this.datasource.Text);
-                db.setEXP();
-
-                config.repalcePar(exp_tem_path, "exp_framework.bat", exp_path);
-                setBAT.RunBat(exp_path + @"\exp_framework.bat");
-                ansStr += "基础框架数据导出完成\r\n";
-            }
-
-            if (check_backup_db_workflow.Checked == true)
-            {
-                //设置空表导出参数
-                setDB db = new setDB(xml.getSetXmlValue("user_workflow"), xml.getSetXmlValue("password_workflow"), this.datasource.Text);
-                db.setEXP();
-
-                config.repalcePar(exp_tem_path, "exp_workflow.bat", exp_path);
-                setBAT.RunBat(exp_path + @"\exp_workflow.bat");
-                ansStr += "工作流据导出完成\r\n";
-            }
-
-            if (check_backup_db_hr.Checked == true)
-            {
-                //设置空表导出参数
-                setDB db = new setDB(xml.getSetXmlValue("user_hr"), xml.getSetXmlValue("password_hr"), this.datasource.Text);
-                db.setEXP();
-
-                config.repalcePar(exp_tem_path, "exp_hr.bat", exp_path);
-                setBAT.RunBat(exp_path + @"\exp_hr.bat");
-                ansStr += "人事据导出完成\r\n";
-            }
-
-            if (check_backup_db_bdc.Checked == true)
-            {
-                //设置空表导出参数
-                setDB db = new setDB(xml.getSetXmlValue("user_bdc"), xml.getSetXmlValue("password_bdc"), this.datasource.Text);
-                db.setEXP();
-
-                config.repalcePar(exp_tem_path, "exp_bdc.bat", exp_path);
-                setBAT.RunBat(exp_path + @"\exp_bdc.bat");
-                ansStr += "不动产导出完成\r\n";
-            }
-
-            if (check_backup_db_qjdc.Checked == true)
-            {
-                //设置空表导出参数
-                setDB db = new setDB(xml.getSetXmlValue("user_qjdc"), xml.getSetXmlValue("password_qjdc"), this.datasource.Text);
-                db.setEXP();
-
-                config.repalcePar(exp_tem_path, "exp_qjdc.bat", exp_path);
-                setBAT.RunBat(exp_path + @"\exp_qjdc.bat");
-                ansStr += "权籍调查数据导出完成\r\n";
-            }
-
-
-            //备份 sde库
-            //初始化 esri授权
-            IAoInitialize pao = new AoInitializeClass();
-            pao.Initialize(esriLicenseProductCode.esriLicenseProductCodeStandard);
-            EngineDatabase engine = new EngineDatabase();
-
-            if (check_backup_sde_sde.Checked == true)
-            {
-                IWorkspace workspace = null;
-                IFeatureWorkspace featureworkspace = null;
-                IFeatureDataset featuredataset = null;
-                workspace = engine.getSDEWorkspace(xml.getSetXmlValue("wcf_ip"), "sde:oracle10g:" + xml.getSetXmlValue("datasource"), xml.getSetXmlValue("user_sde"), xml.getSetXmlValue("password_sde"));
-                engine.createGDBFile(backup_path, "BDCDJ.gdb");
-                frmLoading.ShowLoading();
-                string ans1 = engine.exportSDE2GDB(workspace, featureworkspace, featuredataset, backup_path + "\\BDCDJ.gdb", Convert.ToInt32(xml.getSetXmlValue("par_gcs")), xml.getSetXmlValue("user_sde"));
-                frmLoading.HideLoading();
-                //MessageBox.Show("现势库导出结果如下:\r\n" + ans1);
-                ansStr += "现势库导出结果如下:\r\n" + ans1 + "\r\n";
-                //setMessage.MessageShow("", "现势库导出结果如下:\r\n" + ans1, this);
-                Marshal.ReleaseComObject(workspace);
-                ansStr += "现势库导出导出完成\r\n";
-            }
-
-            if (check_backup_sde_sde_his.Checked == true)
-            {
-                IWorkspace workspace = null;
-                IFeatureWorkspace featureworkspace = null;
-                IFeatureDataset featuredataset = null;
-                workspace = engine.getSDEWorkspace(xml.getSetXmlValue("wcf_ip"), "sde:oracle10g:" + xml.getSetXmlValue("datasource"), xml.getSetXmlValue("user_sde_his"), xml.getSetXmlValue("password_sde_his"));
-                engine.createGDBFile(backup_path, "BDCDJ_HIS.gdb");
-                frmLoading.ShowLoading();
-                string ans1 = engine.exportSDE2GDB(workspace, featureworkspace, featuredataset, backup_path + "\\BDCDJ_HIS.gdb", Convert.ToInt32(xml.getSetXmlValue("par_gcs")), xml.getSetXmlValue("user_sde_his"));
-                //MessageBox.Show("历史库导出结果如下:\r\n" + ans1);
-                frmLoading.HideLoading();
-                // setMessage.MessageShow("", "历史库导出结果如下:\r\n" + ans1, this);
-                ansStr += "历史库导出结果如下:\r\n" + ans1;
-                Marshal.ReleaseComObject(workspace);
-                ansStr += "历史库导出完成\r\n";
-            }
-            if (check_backup_sde_sde_pre.Checked == true)
-            {
-                IWorkspace workspace = null;
-                IFeatureWorkspace featureworkspace = null;
-                IFeatureDataset featuredataset = null;
-                workspace = engine.getSDEWorkspace(xml.getSetXmlValue("wcf_ip"), "sde:oracle10g:" + xml.getSetXmlValue("datasource"), xml.getSetXmlValue("user_sde_pre"), xml.getSetXmlValue("password_sde_pre"));
-                engine.createGDBFile(backup_path, "BDCDJ_PRE.gdb");
-                frmLoading.ShowLoading();
-                string ans1 = engine.exportSDE2GDB(workspace, featureworkspace, featuredataset, backup_path + "\\BDCDJ_PRE.gdb", Convert.ToInt32(xml.getSetXmlValue("par_gcs")), xml.getSetXmlValue("user_sde_pre"));
-                //MessageBox.Show("临时库导出结果如下:\r\n" + ans1);
-                frmLoading.HideLoading();
-                //setMessage.MessageShow("", "临时库导出结果如下:\r\n" + ans1, this);
-                ansStr += "临时库导出结果如下:\r\n" + ans1;
-                Marshal.ReleaseComObject(workspace);
-                ansStr += "临时库数据导出完成\r\n";
-            }
-            //备份 程序
-
-            if (check_backup_app_wcf.Checked == true)
-            {
-                DataTable dtPar = new DataTable();
-                dtPar.Columns.Add("name", typeof(string));
-                dtPar.Columns.Add("value", typeof(string));
-                //然后把你想要加的数据加进DataTable 里
-                dtPar.Rows.Add(new object[] { "appfolder", AppDomain.CurrentDomain.BaseDirectory });
-                dtPar.Rows.Add(new object[] { "filename", "wcf服务程序" });
-                dtPar.Rows.Add(new object[] { "target", backup_path + "\\WebAppServiceHost.7z" });
-                dtPar.Rows.Add(new object[] { "orifolder", xml.getSetXmlValue("path_service") });
-
-                config.repalcePar(exp_tem_path, "7z.bat", exp_path, dtPar);
-                setBAT.RunBat(exp_path + @"\7z.bat");
-                ansStr += "wcf服务程序备份完成\r\n";
-            }
-
-            if (check_backup_app_framework.Checked == true)
-            {
-                DataTable dtPar = new DataTable();
-                dtPar.Columns.Add("name", typeof(string));
-                dtPar.Columns.Add("value", typeof(string));
-                //然后把你想要加的数据加进DataTable 里
-                dtPar.Rows.Add(new object[] { "appfolder", AppDomain.CurrentDomain.BaseDirectory });
-                dtPar.Rows.Add(new object[] { "filename", "基础框架程序" });
-                dtPar.Rows.Add(new object[] { "target", backup_path + "\\BaseFramework.7z" });
-                dtPar.Rows.Add(new object[] { "orifolder", xml.getSetXmlValue("path_framework") });
-
-                config.repalcePar(exp_tem_path, "7z.bat", exp_path, dtPar);
-                setBAT.RunBat(exp_path + @"\7z.bat");
-                ansStr += "基础框架程序备份完成\r\n";
-            }
-
-            if (check_backup_app_workflow.Checked == true)
-            {
-                DataTable dtPar = new DataTable();
-                dtPar.Columns.Add("name", typeof(string));
-                dtPar.Columns.Add("value", typeof(string));
-                //然后把你想要加的数据加进DataTable 里\
-                dtPar.Rows.Add(new object[] { "appfolder", AppDomain.CurrentDomain.BaseDirectory });
-                dtPar.Rows.Add(new object[] { "filename", "工作流程序" });
-                dtPar.Rows.Add(new object[] { "target", backup_path + "\\Workflow.7z" });
-                dtPar.Rows.Add(new object[] { "orifolder", xml.getSetXmlValue("path_workflow") });
-
-                config.repalcePar(exp_tem_path, "7z.bat", exp_path, dtPar);
-                setBAT.RunBat(exp_path + @"\7z.bat");
-                ansStr += "工作流程序备份完成\r\n";
-            }
-            if (check_backup_app_hr.Checked == true)
-            {
-                DataTable dtPar = new DataTable();
-                dtPar.Columns.Add("name", typeof(string));
-                dtPar.Columns.Add("value", typeof(string));
-                //然后把你想要加的数据加进DataTable 里
-                dtPar.Rows.Add(new object[] { "appfolder", AppDomain.CurrentDomain.BaseDirectory });
-                dtPar.Rows.Add(new object[] { "filename", "人事程序" });
-                dtPar.Rows.Add(new object[] { "target", backup_path + "\\HRWebApp.7z" });
-                dtPar.Rows.Add(new object[] { "orifolder", xml.getSetXmlValue("path_hr") });
-
-                config.repalcePar(exp_tem_path, "7z.bat", exp_path, dtPar);
-                setBAT.RunBat(exp_path + @"\7z.bat");
-                ansStr += "人事程序备份完成\r\n";
-            }
-            if (check_backup_app_bdc.Checked == true)
-            {
-                DataTable dtPar = new DataTable();
-                dtPar.Columns.Add("name", typeof(string));
-                dtPar.Columns.Add("value", typeof(string));
-                //然后把你想要加的数据加进DataTable 里
-                dtPar.Rows.Add(new object[] { "appfolder", AppDomain.CurrentDomain.BaseDirectory });
-                dtPar.Rows.Add(new object[] { "filename", "不动产程序" });
-                dtPar.Rows.Add(new object[] { "target", backup_path + "\\RealEstateRegister.7z" });
-                dtPar.Rows.Add(new object[] { "orifolder", xml.getSetXmlValue("path_bdc") });
-
-                config.repalcePar(exp_tem_path, "7z.bat", exp_path, dtPar);
-                setBAT.RunBat(exp_path + @"\7z.bat");
-                ansStr += "不动产程序备份完成\r\n";
-            }
-            if (check_backup_app_qjdc.Checked == true)
-            {
-                DataTable dtPar = new DataTable();
-                dtPar.Columns.Add("name", typeof(string));
-                dtPar.Columns.Add("value", typeof(string));
-                //然后把你想要加的数据加进DataTable 里
-                dtPar.Rows.Add(new object[] { "appfolder", AppDomain.CurrentDomain.BaseDirectory });
-                dtPar.Rows.Add(new object[] { "filename", "权籍调查程序" });
-                dtPar.Rows.Add(new object[] { "target", backup_path + "\\qjdc.7z" });
-                dtPar.Rows.Add(new object[] { "orifolder", xml.getSetXmlValue("path_qjdc") });
-
-                config.repalcePar(exp_tem_path, "7z.bat", exp_path, dtPar);
-                setBAT.RunBat(exp_path + @"\7z.bat");
-                ansStr += "权籍调查程序备份完成\r\n";
-            }
-
-            if (check_backup_files_ftp.Checked == true)
-            {
-                DataTable dtPar = new DataTable();
-                dtPar.Columns.Add("name", typeof(string));
-                dtPar.Columns.Add("value", typeof(string));
-                //然后把你想要加的数据加进DataTable 里
-                dtPar.Rows.Add(new object[] { "appfolder", AppDomain.CurrentDomain.BaseDirectory });
-                dtPar.Rows.Add(new object[] { "filename", "ftp文件" });
-                dtPar.Rows.Add(new object[] { "target", backup_path + "\\ftp文件.7z" });
-                dtPar.Rows.Add(new object[] { "orifolder", xml.getSetXmlValue("path_ftp") });
-
-                config.repalcePar(exp_tem_path, "7z.bat", exp_path, dtPar);
-                setBAT.RunBat(exp_path + @"\7z.bat");
-                ansStr += "权籍调查ftp文件备份完成\r\n";
-            }
-
-            if (check_backup_files_gxml.Checked == true)
-            {
-                DataTable dtPar = new DataTable();
-                dtPar.Columns.Add("name", typeof(string));
-                dtPar.Columns.Add("value", typeof(string));
-                //然后把你想要加的数据加进DataTable 里
-                dtPar.Rows.Add(new object[] { "appfolder", AppDomain.CurrentDomain.BaseDirectory });
-                dtPar.Rows.Add(new object[] { "filename", "共享目录" });
-                dtPar.Rows.Add(new object[] { "target", backup_path + "\\共享目录.7z" });
-                dtPar.Rows.Add(new object[] { "orifolder", xml.getSetXmlValue("path_gxml") });
-
-                config.repalcePar(exp_tem_path, "7z.bat", exp_path, dtPar);
-                setBAT.RunBat(exp_path + @"\7z.bat");
-                ansStr += "权籍调查共享目录文件备份完成\r\n";
-            }
-
-            ansStr += "导出结束\r\n";
-           // MessageBox.Show(ansStr);
-            //Thread.Sleep(3000);
-            // setMessage.MessageShow("", ansStr, this);
-            StreamWriter sw = null;
-            if (!File.Exists(backup_path + "\\" + dayString + ".log"))
-            {
-                //不存在就新建一个文本文件,并写入一些内容 
-                sw = File.CreateText(backup_path + "\\" + dayString + ".log");
-            }
-            else {
-                sw = new StreamWriter(backup_path + "\\" + dayString + ".log");
-            }
-            
-            sw.Write(ansStr);
-            sw.Close();
-
+            backup.backup(backupBool,AppDomain.CurrentDomain.BaseDirectory,AppDomain.CurrentDomain.BaseDirectory+"\\config\\set.xml");
             //打开备份目录
-            DataTable folderPar = new DataTable();
-            folderPar.Columns.Add("name", typeof(string));
-            folderPar.Columns.Add("value", typeof(string));
-            //然后把你想要加的数据加进DataTable 里
-            folderPar.Rows.Add(new object[] { "targetfolder", backup_path + "\\" });
-            folderPar.Rows.Add(new object[] { "dayString", dayString });
-            config.repalcePar(AppDomain.CurrentDomain.BaseDirectory + "tool\\", "explorer.bat", exp_path, folderPar);
-            setBAT.RunBat(exp_path + @"\explorer.bat");
+            backup.openFolderAndLog();
 
 
         }
@@ -1531,6 +1448,32 @@ namespace QuickConfig
         {
             this.check_backup_files_ftp.Checked = true;
             this.check_backup_files_gxml.Checked = true;
+        }
+
+        private void btn_backup_serviceInstall_Click(object sender, EventArgs e)
+        {
+            setBAT.RunBat(AppDomain.CurrentDomain.BaseDirectory + @"Services\Service_Install.bat");
+            this.lab_backupServicesState.Text = getServiceState("QuickConfig_AutoBackup");
+        }
+
+        private void btn_backup_serviceStart_Click(object sender, EventArgs e)
+        {
+            setBAT.RunBat(AppDomain.CurrentDomain.BaseDirectory + @"Services\Service_Start.bat");
+            this.lab_backupServicesState.Text = getServiceState("QuickConfig_AutoBackup");
+        }
+
+        private void btn_backup_serviceStop_Click(object sender, EventArgs e)
+        {
+
+            setBAT.RunBat(AppDomain.CurrentDomain.BaseDirectory + @"Services\Service_Stop.bat");
+            this.lab_backupServicesState.Text = getServiceState("QuickConfig_AutoBackup");
+        }
+
+        private void btn_backup_serviceUninstall_Click(object sender, EventArgs e)
+        {
+
+            setBAT.RunBat(AppDomain.CurrentDomain.BaseDirectory + @"Services\Service_Unistall.bat");
+            this.lab_backupServicesState.Text = getServiceState("QuickConfig_AutoBackup");
         }
 
 

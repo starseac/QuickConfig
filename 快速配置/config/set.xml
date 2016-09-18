@@ -6,7 +6,7 @@
   <par name="path_workflow" value="C:\不动产登记\web\Workflow" />
   <par name="path_hr" value="C:\不动产登记\web\HRWebApp" />
   <par name="path_bdc" value="C:\不动产登记\web\RealEstateRegister" />
-  <par name="path_qjdc" value="C:\不动产登记\QJDC" />
+  <par name="path_qjdc" value="C:\不动产登记\QJDC0909" />
   <par name="path_ftp" value="C:\不动产登记\BDCFTP" />
   <par name="path_gxml" value="C:\不动产登记\共享目录" />
   
@@ -14,14 +14,14 @@
   <par name="path_datafolder" value="C:\APP\ADMINISTRATOR\ORADATA\BDCDJ" />
 
   <par name="path_data_main" value="C:\不动产登记\data" />
-  <par name="path_data_framework" value="C:\不动产登记\data\framework.dmp" />
-  <par name="path_data_workflow" value="C:\不动产登记\data\workflow.dmp" />
-  <par name="path_data_hr" value="C:\不动产登记\data\ovithr.dmp" />
-  <par name="path_data_bdc" value="C:\不动产登记\data\bdcdjsp.dmp" />
-  <par name="path_data_qjdc" value="C:\不动产登记\data\qjdc.dmp" />
-  <par name="path_data_bdcdj" value="C:\不动产登记\data\BDCDJ.gdb" />
-  <par name="path_data_bdcdj_his" value="C:\不动产登记\data\BDCDJ_HIS.gdb" />
-  <par name="path_data_bdcdj_pre" value="C:\不动产登记\data\BDCDJ_PRE.gdb" />
+  <par name="path_data_framework" value="C:\不动产登记\data\exp-framework.dmp" />
+  <par name="path_data_workflow" value="C:\不动产登记\data\exp-workflow.dmp" />
+  <par name="path_data_hr" value="C:\不动产登记\data\exp-ovithr.dmp" />
+  <par name="path_data_bdc" value="C:\不动产登记\data\exp-bdcdjsp.dmp" />
+  <par name="path_data_qjdc" value="C:\不动产登记\data\exp-qjdc.dmp" />
+  <par name="path_data_bdcdj" value="C:\不动产登记\data\JS_BDCDJ.gdb" />
+  <par name="path_data_bdcdj_his" value="C:\不动产登记\data\JS_BDCDJ_HIS.gdb" />
+  <par name="path_data_bdcdj_pre" value="C:\不动产登记\data\JS_BDCDJ_PRE.gdb" />
 
   <par name="par_gcs" value="2360" />
   
@@ -58,4 +58,13 @@
   <par name="par_szdxzbm" value="420000" />
   <par name="par_szdmc" value="武汉市" />
   <par name="par_szdjc" value="武汉" />
+
+  <par name="backup_content" value="True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False"/>
+  <par name="backup_type" value="每周"/>
+  <par name="backup_type_daytime" value=""/>
+  <par name="backup_type_week" value=""/>
+  <par name="backup_type_weektime" value=""/>
+  <par name="backup_type_month" value=""/>
+  <par name="backup_type_monthtime" value=""/>
+    
 </parset>
