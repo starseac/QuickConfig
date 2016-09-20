@@ -55,6 +55,7 @@
             this.btn_workflow = new System.Windows.Forms.Button();
             this.btn_framework = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label53 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -199,6 +200,7 @@
             this.btn_wcfremove = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label49 = new System.Windows.Forms.Label();
             this.lab_backupServicesState = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.btn_backup_serviceUninstall = new System.Windows.Forms.Button();
@@ -284,8 +286,6 @@
             this.check_backup_db_qjdc = new System.Windows.Forms.CheckBox();
             this.btn_backup = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -595,6 +595,16 @@
             this.tabPage2.Text = "数据库设置";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.ForeColor = System.Drawing.Color.Red;
+            this.label53.Location = new System.Drawing.Point(68, 543);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(142, 15);
+            this.label53.TabIndex = 9;
+            this.label53.Text = "在服务器上是存在的";
+            // 
             // label38
             // 
             this.label38.AutoSize = true;
@@ -621,7 +631,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 307F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 311F));
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label12, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 1);
@@ -787,7 +797,7 @@
             this.password_workflow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_workflow.Location = new System.Drawing.Point(346, 66);
             this.password_workflow.Name = "password_workflow";
-            this.password_workflow.Size = new System.Drawing.Size(304, 25);
+            this.password_workflow.Size = new System.Drawing.Size(305, 25);
             this.password_workflow.TabIndex = 13;
             // 
             // password_framework
@@ -795,7 +805,7 @@
             this.password_framework.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_framework.Location = new System.Drawing.Point(346, 35);
             this.password_framework.Name = "password_framework";
-            this.password_framework.Size = new System.Drawing.Size(304, 25);
+            this.password_framework.Size = new System.Drawing.Size(305, 25);
             this.password_framework.TabIndex = 12;
             // 
             // password_hr
@@ -803,7 +813,7 @@
             this.password_hr.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_hr.Location = new System.Drawing.Point(346, 97);
             this.password_hr.Name = "password_hr";
-            this.password_hr.Size = new System.Drawing.Size(304, 25);
+            this.password_hr.Size = new System.Drawing.Size(305, 25);
             this.password_hr.TabIndex = 6;
             // 
             // password_bdc
@@ -811,7 +821,7 @@
             this.password_bdc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_bdc.Location = new System.Drawing.Point(346, 128);
             this.password_bdc.Name = "password_bdc";
-            this.password_bdc.Size = new System.Drawing.Size(304, 25);
+            this.password_bdc.Size = new System.Drawing.Size(305, 25);
             this.password_bdc.TabIndex = 14;
             // 
             // password_qjdc
@@ -819,7 +829,7 @@
             this.password_qjdc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_qjdc.Location = new System.Drawing.Point(346, 159);
             this.password_qjdc.Name = "password_qjdc";
-            this.password_qjdc.Size = new System.Drawing.Size(304, 25);
+            this.password_qjdc.Size = new System.Drawing.Size(305, 25);
             this.password_qjdc.TabIndex = 15;
             // 
             // label13
@@ -839,7 +849,7 @@
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Location = new System.Drawing.Point(346, 1);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(304, 30);
+            this.label14.Size = new System.Drawing.Size(305, 30);
             this.label14.TabIndex = 17;
             this.label14.Text = "密码";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -857,7 +867,7 @@
             this.password_sde.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_sde.Location = new System.Drawing.Point(346, 190);
             this.password_sde.Name = "password_sde";
-            this.password_sde.Size = new System.Drawing.Size(304, 25);
+            this.password_sde.Size = new System.Drawing.Size(305, 25);
             this.password_sde.TabIndex = 19;
             // 
             // user_sde_his
@@ -881,7 +891,7 @@
             this.password_sde_pre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_sde_pre.Location = new System.Drawing.Point(346, 252);
             this.password_sde_pre.Name = "password_sde_pre";
-            this.password_sde_pre.Size = new System.Drawing.Size(304, 25);
+            this.password_sde_pre.Size = new System.Drawing.Size(305, 25);
             this.password_sde_pre.TabIndex = 22;
             // 
             // password_sde_his
@@ -889,7 +899,7 @@
             this.password_sde_his.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_sde_his.Location = new System.Drawing.Point(346, 221);
             this.password_sde_his.Name = "password_sde_his";
-            this.password_sde_his.Size = new System.Drawing.Size(304, 25);
+            this.password_sde_his.Size = new System.Drawing.Size(305, 25);
             this.password_sde_his.TabIndex = 23;
             // 
             // label15
@@ -968,7 +978,7 @@
             this.password_system.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_system.Location = new System.Drawing.Point(346, 283);
             this.password_system.Name = "password_system";
-            this.password_system.Size = new System.Drawing.Size(304, 25);
+            this.password_system.Size = new System.Drawing.Size(305, 25);
             this.password_system.TabIndex = 31;
             // 
             // path_datafolder
@@ -978,7 +988,7 @@
             this.path_datafolder.Location = new System.Drawing.Point(125, 376);
             this.path_datafolder.Multiline = true;
             this.path_datafolder.Name = "path_datafolder";
-            this.path_datafolder.Size = new System.Drawing.Size(525, 58);
+            this.path_datafolder.Size = new System.Drawing.Size(526, 58);
             this.path_datafolder.TabIndex = 33;
             // 
             // label35
@@ -2104,6 +2114,16 @@
             this.tabPage5.Text = "备份";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.ForeColor = System.Drawing.Color.Red;
+            this.label49.Location = new System.Drawing.Point(29, 293);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(472, 15);
+            this.label49.TabIndex = 27;
+            this.label49.Text = "勾选要备份的内容，设置好备份服务的类型和日期等，需要先保存设置";
+            // 
             // lab_backupServicesState
             // 
             this.lab_backupServicesState.AutoSize = true;
@@ -3059,26 +3079,6 @@
             this.btn_save.Text = "保存设置";
             this.btn_save.UseVisualStyleBackColor = true;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.ForeColor = System.Drawing.Color.Red;
-            this.label49.Location = new System.Drawing.Point(29, 293);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(472, 15);
-            this.label49.TabIndex = 27;
-            this.label49.Text = "勾选要备份的内容，设置好备份服务的类型和日期等，需要先保存设置";
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.ForeColor = System.Drawing.Color.Red;
-            this.label53.Location = new System.Drawing.Point(68, 543);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(142, 15);
-            this.label53.TabIndex = 9;
-            this.label53.Text = "在服务器上是存在的";
             // 
             // Form1
             // 

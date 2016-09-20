@@ -60,7 +60,7 @@
   <par name="par_szdjc" value="武汉" />
 
   <par name="backup_content" value="True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False"/>
-  <par name="backup_type" value="每周"/>
+  <par name="backup_type" value="每天"/>
   <par name="backup_type_daytime" value=""/>
   <par name="backup_type_week" value=""/>
   <par name="backup_type_weektime" value=""/>

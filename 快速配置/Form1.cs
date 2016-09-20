@@ -134,7 +134,7 @@ namespace QuickConfig
             string backuptype = parTable.Select("name='backup_type'")[0][1].ToString();
             if (backuptype != "")
             {
-                if (backuptype == "每日")
+                if (backuptype == "每天")
                 {
                     this.tab_backup.SelectedIndex = 0;
                 }
@@ -152,6 +152,8 @@ namespace QuickConfig
             {
                 this.tab_backup.SelectedIndex = 0;
             }
+
+            this.backup_day_starttime.Text = parTable.Select("name='backup_type_daytime'")[0][1].ToString();
 
             string chooseWeekStr = parTable.Select("name='backup_type_week'")[0][1].ToString();
             foreach (Control cb in tab_backup.TabPages[1].Controls)
