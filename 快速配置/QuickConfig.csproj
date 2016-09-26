@@ -220,8 +220,13 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="config\workflow\bin\Configs\DatabaseConnection.xml" />
-    <Content Include="config\workflow\bin\Configs\services.xml" />
+    <Content Include="config\workflow\bin\Configs\DatabaseConnection.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\workflow\bin\Configs\services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="config\workflow\Configs\WFDesignServices.xml" />
     <None Include="Resources\pictureBox1.Image.gif" />
     <Content Include="tt.ico" />
