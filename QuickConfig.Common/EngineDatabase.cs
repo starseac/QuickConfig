@@ -666,7 +666,7 @@ namespace QuickConfig
                                 shpField = shpFields.get_Field(i);
                                 string fieldname = shpField.Name;
                                 int index = sdeBuffer.Fields.FindField(fieldname);
-                                if (index != -1 && index != 0)
+                                if (index != -1 && fieldname!="OBJECTID")
                                 {
                                     sdeBuffer.set_Value(index, row.get_Value(i));
                                 }
@@ -831,7 +831,7 @@ namespace QuickConfig
                                     shpField = shpFields.get_Field(i);
                                     string fieldname = shpField.Name;
                                     int index = sdeBuffer.Fields.FindField(fieldname);
-                                    if (index != -1 && index != 0)
+                                    if (index != -1 &&fieldname!="OBJECTID")
                                     {
                                         sdeBuffer.set_Value(index, row.get_Value(i));
                                     }
