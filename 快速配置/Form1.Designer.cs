@@ -32,13 +32,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label37 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.check_qjdc = new System.Windows.Forms.CheckBox();
-            this.check_bdc = new System.Windows.Forms.CheckBox();
-            this.check_hr = new System.Windows.Forms.CheckBox();
-            this.check_workflow = new System.Windows.Forms.CheckBox();
-            this.check_framework = new System.Windows.Forms.CheckBox();
-            this.check_service = new System.Windows.Forms.CheckBox();
             this.btn_service = new System.Windows.Forms.Button();
             this.path_service = new System.Windows.Forms.TextBox();
             this.path_qjdc = new System.Windows.Forms.TextBox();
@@ -175,7 +168,6 @@
             this.btn_data_workflow = new System.Windows.Forms.Button();
             this.btn_data_framework = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.label39 = new System.Windows.Forms.Label();
             this.btn_beset = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label31 = new System.Windows.Forms.Label();
@@ -286,6 +278,20 @@
             this.check_backup_db_qjdc = new System.Windows.Forms.CheckBox();
             this.btn_backup = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.check_qjdc = new System.Windows.Forms.CheckBox();
+            this.check_bdc = new System.Windows.Forms.CheckBox();
+            this.check_hr = new System.Windows.Forms.CheckBox();
+            this.check_workflow = new System.Windows.Forms.CheckBox();
+            this.check_framework = new System.Windows.Forms.CheckBox();
+            this.check_service = new System.Windows.Forms.CheckBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -311,6 +317,7 @@
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -330,14 +337,13 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label59);
+            this.tabPage1.Controls.Add(this.label58);
+            this.tabPage1.Controls.Add(this.label57);
+            this.tabPage1.Controls.Add(this.label56);
+            this.tabPage1.Controls.Add(this.label55);
+            this.tabPage1.Controls.Add(this.label54);
             this.tabPage1.Controls.Add(this.label37);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.check_qjdc);
-            this.tabPage1.Controls.Add(this.check_bdc);
-            this.tabPage1.Controls.Add(this.check_hr);
-            this.tabPage1.Controls.Add(this.check_workflow);
-            this.tabPage1.Controls.Add(this.check_framework);
-            this.tabPage1.Controls.Add(this.check_service);
             this.tabPage1.Controls.Add(this.btn_service);
             this.tabPage1.Controls.Add(this.path_service);
             this.tabPage1.Controls.Add(this.path_qjdc);
@@ -371,88 +377,6 @@
             this.label37.TabIndex = 29;
             this.label37.Text = "设置完主目录后，程序和ftp、共享目录的地址就会根据默认的值设置地址，建议都放在一个文件夹下面";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(17, 457);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 15);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "勾选的才会更新配置";
-            // 
-            // check_qjdc
-            // 
-            this.check_qjdc.AutoSize = true;
-            this.check_qjdc.Checked = true;
-            this.check_qjdc.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_qjdc.Location = new System.Drawing.Point(20, 394);
-            this.check_qjdc.Name = "check_qjdc";
-            this.check_qjdc.Size = new System.Drawing.Size(89, 19);
-            this.check_qjdc.TabIndex = 27;
-            this.check_qjdc.Text = "权籍调查";
-            this.check_qjdc.UseVisualStyleBackColor = true;
-            // 
-            // check_bdc
-            // 
-            this.check_bdc.AutoSize = true;
-            this.check_bdc.Checked = true;
-            this.check_bdc.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_bdc.Location = new System.Drawing.Point(20, 331);
-            this.check_bdc.Name = "check_bdc";
-            this.check_bdc.Size = new System.Drawing.Size(74, 19);
-            this.check_bdc.TabIndex = 26;
-            this.check_bdc.Text = "不动产";
-            this.check_bdc.UseVisualStyleBackColor = true;
-            // 
-            // check_hr
-            // 
-            this.check_hr.AutoSize = true;
-            this.check_hr.Checked = true;
-            this.check_hr.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_hr.Location = new System.Drawing.Point(20, 267);
-            this.check_hr.Name = "check_hr";
-            this.check_hr.Size = new System.Drawing.Size(59, 19);
-            this.check_hr.TabIndex = 25;
-            this.check_hr.Text = "人事";
-            this.check_hr.UseVisualStyleBackColor = true;
-            // 
-            // check_workflow
-            // 
-            this.check_workflow.AutoSize = true;
-            this.check_workflow.Checked = true;
-            this.check_workflow.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_workflow.Location = new System.Drawing.Point(20, 215);
-            this.check_workflow.Name = "check_workflow";
-            this.check_workflow.Size = new System.Drawing.Size(74, 19);
-            this.check_workflow.TabIndex = 24;
-            this.check_workflow.Text = "工作流";
-            this.check_workflow.UseVisualStyleBackColor = true;
-            // 
-            // check_framework
-            // 
-            this.check_framework.AutoSize = true;
-            this.check_framework.Checked = true;
-            this.check_framework.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_framework.Location = new System.Drawing.Point(20, 159);
-            this.check_framework.Name = "check_framework";
-            this.check_framework.Size = new System.Drawing.Size(89, 19);
-            this.check_framework.TabIndex = 23;
-            this.check_framework.Text = "基础平台";
-            this.check_framework.UseVisualStyleBackColor = true;
-            // 
-            // check_service
-            // 
-            this.check_service.AutoSize = true;
-            this.check_service.Checked = true;
-            this.check_service.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.check_service.Location = new System.Drawing.Point(20, 115);
-            this.check_service.Name = "check_service";
-            this.check_service.Size = new System.Drawing.Size(59, 19);
-            this.check_service.TabIndex = 22;
-            this.check_service.Text = "服务";
-            this.check_service.UseVisualStyleBackColor = true;
-            // 
             // btn_service
             // 
             this.btn_service.Location = new System.Drawing.Point(656, 112);
@@ -472,28 +396,28 @@
             // 
             // path_qjdc
             // 
-            this.path_qjdc.Location = new System.Drawing.Point(115, 392);
+            this.path_qjdc.Location = new System.Drawing.Point(114, 364);
             this.path_qjdc.Name = "path_qjdc";
             this.path_qjdc.Size = new System.Drawing.Size(514, 25);
             this.path_qjdc.TabIndex = 17;
             // 
             // path_bdc
             // 
-            this.path_bdc.Location = new System.Drawing.Point(115, 329);
+            this.path_bdc.Location = new System.Drawing.Point(115, 309);
             this.path_bdc.Name = "path_bdc";
             this.path_bdc.Size = new System.Drawing.Size(514, 25);
             this.path_bdc.TabIndex = 16;
             // 
             // path_hr
             // 
-            this.path_hr.Location = new System.Drawing.Point(115, 267);
+            this.path_hr.Location = new System.Drawing.Point(115, 257);
             this.path_hr.Name = "path_hr";
             this.path_hr.Size = new System.Drawing.Size(514, 25);
             this.path_hr.TabIndex = 15;
             // 
             // path_workflow
             // 
-            this.path_workflow.Location = new System.Drawing.Point(115, 215);
+            this.path_workflow.Location = new System.Drawing.Point(115, 207);
             this.path_workflow.Name = "path_workflow";
             this.path_workflow.Size = new System.Drawing.Size(514, 25);
             this.path_workflow.TabIndex = 14;
@@ -533,7 +457,7 @@
             // 
             // btn_qjdc
             // 
-            this.btn_qjdc.Location = new System.Drawing.Point(656, 388);
+            this.btn_qjdc.Location = new System.Drawing.Point(655, 360);
             this.btn_qjdc.Name = "btn_qjdc";
             this.btn_qjdc.Size = new System.Drawing.Size(75, 32);
             this.btn_qjdc.TabIndex = 4;
@@ -543,7 +467,7 @@
             // 
             // btn_bdc
             // 
-            this.btn_bdc.Location = new System.Drawing.Point(656, 326);
+            this.btn_bdc.Location = new System.Drawing.Point(656, 306);
             this.btn_bdc.Name = "btn_bdc";
             this.btn_bdc.Size = new System.Drawing.Size(75, 32);
             this.btn_bdc.TabIndex = 3;
@@ -553,7 +477,7 @@
             // 
             // btn_hr
             // 
-            this.btn_hr.Location = new System.Drawing.Point(656, 264);
+            this.btn_hr.Location = new System.Drawing.Point(656, 254);
             this.btn_hr.Name = "btn_hr";
             this.btn_hr.Size = new System.Drawing.Size(75, 32);
             this.btn_hr.TabIndex = 2;
@@ -563,7 +487,7 @@
             // 
             // btn_workflow
             // 
-            this.btn_workflow.Location = new System.Drawing.Point(656, 212);
+            this.btn_workflow.Location = new System.Drawing.Point(656, 204);
             this.btn_workflow.Name = "btn_workflow";
             this.btn_workflow.Size = new System.Drawing.Size(75, 32);
             this.btn_workflow.TabIndex = 1;
@@ -631,7 +555,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 312F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 313F));
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label12, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 1);
@@ -797,7 +721,7 @@
             this.password_workflow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_workflow.Location = new System.Drawing.Point(346, 66);
             this.password_workflow.Name = "password_workflow";
-            this.password_workflow.Size = new System.Drawing.Size(306, 25);
+            this.password_workflow.Size = new System.Drawing.Size(307, 25);
             this.password_workflow.TabIndex = 13;
             // 
             // password_framework
@@ -805,7 +729,7 @@
             this.password_framework.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_framework.Location = new System.Drawing.Point(346, 35);
             this.password_framework.Name = "password_framework";
-            this.password_framework.Size = new System.Drawing.Size(306, 25);
+            this.password_framework.Size = new System.Drawing.Size(307, 25);
             this.password_framework.TabIndex = 12;
             // 
             // password_hr
@@ -813,7 +737,7 @@
             this.password_hr.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_hr.Location = new System.Drawing.Point(346, 97);
             this.password_hr.Name = "password_hr";
-            this.password_hr.Size = new System.Drawing.Size(306, 25);
+            this.password_hr.Size = new System.Drawing.Size(307, 25);
             this.password_hr.TabIndex = 6;
             // 
             // password_bdc
@@ -821,7 +745,7 @@
             this.password_bdc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_bdc.Location = new System.Drawing.Point(346, 128);
             this.password_bdc.Name = "password_bdc";
-            this.password_bdc.Size = new System.Drawing.Size(306, 25);
+            this.password_bdc.Size = new System.Drawing.Size(307, 25);
             this.password_bdc.TabIndex = 14;
             // 
             // password_qjdc
@@ -829,7 +753,7 @@
             this.password_qjdc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_qjdc.Location = new System.Drawing.Point(346, 159);
             this.password_qjdc.Name = "password_qjdc";
-            this.password_qjdc.Size = new System.Drawing.Size(306, 25);
+            this.password_qjdc.Size = new System.Drawing.Size(307, 25);
             this.password_qjdc.TabIndex = 15;
             // 
             // label13
@@ -849,7 +773,7 @@
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Location = new System.Drawing.Point(346, 1);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(306, 30);
+            this.label14.Size = new System.Drawing.Size(307, 30);
             this.label14.TabIndex = 17;
             this.label14.Text = "密码";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -867,7 +791,7 @@
             this.password_sde.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_sde.Location = new System.Drawing.Point(346, 190);
             this.password_sde.Name = "password_sde";
-            this.password_sde.Size = new System.Drawing.Size(306, 25);
+            this.password_sde.Size = new System.Drawing.Size(307, 25);
             this.password_sde.TabIndex = 19;
             // 
             // user_sde_his
@@ -891,7 +815,7 @@
             this.password_sde_pre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_sde_pre.Location = new System.Drawing.Point(346, 252);
             this.password_sde_pre.Name = "password_sde_pre";
-            this.password_sde_pre.Size = new System.Drawing.Size(306, 25);
+            this.password_sde_pre.Size = new System.Drawing.Size(307, 25);
             this.password_sde_pre.TabIndex = 22;
             // 
             // password_sde_his
@@ -899,7 +823,7 @@
             this.password_sde_his.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_sde_his.Location = new System.Drawing.Point(346, 221);
             this.password_sde_his.Name = "password_sde_his";
-            this.password_sde_his.Size = new System.Drawing.Size(306, 25);
+            this.password_sde_his.Size = new System.Drawing.Size(307, 25);
             this.password_sde_his.TabIndex = 23;
             // 
             // label15
@@ -978,7 +902,7 @@
             this.password_system.Dock = System.Windows.Forms.DockStyle.Fill;
             this.password_system.Location = new System.Drawing.Point(346, 283);
             this.password_system.Name = "password_system";
-            this.password_system.Size = new System.Drawing.Size(306, 25);
+            this.password_system.Size = new System.Drawing.Size(307, 25);
             this.password_system.TabIndex = 31;
             // 
             // path_datafolder
@@ -988,7 +912,7 @@
             this.path_datafolder.Location = new System.Drawing.Point(125, 376);
             this.path_datafolder.Multiline = true;
             this.path_datafolder.Name = "path_datafolder";
-            this.path_datafolder.Size = new System.Drawing.Size(527, 58);
+            this.path_datafolder.Size = new System.Drawing.Size(528, 58);
             this.path_datafolder.TabIndex = 33;
             // 
             // label35
@@ -1012,7 +936,7 @@
             this.check_default.Name = "check_default";
             this.check_default.Size = new System.Drawing.Size(214, 24);
             this.check_default.TabIndex = 34;
-            this.check_default.Text = "系统默认";
+            this.check_default.Text = "获取系统默认路径";
             this.check_default.UseVisualStyleBackColor = true;
             this.check_default.CheckedChanged += new System.EventHandler(this.check_default_CheckedChanged);
             // 
@@ -1817,8 +1741,7 @@
             // 
             // tabPage6
             // 
-            this.tabPage6.Controls.Add(this.label39);
-            this.tabPage6.Controls.Add(this.btn_beset);
+            this.tabPage6.Controls.Add(this.groupBox13);
             this.tabPage6.Controls.Add(this.groupBox8);
             this.tabPage6.Controls.Add(this.groupBox7);
             this.tabPage6.Controls.Add(this.groupBox6);
@@ -1831,19 +1754,9 @@
             this.tabPage6.Text = "网站搭建";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.ForeColor = System.Drawing.Color.Red;
-            this.label39.Location = new System.Drawing.Point(97, 35);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(526, 15);
-            this.label39.TabIndex = 18;
-            this.label39.Text = "配置wcf服务程序、网站（不动产、基础框架、人事、工作流）、权籍调查系统";
-            // 
             // btn_beset
             // 
-            this.btn_beset.Location = new System.Drawing.Point(285, 66);
+            this.btn_beset.Location = new System.Drawing.Point(235, 78);
             this.btn_beset.Name = "btn_beset";
             this.btn_beset.Size = new System.Drawing.Size(93, 32);
             this.btn_beset.TabIndex = 2;
@@ -1855,7 +1768,7 @@
             // 
             this.groupBox8.Controls.Add(this.label31);
             this.groupBox8.Controls.Add(this.btn_creategxml);
-            this.groupBox8.Location = new System.Drawing.Point(100, 485);
+            this.groupBox8.Location = new System.Drawing.Point(93, 503);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(591, 69);
             this.groupBox8.TabIndex = 17;
@@ -1885,7 +1798,7 @@
             // 
             this.groupBox7.Controls.Add(this.label6);
             this.groupBox7.Controls.Add(this.btn_createftp);
-            this.groupBox7.Location = new System.Drawing.Point(97, 407);
+            this.groupBox7.Location = new System.Drawing.Point(94, 430);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(589, 60);
             this.groupBox7.TabIndex = 16;
@@ -1921,7 +1834,7 @@
             this.groupBox6.Controls.Add(this.check_web_workflow);
             this.groupBox6.Controls.Add(this.check_web_hr);
             this.groupBox6.Controls.Add(this.check_web_bdc);
-            this.groupBox6.Location = new System.Drawing.Point(94, 241);
+            this.groupBox6.Location = new System.Drawing.Point(94, 262);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(592, 160);
             this.groupBox6.TabIndex = 15;
@@ -2025,7 +1938,7 @@
             this.groupBox5.Controls.Add(this.btn_wcfstop);
             this.groupBox5.Controls.Add(this.btn_wcfremove);
             this.groupBox5.Controls.Add(this.label5);
-            this.groupBox5.Location = new System.Drawing.Point(94, 103);
+            this.groupBox5.Location = new System.Drawing.Point(94, 123);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(592, 122);
             this.groupBox5.TabIndex = 14;
@@ -3080,11 +2993,164 @@
             this.btn_save.UseVisualStyleBackColor = true;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(23, 115);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(37, 15);
+            this.label54.TabIndex = 30;
+            this.label54.Text = "服务";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(23, 168);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(67, 15);
+            this.label55.TabIndex = 31;
+            this.label55.Text = "基础平台";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(23, 216);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(52, 15);
+            this.label56.TabIndex = 32;
+            this.label56.Text = "工作流";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(23, 266);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(37, 15);
+            this.label57.TabIndex = 33;
+            this.label57.Text = "人事";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(23, 318);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(52, 15);
+            this.label58.TabIndex = 34;
+            this.label58.Text = "不动产";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(22, 364);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(67, 15);
+            this.label59.TabIndex = 35;
+            this.label59.Text = "权籍调查";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(20, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(142, 15);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "勾选的才会更新配置";
+            // 
+            // check_qjdc
+            // 
+            this.check_qjdc.AutoSize = true;
+            this.check_qjdc.Checked = true;
+            this.check_qjdc.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.check_qjdc.Location = new System.Drawing.Point(485, 24);
+            this.check_qjdc.Name = "check_qjdc";
+            this.check_qjdc.Size = new System.Drawing.Size(89, 19);
+            this.check_qjdc.TabIndex = 34;
+            this.check_qjdc.Text = "权籍调查";
+            this.check_qjdc.UseVisualStyleBackColor = true;
+            // 
+            // check_bdc
+            // 
+            this.check_bdc.AutoSize = true;
+            this.check_bdc.Checked = true;
+            this.check_bdc.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.check_bdc.Location = new System.Drawing.Point(398, 24);
+            this.check_bdc.Name = "check_bdc";
+            this.check_bdc.Size = new System.Drawing.Size(74, 19);
+            this.check_bdc.TabIndex = 33;
+            this.check_bdc.Text = "不动产";
+            this.check_bdc.UseVisualStyleBackColor = true;
+            // 
+            // check_hr
+            // 
+            this.check_hr.AutoSize = true;
+            this.check_hr.Checked = true;
+            this.check_hr.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.check_hr.Location = new System.Drawing.Point(313, 24);
+            this.check_hr.Name = "check_hr";
+            this.check_hr.Size = new System.Drawing.Size(59, 19);
+            this.check_hr.TabIndex = 32;
+            this.check_hr.Text = "人事";
+            this.check_hr.UseVisualStyleBackColor = true;
+            // 
+            // check_workflow
+            // 
+            this.check_workflow.AutoSize = true;
+            this.check_workflow.Checked = true;
+            this.check_workflow.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.check_workflow.Location = new System.Drawing.Point(218, 24);
+            this.check_workflow.Name = "check_workflow";
+            this.check_workflow.Size = new System.Drawing.Size(74, 19);
+            this.check_workflow.TabIndex = 31;
+            this.check_workflow.Text = "工作流";
+            this.check_workflow.UseVisualStyleBackColor = true;
+            // 
+            // check_framework
+            // 
+            this.check_framework.AutoSize = true;
+            this.check_framework.Checked = true;
+            this.check_framework.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.check_framework.Location = new System.Drawing.Point(117, 24);
+            this.check_framework.Name = "check_framework";
+            this.check_framework.Size = new System.Drawing.Size(89, 19);
+            this.check_framework.TabIndex = 30;
+            this.check_framework.Text = "基础平台";
+            this.check_framework.UseVisualStyleBackColor = true;
+            // 
+            // check_service
+            // 
+            this.check_service.AutoSize = true;
+            this.check_service.Checked = true;
+            this.check_service.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.check_service.Location = new System.Drawing.Point(26, 24);
+            this.check_service.Name = "check_service";
+            this.check_service.Size = new System.Drawing.Size(83, 19);
+            this.check_service.TabIndex = 29;
+            this.check_service.Text = "wcf服务";
+            this.check_service.UseVisualStyleBackColor = true;
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.btn_beset);
+            this.groupBox13.Controls.Add(this.check_qjdc);
+            this.groupBox13.Controls.Add(this.check_bdc);
+            this.groupBox13.Controls.Add(this.label2);
+            this.groupBox13.Controls.Add(this.check_hr);
+            this.groupBox13.Controls.Add(this.check_service);
+            this.groupBox13.Controls.Add(this.check_workflow);
+            this.groupBox13.Controls.Add(this.check_framework);
+            this.groupBox13.Location = new System.Drawing.Point(94, 6);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(592, 116);
+            this.groupBox13.TabIndex = 36;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "程序配置";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(803, 662);
+            this.ClientSize = new System.Drawing.Size(809, 662);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -3111,7 +3177,6 @@
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -3137,6 +3202,8 @@
             this.groupBox10.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3225,13 +3292,6 @@
         private System.Windows.Forms.TextBox path_service;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox datasource;
-        private System.Windows.Forms.CheckBox check_qjdc;
-        private System.Windows.Forms.CheckBox check_bdc;
-        private System.Windows.Forms.CheckBox check_hr;
-        private System.Windows.Forms.CheckBox check_workflow;
-        private System.Windows.Forms.CheckBox check_framework;
-        private System.Windows.Forms.CheckBox check_service;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TextBox path_gxml;
         private System.Windows.Forms.Label label4;
@@ -3291,7 +3351,6 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Button btn_folder_gxml;
         private System.Windows.Forms.Button btn_folder_ftp;
@@ -3400,6 +3459,20 @@
         private System.Windows.Forms.CheckBox backup_month_check1;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.CheckBox check_qjdc;
+        private System.Windows.Forms.CheckBox check_bdc;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox check_hr;
+        private System.Windows.Forms.CheckBox check_service;
+        private System.Windows.Forms.CheckBox check_workflow;
+        private System.Windows.Forms.CheckBox check_framework;
     }
 }
 

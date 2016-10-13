@@ -256,29 +256,7 @@ namespace QuickConfig
             xml.editxml("par_szdjc", this.par_szdjc.Text);
 
 
-            //设置备份服务
-            string chooseContent =
-                this.check_backup_db_framework.Checked.ToString() + "," +
-                this.check_backup_db_workflow.Checked.ToString() + "," +
-                this.check_backup_db_hr.Checked.ToString() + "," +
-                this.check_backup_db_bdc.Checked.ToString() + "," +
-                this.check_backup_db_qjdc.Checked.ToString() + "," +
-
-                this.check_backup_sde_sde.Checked.ToString() + "," +
-                this.check_backup_sde_sde_his.Checked.ToString() + "," +
-                this.check_backup_sde_sde_pre.Checked.ToString() + "," +
-
-                this.check_backup_app_wcf.Checked.ToString() + "," +
-                this.check_backup_app_framework.Checked.ToString() + "," +
-                this.check_backup_app_workflow.Checked.ToString() + "," +
-                this.check_backup_app_hr.Checked.ToString() + "," +
-                this.check_backup_app_bdc.Checked.ToString() + "," +
-                this.check_backup_app_qjdc.Checked.ToString() + "," +
-
-                this.check_backup_files_ftp.Checked.ToString() + "," +
-                this.check_backup_files_gxml.Checked.ToString();
-
-            xml.editxml("backup_content", chooseContent);
+            saveBackupContent();
 
             xml.editxml("backup_type", this.tab_backup.SelectedTab.Text);
             xml.editxml("backup_type_daytime", this.backup_day_starttime.Value.ToString("HH:mm:ss"));
@@ -330,6 +308,34 @@ namespace QuickConfig
 
         }
 
+        private void saveBackupContent() {
+            setXml xml = new setXml();
+            xml.setQuickConfig();
+            //设置备份服务
+            string chooseContent =
+                this.check_backup_db_framework.Checked.ToString() + "," +
+                this.check_backup_db_workflow.Checked.ToString() + "," +
+                this.check_backup_db_hr.Checked.ToString() + "," +
+                this.check_backup_db_bdc.Checked.ToString() + "," +
+                this.check_backup_db_qjdc.Checked.ToString() + "," +
+
+                this.check_backup_sde_sde.Checked.ToString() + "," +
+                this.check_backup_sde_sde_his.Checked.ToString() + "," +
+                this.check_backup_sde_sde_pre.Checked.ToString() + "," +
+
+                this.check_backup_app_wcf.Checked.ToString() + "," +
+                this.check_backup_app_framework.Checked.ToString() + "," +
+                this.check_backup_app_workflow.Checked.ToString() + "," +
+                this.check_backup_app_hr.Checked.ToString() + "," +
+                this.check_backup_app_bdc.Checked.ToString() + "," +
+                this.check_backup_app_qjdc.Checked.ToString() + "," +
+
+                this.check_backup_files_ftp.Checked.ToString() + "," +
+                this.check_backup_files_gxml.Checked.ToString();
+
+            xml.editxml("backup_content", chooseContent);
+        
+        }
 
         private void check_default_CheckedChanged(object sender, EventArgs e)
         {
@@ -408,7 +414,18 @@ namespace QuickConfig
             {
                 errStr += "共享目录的文件夹不存在,请重新设置\r\n";
             }
+                        
 
+            if (errStr != "")
+            {
+                MessageBox.Show(errStr, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        private bool checkDataImportSet() {
+            string errStr = "";
             //导入数据文件检查
             if (!checkFolder(this.path_gxml.Text))
             {
@@ -435,18 +452,6 @@ namespace QuickConfig
             {
                 errStr += "权籍调查的dmp文件不存在,请重新设置\r\n";
             }
-            if (!checkFolder(this.path_data_bdcdj.Text) && this.check_data_bdcdj.Checked == true)
-            {
-                errStr += "现势库的文件夹不存在,请重新设置\r\n";
-            }
-            if (!checkFolder(this.path_data_bdcdj_his.Text) && this.check_data_bdcdj_his.Checked == true)
-            {
-                errStr += "历史库的文件夹不存在,请重新设置\r\n";
-            }
-            if (!checkFolder(this.path_data_bdcdj_pre.Text) && this.check_data_bdcdj_pre.Checked == true)
-            {
-                errStr += "临时库的文件夹不存在,请重新设置\r\n";
-            }
 
             if (errStr != "")
             {
@@ -454,6 +459,29 @@ namespace QuickConfig
                 return false;
             }
             return true;
+        }
+
+        private bool checkSDEimportSet() {
+            string errStr = "";
+            if (!checkGDBFolder(this.path_data_bdcdj.Text) && this.check_data_bdcdj.Checked == true)
+            {
+                errStr += "现势库的GDB文件夹不存在,请重新设置\r\n";
+            }
+            if (!checkGDBFolder(this.path_data_bdcdj_his.Text) && this.check_data_bdcdj_his.Checked == true)
+            {
+                errStr += "历史库的GDB文件夹不存在,请重新设置\r\n";
+            }
+            if (!checkGDBFolder(this.path_data_bdcdj_pre.Text) && this.check_data_bdcdj_pre.Checked == true)
+            {
+                errStr += "临时库的GDB文件夹不存在,请重新设置\r\n";
+            }
+            if (errStr != "")
+            {
+                MessageBox.Show(errStr, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        
         }
 
         private void btn_beset_Click(object sender, EventArgs e)
@@ -515,11 +543,40 @@ namespace QuickConfig
             return folderPath;
         }
 
+        private string folderPath(string DefinefolderPath)
+        {
+            string folderPath = "";
+            FolderBrowserDialog folderfDialog = new FolderBrowserDialog();
+            folderfDialog.SelectedPath = DefinefolderPath;
+            folderfDialog.Description = "请选着文件夹";
+            if (folderfDialog.ShowDialog() == DialogResult.OK)
+            {
+                folderPath = folderfDialog.SelectedPath;
+
+            }
+            return folderPath;
+        }
+
 
         private string filePath(string format)
         {
             string filePath = "";
             OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Multiselect = true;
+            fileDialog.Title = "请选择文件";
+            fileDialog.Filter = "所有文件(*." + format + ")|*." + format + "";
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                filePath = fileDialog.FileName;
+            }
+            return filePath;
+        }
+
+        private string filePath(string format,string defineOpenFolder)
+        {
+            string filePath = "";
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.InitialDirectory = defineOpenFolder;
             fileDialog.Multiselect = true;
             fileDialog.Title = "请选择文件";
             fileDialog.Filter = "所有文件(*." + format + ")|*." + format + "";
@@ -536,6 +593,29 @@ namespace QuickConfig
 
         }
 
+        private bool checkGDBFolder(string folderPath)
+        {
+            if (System.IO.Directory.Exists(folderPath))
+            {
+                string[] args = folderPath.Split('.');
+                string lastStr = args[args.Length - 1];
+                if (lastStr.ToUpper() == "GDB")
+                {
+                    return true;
+
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            else {
+                return false;
+            }
+           
+        }
+
         private bool checkFile(string filePath)
         {
             return System.IO.File.Exists(filePath);
@@ -546,8 +626,8 @@ namespace QuickConfig
 
         private void btn_main_Click(object sender, EventArgs e)
         {
-
-            this.path_main.Text = this.folderPath();
+            string Path = this.folderPath();
+            this.path_main.Text = Path == "" ? this.path_main.Text : Path;
 
             this.path_service.Text = this.path_main.Text + @"\service\WebAppServiceHost";
             this.path_framework.Text = this.path_main.Text + @"\web\BaseFramework";
@@ -564,49 +644,50 @@ namespace QuickConfig
 
         private void btn_service_Click(object sender, EventArgs e)
         {
-            string Path = this.folderPath();
+            
+            string Path = this.folderPath(this.path_main.Text);
             this.path_service.Text = Path == "" ? this.path_service.Text : Path;
         }
 
         private void btn_framework_Click(object sender, EventArgs e)
         {
-            string Path = this.folderPath();
-            this.path_framework.Text = Path == "" ? this.path_service.Text : Path;
+            string Path = this.folderPath(this.path_main.Text);
+            this.path_framework.Text = Path == "" ? this.path_framework.Text : Path;
         }
 
         private void btn_workflow_Click(object sender, EventArgs e)
         {
-            string Path = this.folderPath();
-            this.path_workflow.Text = Path == "" ? this.path_service.Text : Path;
+            string Path = this.folderPath(this.path_main.Text);
+            this.path_workflow.Text = Path == "" ? this.path_workflow.Text : Path;
         }
 
         private void btn_hr_Click(object sender, EventArgs e)
         {
-            string Path = this.folderPath();
-            this.path_hr.Text = Path == "" ? this.path_service.Text : Path;
+            string Path = this.folderPath(this.path_main.Text);
+            this.path_hr.Text = Path == "" ? this.path_hr.Text : Path;
         }
 
         private void btn_bdc_Click(object sender, EventArgs e)
         {
-            string Path = this.folderPath();
-            this.path_bdc.Text = Path == "" ? this.path_service.Text : Path;
+            string Path = this.folderPath(this.path_main.Text);
+            this.path_bdc.Text = Path == "" ? this.path_bdc.Text : Path;
         }
 
         private void btn_qjdc_Click(object sender, EventArgs e)
         {
-            string Path = this.folderPath();
-            this.path_qjdc.Text = Path == "" ? this.path_service.Text : Path;
+            string Path = this.folderPath(this.path_main.Text);
+            this.path_qjdc.Text = Path == "" ? this.path_qjdc.Text : Path;
         }
 
         private void btn_ftp_Click(object sender, EventArgs e)
         {
-            string Path = this.folderPath();
+            string Path = this.folderPath(this.path_main.Text);
             this.path_ftp.Text = Path == "" ? this.path_ftp.Text : Path;
         }
 
         private void btn_gxml_Click(object sender, EventArgs e)
         {
-            string Path = this.folderPath();
+            string Path = this.folderPath(this.path_main.Text);
             this.path_gxml.Text = Path == "" ? this.path_gxml.Text : Path;
         }
 
@@ -840,49 +921,49 @@ namespace QuickConfig
 
         private void btn_data_framework_Click(object sender, EventArgs e)
         {
-            string Path = this.filePath("dmp");
+            string Path = this.filePath("dmp",this.path_data_main.Text);
             this.path_data_framework.Text = Path == "" ? this.path_data_framework.Text : Path;
         }
 
         private void btn_data_workflow_Click(object sender, EventArgs e)
         {
-            string Path = this.filePath("dmp");
+            string Path = this.filePath("dmp",this.path_data_main.Text);
             this.path_data_workflow.Text = Path == "" ? this.path_data_workflow.Text : Path;
         }
 
         private void btn_data_hr_Click(object sender, EventArgs e)
         {
-            string Path = this.filePath("dmp");
+            string Path = this.filePath("dmp", this.path_data_main.Text);
             this.path_data_hr.Text = Path == "" ? this.path_data_hr.Text : Path;
         }
 
         private void btn_data_bdc_Click(object sender, EventArgs e)
         {
-            string Path = this.filePath("dmp");
+            string Path = this.filePath("dmp", this.path_data_main.Text);
             this.path_data_bdc.Text = Path == "" ? this.path_data_bdc.Text : Path;
         }
 
         private void btn_data_qjdc_Click(object sender, EventArgs e)
         {
-            string Path = this.filePath("dmp");
+            string Path = this.filePath("dmp", this.path_data_main.Text);
             this.path_data_qjdc.Text = Path == "" ? this.path_data_qjdc.Text : Path;
         }
 
         private void btn_data_bdcdj_Click(object sender, EventArgs e)
         {
-            string Path = this.folderPath();
+            string Path = this.folderPath(this.path_data_main.Text);
             this.path_data_bdcdj.Text = Path == "" ? this.path_data_bdcdj.Text : Path;
         }
 
         private void btn_data_bdcdj_his_Click(object sender, EventArgs e)
         {
-            string Path = this.folderPath();
+            string Path = this.folderPath(this.path_data_main.Text);
             this.path_data_bdcdj_his.Text = Path == "" ? this.path_data_bdcdj_his.Text : Path;
         }
 
         private void btn_data_bdcdj_pre_Click(object sender, EventArgs e)
         {
-            string Path = this.folderPath();
+            string Path = this.folderPath(this.path_data_main.Text);
             this.path_data_bdcdj_pre.Text = Path == "" ? this.path_data_bdcdj_pre.Text : Path;
         }
 
@@ -1126,7 +1207,7 @@ namespace QuickConfig
 
         private void btn_imp_framework_Click(object sender, EventArgs e)
         {
-            if (!checkAppFolder())
+            if (!checkDataImportSet())
             {
                 return;
             }
@@ -1286,7 +1367,7 @@ namespace QuickConfig
                 return;
             }
 
-            if (!checkAppFolder())
+            if (!checkSDEimportSet())
             {
                 return;
             }
@@ -1355,6 +1436,9 @@ namespace QuickConfig
 
         private void btn_backup_Click(object sender, EventArgs e)
         {
+            //先保存备份内容设置
+            saveBackupContent();
+
             string exp_tem_path = AppDomain.CurrentDomain.BaseDirectory + @"data";
             string exp_path = AppDomain.CurrentDomain.BaseDirectory + @"dataTemp";
 
